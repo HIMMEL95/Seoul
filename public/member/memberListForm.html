@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <!-- start -->
+
+ 	<div>
+ 		<div class="card bg-dark text-white m-3">
+            <img src="../../../html_tr2/image/background/panorama1.jpg" cl0s="card-img" alt="..." style="max-height: 300px;">
+            <div class="card-img-overlay">
+                <h1 class="card-title position-absolute top-50 start-50">회원 리스트</h1>
+            </div>
+		</div>
+ 	</div>
+ 
+ 	<br>
+ 	
+    <form class="container-fluid">
+        <div class="row g-3 needs-validation m-3 p-3 bg-light border" novalidate>
+            <div class="row mb-2">
+                <div class="col-md-2">
+                    <select class="form-select" id="deleteSelect">
+                        <option selected value="">선택</option>
+                        <option value="삭제">삭제</option>
+                        <option value="미삭제">미삭제</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select" id="dateSelect">
+                        <option selected value="">선택</option>
+                        <option value="등록일">등록일</option>
+                        <option value="수정일">수정일</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="regDate" value="" placeholder="2022.06.23">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="modDate" value="" placeholder="2022.12.05">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <select class="form-select" id="searchSelect" aria-label="Floating label select example" required>
+                        <option selected value="">선택</option>
+                        <option value="이름">이름</option>
+                        <option value="아이디">아이디</option>
+                        <option value="성별">성별</option>
+                        <option value="이메일">이메일</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="searchInput" placeholder="이름" required>
+                </div>
+                <div class="col-md-1">
+                    <a class="btn btn-primary btn-sm form-control" role="button" href="#">검색</a>
+                </div>
+                <div class="col-md-1">
+                    <a class="btn btn-primary btn-sm form-control" role="button" href="#">
+                        <img alt="" src="../../../html_tr2/recruit/image/reload.png" style="width: 18px;">
+                    </a>
+                </div>
+            </div>
+        </div>  
+        <br>
+        <div class="m-3">
+            <table class="table table-striped table-hover text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        </th>
+                        <th>번호</th>
+                        <th>이름</th>
+                        <th>영문이름</th>
+                        <th>생년월일</th>
+                        <th>전자우편</th>
+                        <th>전화번호</th>
+                        <th>주소</th>
+                        <th>지원분야</th>
+                        <th>경력</th>
+                        <th>희망연봉</th>
+                        <th>전공</th>
+                        <th>취미</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<tr>
+						<td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td>
+						<td>1</td>
+						<td>박 지성</td>
+						<td>Park Jisung</td>
+						<td>1983.02.05</td>
+						<td>Ji@gmail.com</td>
+						<td>010-5132-5645</td>
+						<td>서울특별시 강남구</td>
+						<td>안드로이드 앱 개발</td>
+						<td>경력</td>
+						<td>5,000만원</td>
+						<td>정보통신공학과</td>
+						<td>축구</td>
+					</tr>
+					<tr>
+						<td><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></td>
+						<td>3</td>
+						<td>이 승엽</td>
+						<td>Lee Seungyub</td>
+						<td>1984.05.15</td>
+						<td>Seung@naver.com</td>
+						<td>010-5487-4613</td>
+						<td>경기도 남양주시</td>
+						<td>프론트엔드 개발</td>
+						<td>경력</td>
+						<td>5,500만원</td>
+						<td>소프트웨어공학과</td>
+						<td>야구</td>
+					</tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="container-fluid">
+        	<div class="row">
+	        	<div class="col-md-1">
+	                <a class="btn btn-danger btn-sm form-control" role="button" href="#">삭제</a>
+	            </div>
+	            <div class="col-md-1 opacity-75">
+	                <a class="btn btn-danger btn-sm form-control" role="button" href="#">삭제</a>
+	            </div>
+	            <div class="col-md-1 offset-md-8">
+	                <a class="btn btn-success btn-sm form-control" role="button" href="#">엑셀</a>
+	            </div>
+	            <div class="col-md-1">
+	                <a class="btn btn-primary btn-sm form-control" role="button" href="#">추가</a>
+	            </div>
+	        </div>
+        </div>
+
+      </form>
+    <!-- end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
