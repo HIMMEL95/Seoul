@@ -42,10 +42,10 @@
 </head>
 <body>
     <!-- start -->
-    <form class="container-fluid">
+    <form class="m-4">
 	    <nav class="navbar fixed-top bg-primary">
 	        <div class="container-fluid">
-	            <a class="navbar-brand" href="#"  style="color: white;"><strong><em>LHN</em></strong></a>
+	            <a class="navbar-brand" href="./memberListForm.html"  style="color: white;"><strong><em>LHN</em></strong></a>
 	            <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 	                <span class="navbar-toggler-icon"></span>
 	            </button>
@@ -56,6 +56,16 @@
 	                </div>
 	                <div class="offcanvas-body">
 	                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	                    	<li class="nav-item">
+	                            <a class="nav-link active" href="./memberModForm.html">
+                                    <img src="../../../html_tr2/recruit/image/diano.jpg" class="rounded-circle" alt="" style="width: 40px;">
+                                	<span class="ps-2"><strong>이하늘</strong></span>
+                                </a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link active disabled" href="#">로그아웃</a>
+	                        </li>
+	                        <hr>
 	                        <li class="nav-item">
 	                            <a class="nav-link active" aria-current="page" href="#">로그인</a>
 	                        </li>
@@ -67,8 +77,8 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <div class="shadow-lg p-2 mb-4 bg-body rounded">
-	    	<table class="table align-middle mb-4">
+	    <div class="shadow-lg p-2 mb-4 mt-5 bg-body rounded">
+	    	<table class="table align-middle mb-4 mt-1">
                 <thead>
                     <tr>
                         <th scope="col" colspan="7" style="text-align: center;" >
@@ -363,16 +373,16 @@
 	    <div>
 	    	<div class="row">
 	    		<div class="col-md-1">
-	                <a class="btn btn-success btn-sm form-control" role="button" href="./memberListForm.html" 
+	                <a class="btn btn-success btn-sm" role="button" href="./memberListForm.html" 
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         취소
                     </a>
 	            </div>
 	            <div class="col-md-1 offset-md-10">
-	                <a class="btn btn-primary btn-sm form-control" role="button" href="./memberModForm.html" 
+	                <a class="btn btn-primary btn-sm" role="button" href="./memberModForm.html"
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         등록
-                    </a>
+					</a>
             	</div>
 	    	</div>
     	</div>
