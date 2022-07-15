@@ -9,6 +9,35 @@
 		.form-control {
 			height: 30px;
 		}
+		
+		.filebox label {
+			display: inline-block;
+			padding: .5em .75em;
+			color: white;
+			font-size: inherit;
+			line-height: normal;
+			vertical-align: middle;
+			background-color: #c1d6b0;
+			cursor: pointer;
+			border: 1px solid #ebebeb;
+			border-bottom-color: #e2e2e2;
+			border-radius: .25em;
+		}
+
+		.filebox input[type="file"] {  /* 파일 필드 숨기기 */
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip:rect(0,0,0,0);
+			border: 0;
+		}
+		
+		th {
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -38,9 +67,8 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <br><br><br>
-	    <div class="shadow-lg p-3 mb-5 bg-body rounded">
-	    	<table class="table align-middle">
+	    <div class="shadow-lg p-2 mb-4 bg-body rounded">
+	    	<table class="table align-middle mb-4">
                 <thead>
                     <tr>
                         <th scope="col" colspan="7" style="text-align: center;" >
@@ -50,43 +78,298 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>지원분야</td>
+                        <th class="bg-info">지원분야</th>
                         <td>
                         	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
                         </td>
-                        <td>경력구분</td>
+                        <th class="bg-info">경력구분</th>
                         <td>
-                            <input type="text" class="form-control" id="career" placeholder="경력" required>
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+								<option selected value="">선택</option>
+								<option value="신입">신입</option>
+								<option value="경력">경력</option>
+							</select>
                         </td>
-                        <td>희망연봉</td>
+                        <th class="bg-info">희망연봉</th>
                         <td>
                             <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <br>
-            <div class="container">
-            	<div class="row ">
-            		<h4>□ 기본정보</h4>
-            	</div>
-            	<div class="row">
-            		<div class="col">
-            		
-            		</div>
-            	</div>
-            </div>
+            <table class="table align-middle mb-5">
+                <tr>
+                    <td colspan="7">
+                        <h6><strong>□ 기본정보</strong></h6>
+                    </td>
+                </tr>
+                <tr>
+                	<td rowspan="6" align="center" width="250px;">
+          				<em>
+							<font size="3" color="red" id="text">
+								수정하고 싶은
+								<br>사진을 넣으시면 
+								<br>됩니다.
+							</font>
+						</em>
+						<div class="filebox">
+							<img src="" id="preview" width="200px;" class="m-2">
+							<label for="ex_file">업로드</label>
+							<input type="file" id="ex_file">
+						</div>
+                	</td>
+                    <th class="bg-info">이 름</th>
+                    <td>
+                    	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+                    </td>
+                    <th class="bg-info">한 문</th>
+                    <td>
+                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+                    </td>
+                </tr>
+                <tr>
+                	<!-- <td rowspan="6"></td> -->
+                    <th class="bg-info">영 어</th>
+                    <td>
+                    	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+                    </td>
+                    <th class="bg-info">생년월일</th>
+                    <td>
+                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+                    </td>
+                </tr>
+                <tr>
+                	<!-- <td rowspan="6"></td> -->
+                    <th class="bg-info">전화번호</th>
+                    <td>
+                    	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+                    </td>
+                    <th class="bg-info">비상연락망</th>
+                    <td>
+                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+                    </td>
+                </tr>
+                <tr>
+                	<!-- <td rowspan="6"></td> -->
+                    <th class="bg-info">전자우편</th>
+                    <td>
+                    	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+                    </td>
+                    <th class="bg-info">나 이</th>
+                    <td>
+                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+                    </td>
+                </tr>
+                <tr>
+                	<!-- <td rowspan="6"></td> -->
+                    <th class="bg-info">주소</th>
+                    <td colspan="3">
+                    	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+                    </td>
+                   <!--  <td>희망연봉</td>
+                    <td>
+                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+                    </td> -->
+                </tr>
+                <tr>
+                	<!-- <td rowspan="6"></td> -->
+                    <th class="bg-info">취미생활</th>
+                    <td colspan="3">
+                    	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+                    </td>
+                   <!--  <td>희망연봉</td>
+                    <td>
+                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+                    </td> -->
+                </tr>
+            </table>
+            <table class="table align-middle mb-5">
+                <tr>
+                    <td colspan="5">
+                        <h6><strong>□ 학력사항 (최신이력이 가장 위로)</strong></h6>
+                    </td>
+                    <td align="right">
+		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
+	                        등록
+	                    </a>
+                    </td>
+                </tr>
+                <tr class="bg-info text-center">
+                	<th width="200px;">기간</th>
+                    <th>출신학교</th>
+                    <th>구분</th>
+                    <th>학과</th>
+                    <th>소재지</th>
+                    <th></th>
+                </tr>
+                <tbody>
+                	<tr>
+	                    <td align="center">
+							<input type="date" name="start">
+							<font color="#0dc455" style="font-size: medium;">~</font>
+							<input type="date" name="end">
+						</td>
+	                    <td align="center">
+	                    	<input type="text" class="form-control" value="" name="collage" placeholder="OO대학교">
+						</td>
+	                    <td align="center">
+							<select id="selectEmail">
+								<option value=""> 선택
+								<option value="졸업"> 졸업
+								<option value="재학"> 재학
+								<option value="고졸"> 고졸
+								<option value="중퇴"> 중퇴
+							</select>
+						</td>
+	                    <td align="center">
+	                    	<input type="text" class="form-control" id="major" name="major" value="" placeholder="정보통신공학과">
+						</td>
+						<td align="center">
+							<input type="text" class="form-control" name="location" value="">
+						</td>
+						<td align="right">
+							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
+								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+	                        	삭제
+	                    	</a>
+						</td>
+	                </tr>
+                </tbody>
+            </table>
+            <table class="table align-middle mb-5">
+                <tr>
+                    <td colspan="3">
+                        <h6><strong>□ 교육연수</strong></h6>
+                    </td>
+                    <td align="right">
+		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
+	                        등록
+	                    </a>
+                    </td>
+                </tr>
+                <tr class="bg-info text-center">
+                	<th width="200px;">연수기간</th>
+                    <th width="300px;">연수기관</th>
+                    <th>연수과정 및 내용</th>
+                    <th width="50px;"></th>
+                </tr>
+                <tbody>
+                	<tr>
+	                    <td align="center">
+							<input type="date" name="start">
+							<font color="#0dc455" style="font-size: medium;">~</font>
+							<input type="date" name="end">
+						</td>
+	                    <td align="center">
+	                    	<input type="text" class="form-control" value="" placeholder="(주)이젠IT아카데미">
+						</td>
+	                    <td align="center">
+	                    	<textarea class="form-control" aria-label="With textarea"></textarea>
+						</td>
+						<td align="right">
+							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
+								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+	                        	삭제
+	                    	</a>
+						</td>
+	                </tr>
+                </tbody>
+            </table>
+            <table class="table align-middle mb-5">
+                <tr>
+                    <td colspan="4">
+                        <h6><strong>□ 자격사항</strong></h6>
+                    </td>
+                    <td align="right">
+		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
+	                        등록
+	                    </a>
+                    </td>
+                </tr>
+                <tr class="bg-info text-center">
+                	<th width="200px;">취득일</th>
+                    <th>종류 및 등급</th>
+                    <th>발행처</th>
+                    <th>보유기술 및 수준</th>
+                    <th></th>
+                </tr>
+                <tbody>
+                	<tr>
+	                    <td align="center">
+							<input type="date" name="start">
+						</td>
+	                    <td align="center">
+	                    	<input type="text" class="form-control" value="">
+						</td>
+	                    <td align="center">
+							<input type="text" class="form-control" value="">
+						</td>
+						<td align="center">
+							<input type="text" class="form-control" value="">
+						</td>
+						<td align="right">
+							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
+								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+	                        	삭제
+	                    	</a>
+						</td>
+	                </tr>
+                </tbody>
+            </table>
+            <table class="table align-middle mb-5">
+                <tr>
+                    <td colspan="4">
+                        <h6><strong>□ 경력사항 (4대 보험 가입 경력)</strong></h6>
+                    </td>
+                    <td align="right">
+		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
+	                        등록
+	                    </a>
+                    </td>
+                </tr>
+                <tr class="bg-info text-center">
+                	<th width="200px;">활동기간</th>
+                    <th>기관</th>
+                    <th>담당업무</th>
+                    <th>경험 및 습득역량</th>
+                    <th></th>
+                </tr>
+                <tbody>
+                	<tr>
+	                    <td align="center">
+							<input type="date" name="start">
+							<font color="#0dc455" style="font-size: medium;">~</font>
+							<input type="date" name="end">
+						</td>
+	                    <td align="center">
+	                    	<input type="text" class="form-control" value="" >
+						</td>
+	                    <td align="center">
+	                    	<input type="text" class="form-control" value="">
+						</td>
+						<td align="center">
+							<input type="text" class="form-control" value="">
+						</td>
+						<td align="right">
+							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
+								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+	                        	삭제
+	                    	</a>
+						</td>
+	                </tr>
+                </tbody>
+            </table>
 	    </div>
 	    <div>
 	    	<div class="row">
-	    		<div class="col-md-1 offset-md-1">
+	    		<div class="col-md-1">
 	                <a class="btn btn-success btn-sm form-control" role="button" href="./memberListForm.html" 
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         취소
                     </a>
 	            </div>
-	            <div class="col-md-1">
-	                <a class="btn btn-primary btn-sm form-control" role="button" href="./memberRegForm.html" 
+	            <div class="col-md-1 offset-md-10">
+	                <a class="btn btn-primary btn-sm form-control" role="button" href="./memberModForm.html" 
                         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                         등록
                     </a>
@@ -97,5 +380,20 @@
     
     <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		const reader = new FileReader();
+	
+	    reader.onload = (readerEvent) => {
+	        document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+	    };
+	
+	    document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+	
+	        const imgFile = changeEvent.target.files[0];
+	        reader.readAsDataURL(imgFile);
+			document.getElementById("text").innerHTML = " ";
+	    })
+	</script>
 </body>
 </html>
