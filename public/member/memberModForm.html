@@ -46,7 +46,7 @@
     <form class="m-4">
 	    <nav class="navbar fixed-top bg-primary">
 	        <div class="container-fluid">
-	            <a class="navbar-brand" href="./memberListForm.html"  style="color: white;"><strong><em>LHN</em></strong></a>
+	            <a class="navbar-brand ps-3 fs-4" href="./memberListForm.html"  style="color: white;"><strong><em>LHN</em></strong></a>
 	            <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 	                <span class="navbar-toggler-icon"></span>
 	            </button>
@@ -78,311 +78,181 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <div class="shadow-lg p-2 mb-4 mt-5 bg-body rounded">
-	    	<table class="table align-middle mb-4 mt-1">
-                <thead>
-                    <tr>
-                        <th scope="col" colspan="7" style="text-align: center;" >
-                            <h1><strong>입사지원서</strong></h1>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="bg-info">지원분야</th>
-                        <td>
-                        	<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
-                        </td>
-                        <th class="bg-info">경력구분</th>
-                        <td>
-                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+	    <div class="container-fluid shadow-lg p-2 mb-4 mt-5 bg-body rounded">
+	    	<div class="row m-3">
+	    		<span class="fs-2 col-md-2 offset-md-5">지원서</span>
+	    	</div>
+	    	<div class="row border-bottom m-3 p-3 text-center">
+	    		<div class="col-md-1 bg-info">
+	    			<span class="fw-bold">지원분야</span>
+	    		</div>
+	    		<div class="col-md-3">
+	    			<span>
+	    				<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
+	    			</span>
+	    		</div>
+	    		<div class="col-md-2 bg-info">
+	    			<span class="fw-bold">경력구분</span>
+	    		</div>
+	    		<div class="col-md-2">
+	    			<span>
+	    				 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
 								<option selected value="">선택</option>
 								<option value="신입">신입</option>
 								<option value="경력">경력</option>
-							</select>
-                        </td>
-                        <th class="bg-info">희망연봉</th>
-                        <td>
-                            <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table align-middle mb-5">
-                <tr>
-                    <td colspan="7">
-                        <h6><strong>□ 기본정보</strong></h6>
-                    </td>
-                </tr>
-                <tr>
-                	<td rowspan="6" align="center" width="250px;">
-          				<em>
-							<font size="3" color="red" id="text">
-								수정하고 싶은
-								<br>사진을 넣으시면 
-								<br>됩니다.
-							</font>
+						</select>
+	    			</span>
+	    		</div>
+	    		<div class="col-md-1 bg-info">
+	    			<span class="fw-bold">희망연봉</span>
+	    		</div>
+	    		<div class="col-md-3">
+	    			<span>
+	    				<input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
+	    			</span>
+	    		</div>
+	    	</div>
+			<div class="row m-3 text-center">
+				<div class="col-md-3 border align-middle">
+					<span id="text">
+						<em style="color: red;">
+							수정하고 싶은
+							<br>사진을 넣으시면 
+							<br>됩니다.
 						</em>
-						<div class="filebox">
-							<img src="" id="preview" width="200px;" class="m-2">
-							<label for="ex_file">업로드</label>
-							<input type="file" id="ex_file">
+					</span>
+					<div class="filebox">
+						<img src="" id="preview" width="200px;" class="m-2">
+						<label for="ex_file">업로드</label>
+						<input type="file" id="ex_file">
+					</div>
+				</div>	 
+				<div class="col-md m-3 p-1">
+					<div class="row mb-1">
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								성명
+							</span>
 						</div>
-                	</td>
-                    <th class="bg-info">이 름</th>
-                    <td>
-                    	<input type="text" class="form-control" id="name" placeholder="이름" required>
-                    </td>
-                    <th class="bg-info">한 문</th>
-                    <td>
-                        <input type="text" class="form-control" id="chaName" placeholder="힌문" required>
-                    </td>
-                </tr>
-                <tr>
-                	<!-- <td rowspan="6"></td> -->
-                    <th class="bg-info">영 어</th>
-                    <td>
-                    	<input type="text" class="form-control" id="engName" placeholder="영어" required>
-                    </td>
-                    <th class="bg-info">생년월일</th>
-                    <td>
-                        <input type="text" class="form-control" id="birth" placeholder="생년월일" required>
-                    </td>
-                </tr>
-                <tr>
-                	<!-- <td rowspan="6"></td> -->
-                    <th class="bg-info">전화번호</th>
-                    <td>
-                    	<input type="text" class="form-control" id="tel1" placeholder="전화번호" required>
-                    </td>
-                    <th class="bg-info">비상연락망</th>
-                    <td>
-                        <input type="text" class="form-control" id="tel2" placeholder="비상연락망" required>
-                    </td>
-                </tr>
-                <tr>
-                	<!-- <td rowspan="6"></td> -->
-                    <th class="bg-info">전자우편</th>
-                    <td>
-                    	<input type="text" class="form-control" id="email" placeholder="전자우편" required>
-                    </td>
-                    <th class="bg-info">나 이</th>
-                    <td>
-                        <input type="text" class="form-control" id="age" placeholder="나이" required>
-                    </td>
-                </tr>
-                <tr>
-                	<!-- <td rowspan="6"></td> -->
-                    <th class="bg-info">주소</th>
-                    <td colspan="3">
-                    	<input type="text" class="form-control" id="address" placeholder="주소" required>
-                    </td>
-                   <!--  <td>희망연봉</td>
-                    <td>
-                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
-                    </td> -->
-                </tr>
-                <tr>
-                	<!-- <td rowspan="6"></td> -->
-                    <th class="bg-info">취미생활</th>
-                    <td colspan="3">
-                    	<input type="text" class="form-control" id="hobby" placeholder="취미" required>
-                    </td>
-                   <!--  <td>희망연봉</td>
-                    <td>
-                        <input type="text" class="form-control" id="pay" placeholder="희망연봉" required>
-                    </td> -->
-                </tr>
-            </table>
-            <table class="table align-middle mb-5">
-                <tr>
-                    <td colspan="5">
-                        <h6><strong>□ 학력사항 (최신이력이 가장 위로)</strong></h6>
-                    </td>
-                    <td align="right">
-		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
-	                        등록
-	                    </a>
-                    </td>
-                </tr>
-                <tr class="bg-info text-center">
-                	<th width="200px;">기간</th>
-                    <th>출신학교</th>
-                    <th>구분</th>
-                    <th>학과</th>
-                    <th>소재지</th>
-                    <th></th>
-                </tr>
-                <tbody>
-                	<tr>
-	                    <td align="center">
-							<input type="date" name="start">
-							<font color="#0dc455" style="font-size: medium;">~</font>
-							<input type="date" name="end">
-						</td>
-	                    <td align="center">
-	                    	<input type="text" class="form-control" value="" name="collage" placeholder="OO대학교">
-						</td>
-	                    <td align="center">
-							<select id="selectEmail">
-								<option value=""> 선택
-								<option value="졸업"> 졸업
-								<option value="재학"> 재학
-								<option value="고졸"> 고졸
-								<option value="중퇴"> 중퇴
-							</select>
-						</td>
-	                    <td align="center">
-	                    	<input type="text" class="form-control" id="major" name="major" value="" placeholder="정보통신공학과">
-						</td>
-						<td align="center">
-							<input type="text" class="form-control" name="location" value="">
-						</td>
-						<td align="right">
-							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
-								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-	                        	삭제
-	                    	</a>
-						</td>
-	                </tr>
-                </tbody>
-            </table>
-            <table class="table align-middle mb-5">
-                <tr>
-                    <td colspan="3">
-                        <h6><strong>□ 교육연수</strong></h6>
-                    </td>
-                    <td align="right">
-		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
-	                        등록
-	                    </a>
-                    </td>
-                </tr>
-                <tr class="bg-info text-center">
-                	<th width="200px;">연수기간</th>
-                    <th width="300px;">연수기관</th>
-                    <th>연수과정 및 내용</th>
-                    <th width="50px;"></th>
-                </tr>
-                <tbody>
-                	<tr>
-	                    <td align="center">
-							<input type="date" name="start">
-							<font color="#0dc455" style="font-size: medium;">~</font>
-							<input type="date" name="end">
-						</td>
-	                    <td align="center">
-	                    	<input type="text" class="form-control" value="" placeholder="(주)이젠IT아카데미">
-						</td>
-	                    <td align="center">
-	                    	<textarea class="form-control" aria-label="With textarea"></textarea>
-						</td>
-						<td align="right">
-							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
-								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-	                        	삭제
-	                    	</a>
-						</td>
-	                </tr>
-                </tbody>
-            </table>
-            <table class="table align-middle mb-5">
-                <tr>
-                    <td colspan="4">
-                        <h6><strong>□ 자격사항</strong></h6>
-                    </td>
-                    <td align="right">
-		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
-	                        등록
-	                    </a>
-                    </td>
-                </tr>
-                <tr class="bg-info text-center">
-                	<th width="200px;">취득일</th>
-                    <th>종류 및 등급</th>
-                    <th>발행처</th>
-                    <th>보유기술 및 수준</th>
-                    <th></th>
-                </tr>
-                <tbody>
-                	<tr>
-	                    <td align="center">
-							<input type="date" name="start">
-						</td>
-	                    <td align="center">
-	                    	<input type="text" class="form-control" value="">
-						</td>
-	                    <td align="center">
-							<input type="text" class="form-control" value="">
-						</td>
-						<td align="center">
-							<input type="text" class="form-control" value="">
-						</td>
-						<td align="right">
-							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
-								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-	                        	삭제
-	                    	</a>
-						</td>
-	                </tr>
-                </tbody>
-            </table>
-            <table class="table align-middle mb-5">
-                <tr>
-                    <td colspan="4">
-                        <h6><strong>□ 경력사항 (4대 보험 가입 경력)</strong></h6>
-                    </td>
-                    <td align="right">
-		                <a class="btn btn-primary btn-sm form-control text-wrap" style="width: 3rem;" role="button" href="./memberRegForm.html">
-	                        등록
-	                    </a>
-                    </td>
-                </tr>
-                <tr class="bg-info text-center">
-                	<th width="200px;">활동기간</th>
-                    <th>기관</th>
-                    <th>담당업무</th>
-                    <th>경험 및 습득역량</th>
-                    <th></th>
-                </tr>
-                <tbody>
-                	<tr>
-	                    <td align="center">
-							<input type="date" name="start">
-							<font color="#0dc455" style="font-size: medium;">~</font>
-							<input type="date" name="end">
-						</td>
-	                    <td align="center">
-	                    	<input type="text" class="form-control" value="" >
-						</td>
-	                    <td align="center">
-	                    	<input type="text" class="form-control" value="">
-						</td>
-						<td align="center">
-							<input type="text" class="form-control" value="">
-						</td>
-						<td align="right">
-							<a class="btn btn-primary btn-sm form-control text-wrap" role="button" href="./memberRegForm.html" 
-								 style="width: 3rem; --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-	                        	삭제
-	                    	</a>
-						</td>
-	                </tr>
-                </tbody>
-            </table>
-	    </div>
-	    <div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="name" placeholder="이름" required>
+							</span>
+						</div>
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								한문
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="chiName" placeholder="한문" required>
+							</span>
+						</div>
+					</div>
+					<div class="row mb-1">
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								영문
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="engName" placeholder="영문" required>
+							</span>
+						</div>
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								생년월일
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="birth" placeholder="1990.01.01" required>
+							</span>
+						</div>
+					</div>
+					<div class="row mb-1">
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								전화번호
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="tel1" placeholder="010-0000-0000" required>
+							</span>
+						</div>
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								비상연락망
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="tel2" placeholder="010-0000-0000" required>
+							</span>
+						</div>
+					</div>
+					<div class="row mb-1">
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								전자우편
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="email" placeholder="000@gmail.com" required>
+							</span>
+						</div>
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								나이
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span>
+								<input type="text" class="form-control" id="age" placeholder="만 00세" required>
+							</span>
+						</div>
+					</div>
+					<div class="row mb-1">
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								주소
+							</span>
+						</div>
+						<div class="col-md-9">
+							<span>
+								<input type="text" class="form-control" id="address" placeholder="주소" required>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 bg-info">
+							<span class="fw-bold">
+								취미생활
+							</span>
+						</div>
+						<div class="col-md-9">
+							<span>
+								<input type="text" class="form-control" id="hobby" placeholder="취미생활" required>
+							</span>
+						</div>
+					</div>
+				</div>   	
+			</div>
+		</div>
+	    <div class="container-fluid">
 	    	<div class="row">
 	    		<div class="col-md-1">
-	                <a class="btn btn-success btn-sm" role="button" href="./memberListForm.html" 
-                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                        취소
+	                <a class="btn btn-success" type="button" href="./memberListForm.html">
+                        <i class="fa-solid fa-xmark"></i>
                     </a>
 	            </div>
-	            <div class="col-md-1 offset-md-10">
-	                <a class="btn btn-primary btn-sm" role="button" href="./memberRegForm.html"
-                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                        수정
+	            <div class="col-md-1 offset-md-10 d-md-flex justify-content-md-end">
+	                <a class="btn btn-primary" type="button" href="./memberModForm.html">
+                        <i class="fa-solid fa-registered"></i>
 					</a>
             	</div>
 	    	</div>
