@@ -47,21 +47,21 @@
 	    </nav>
 	    <!-- Tab -->
         <div class="mb-3 ms-3 mb-3 mt-5">
-            <ul class="nav nav-tabs">
-               <li class="nav-item">
+            <ul class="nav nav-tabs" role="tablist">
+               <li class="nav-item" role="presentation" id="manageGroup">
                    <a class="nav-link active" aria-current="page" href="./memberListForm.html">코드그룹관리</a>
                </li>
-               <li class="nav-item dropdown">
+               <li class="nav-item dropdown" role="presentation" id="manageCode">
                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">코드관리</a>
                    <ul class="dropdown-menu">
                        <li><a class="dropdown-item" href="#">신입</a></li>
                        <li><a class="dropdown-item" href="#">경력</a></li>
                    </ul>
                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="./memberListForm.html">회원관리</a>
+               <li class="nav-item" role="presentation" id="manageUser">
+                   <a class="nav-link" href="./memberRegForm.html">회원관리</a>
                </li>
-           </ul>
+			</ul>
         </div>
         <!-- Card Image -->
 	 	<div class="me-3 ms-3 mt-3 mb-2 shadow-lg bg-body rounded">
@@ -111,9 +111,22 @@
                     <input type="text" class="form-control" id="searchInput" placeholder="이름" required>
                 </div>
                 <div class="col-md-2">
-                    <a class="btn btn-warning" role="button" href="#">
+                    <button class="btn btn-warning" type="button" id="searching">
                    		<i class="fa-solid fa-magnifying-glass"></i>
-                   	</a>
+                   	</button>
+					<div class="toast-container position-fixed bottom-0 end-0 p-3">
+						<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+							<div class="toast-header">
+								<img src="..." class="rounded me-2" alt="...">
+								<strong class="me-auto">LHN</strong>
+								<small>10 mins ago</small>
+								<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+							</div>
+							<div class="toast-body">
+								검색중입니다....
+							</div>
+						</div>
+					</div>
                    	<a class="btn btn-primary" role="button" href="#">
                         <i class="fa-solid fa-arrow-rotate-right"></i>
                     </a>
@@ -217,17 +230,68 @@
         <div class="container-fluid">
         	<div class="row">
 	        	<div class="col-md-2">
-	                <a class="btn btn-danger" type="button" href="#">
+	                <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#realDelect">
                         <i class="fa-solid fa-trash"></i>
-                    </a>
-                    <a class="btn btn-danger" type="button" href="#">
+					</button>
+					<div class="modal fade" id="realDelect" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="applyRegist">진짜 삭제</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									진짜로 삭제 하시겠습니까?
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+									<a role="button" href="#" class="btn btn-primary">삭제</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#fakeDelect">
                         <i class="fa-solid fa-trash-can"></i>
-                    </a>
+					</button>
+					<div class="modal fade" id="fakeDelect" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="applyRegist">가짜 삭제</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									가짜로 삭제 하시겠습니까?
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+									<a role="button" href="#" class="btn btn-primary">삭제</a>
+								</div>
+							</div>
+						</div>
+					</div>
 	            </div>
 	            <div class="col-md-2 offset-md-8 pe-3" align="right">
-	                <a class="btn btn-success" role="button" href="#">
+	                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#excelDown">
                         <i class="fa-solid fa-file-excel"></i>
-                    </a>
+                    </button>
+					<div class="modal fade" id="excelDown" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="applyRegist">엑셀 파일 다운로드</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body text-start">
+									엑셀로 다운받으시겠습니까?
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+									<a role="button" href="#" class="btn btn-primary">다운로드</a>
+								</div>
+							</div>
+						</div>
+					</div>
                     <a class="btn btn-primary" role="button" href="./memberRegForm.html">
                         <i class="fa-solid fa-plus"></i>
                     </a>
@@ -238,5 +302,16 @@
     <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		const toastTrigger = document.getElementById('searching')
+		const toastLiveExample = document.getElementById('liveToast')
+		if (toastTrigger) {
+		  toastTrigger.addEventListener('click', () => {
+		    const toast = new bootstrap.Toast(toastLiveExample)
+	
+		    toast.show()
+		  })
+		}
+	</script>
 </body>
 </html>

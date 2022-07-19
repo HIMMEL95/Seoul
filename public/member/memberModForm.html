@@ -43,7 +43,7 @@
 </head>
 <body>
     <!-- start -->
-    <form class="m-4">
+	<form class="m-4 p-5">
 	    <nav class="navbar fixed-top bg-primary">
 	        <div class="container-fluid">
 	            <a class="navbar-brand ps-3 fs-4" href="./memberListForm.html"  style="color: white;"><strong><em>LHN</em></strong></a>
@@ -78,33 +78,33 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <div class="container-fluid shadow-lg p-2 mb-4 mt-5 bg-body rounded">
-	    	<div class="row m-3">
-	    		<span class="fs-2 col-md-2 offset-md-5">지원서</span>
+		<div class="card container-fluid mb-4 mt-5 shadow-lg">
+			<div class="row m-3">
+	    		<span class="fs-2 col-md-2 offset-md-5 fw-bold">지원서</span>
 	    	</div>
-	    	<div class="row border-bottom m-3 p-3 text-center">
-	    		<div class="col-md-1 bg-info">
-	    			<span class="fw-bold">지원분야</span>
+	    	<div class="row m-3 p-3 text-center">
+	    		<div class="col-md-1">
+					<label for="applyField" class="form-label fw-bold">지원분야</label>
 	    		</div>
 	    		<div class="col-md-3">
 	    			<span>
 	    				<input type="text" class="form-control" id="applyField" placeholder="지원분야" required>
 	    			</span>
 	    		</div>
-	    		<div class="col-md-2 bg-info">
-	    			<span class="fw-bold">경력구분</span>
+	    		<div class="col-md-2">
+					<label for="selectCareer" class="form-label fw-bold">경력구분</label>
 	    		</div>
 	    		<div class="col-md-2">
 	    			<span>
-	    				 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+	    				 <select class="form-select form-select-sm" id="selectCareer" aria-label=".form-select-sm example">
 								<option selected value="">선택</option>
 								<option value="신입">신입</option>
 								<option value="경력">경력</option>
 						</select>
 	    			</span>
 	    		</div>
-	    		<div class="col-md-1 bg-info">
-	    			<span class="fw-bold">희망연봉</span>
+	    		<div class="col-md-1">
+					<label for="pay" class="form-label fw-bold">희망연봉</label>
 	    		</div>
 	    		<div class="col-md-3">
 	    			<span>
@@ -112,8 +112,14 @@
 	    			</span>
 	    		</div>
 	    	</div>
-			<div class="row m-3 text-center">
-				<div class="col-md-3 border align-middle">
+		</div>
+
+		<div class="card p-3 shadow-lg mt-5 mb-3">
+			<div class="row ps-2 pt-2 pb-3 fw-bold">
+				<i class="fa-solid fa-circle-info"> 기본정보</i>
+			</div>
+			<div class="row m-2">
+				<div class="col-md-3 text-center border pt-4">
 					<span id="text">
 						<em style="color: red;">
 							수정하고 싶은
@@ -126,23 +132,19 @@
 						<label for="ex_file">업로드</label>
 						<input type="file" id="ex_file">
 					</div>
-				</div>	 
-				<div class="col-md m-3 p-1">
-					<div class="row mb-1">
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								성명
-							</span>
+				</div>
+				<div class="col-md-9 text-center">
+					<div class="row mb-2">
+						<div class="col-md-3">
+							<label for="name" class="form-label fw-bold">성명</label>
 						</div>
 						<div class="col-md-3">
 							<span>
 								<input type="text" class="form-control" id="name" placeholder="이름" required>
 							</span>
 						</div>
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								한문
-							</span>
+						<div class="col-md-3">
+							<label for="chiName" class="form-label fw-bold">한문</label>
 						</div>
 						<div class="col-md-3">
 							<span>
@@ -150,21 +152,17 @@
 							</span>
 						</div>
 					</div>
-					<div class="row mb-1">
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								영문
-							</span>
+					<div class="row mb-2">
+						<div class="col-md-3">
+							<label for="engName" class="form-label fw-bold">영문</label>
 						</div>
 						<div class="col-md-3">
 							<span>
 								<input type="text" class="form-control" id="engName" placeholder="영문" required>
 							</span>
 						</div>
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								생년월일
-							</span>
+						<div class="col-md-3">
+							<label for="birth" class="form-label fw-bold">생년월일</label>
 						</div>
 						<div class="col-md-3">
 							<span>
@@ -172,55 +170,45 @@
 							</span>
 						</div>
 					</div>
-					<div class="row mb-1">
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								전화번호
-							</span>
+					<div class="row mb-2">
+						<div class="col-md-3">
+							<label for="tel1" class="form-label fw-bold">전화번호</label>
 						</div>
 						<div class="col-md-3">
 							<span>
 								<input type="text" class="form-control" id="tel1" placeholder="010-0000-0000" required>
 							</span>
 						</div>
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								비상연락망
-							</span>
+						<div class="col-md-3">
+							<label for="email" class="form-label fw-bold">전자우편</label>
 						</div>
 						<div class="col-md-3">
 							<span>
-								<input type="text" class="form-control" id="tel2" placeholder="010-0000-0000" required>
+								<input type="email" class="form-control" id="email" placeholder="000@gmail.com" required>
 							</span>
 						</div>
 					</div>
-					<div class="row mb-1">
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								전자우편
-							</span>
+					<div class="row mb-2">
+						<div class="col-md-3">
+							<label for="hobby" class="form-label fw-bold">취미생활</label>
 						</div>
 						<div class="col-md-3">
 							<span>
-								<input type="text" class="form-control" id="email" placeholder="000@gmail.com" required>
-							</span>
-						</div>
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								나이
+								<input type="text" class="form-control" id="hobby" placeholder="취미생활" required>
 							</span>
 						</div>
 						<div class="col-md-3">
+							<label for="major" class="form-label fw-bold">전공</label>
+						</div>
+						<div class="col-md-3">
 							<span>
-								<input type="text" class="form-control" id="age" placeholder="만 00세" required>
+								<input type="email" class="form-control" id="major" placeholder="OO학과" required>
 							</span>
 						</div>
 					</div>
-					<div class="row mb-1">
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								주소
-							</span>
+					<div class="row">
+						<div class="col-md-3">
+							<label for="address" class="form-label fw-bold">주소</label>
 						</div>
 						<div class="col-md-9">
 							<span>
@@ -228,37 +216,59 @@
 							</span>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-3 bg-info">
-							<span class="fw-bold">
-								취미생활
-							</span>
-						</div>
-						<div class="col-md-9">
-							<span>
-								<input type="text" class="form-control" id="hobby" placeholder="취미생활" required>
-							</span>
-						</div>
-					</div>
-				</div>   	
+				</div>
 			</div>
 		</div>
+
 	    <div class="container-fluid">
 	    	<div class="row">
 	    		<div class="col-md-1">
-	                <a class="btn btn-success" type="button" href="./memberListForm.html">
+	                <button class="btn btn-success" data-bs-toggle="modal" type="button" data-bs-target="#cancleModal">
                         <i class="fa-solid fa-xmark"></i>
-                    </a>
+					</button>
 	            </div>
+	            <div class="modal fade" id="cancleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="applyCancle">지원서</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								지원서 작성을 취소하시겠습니까?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+								<a role="button" href="./memberListForm.html" class="btn btn-primary">확인</a>
+							</div>
+						</div>
+					</div>
+				</div>
 	            <div class="col-md-1 offset-md-10 d-md-flex justify-content-md-end">
-	                <a class="btn btn-primary" type="button" href="./memberModForm.html">
+	                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#registModal">
                         <i class="fa-solid fa-registered"></i>
-					</a>
+					</button>
             	</div>
+            	<div class="modal fade" id="registModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="applyRegist">지원서</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								지원서 작성을 완료하시겠습니까?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+								<a role="button" href="./memberModForm.html" class="btn btn-primary">등록</a>
+							</div>
+						</div>
+					</div>
+				</div>
 	    	</div>
     	</div>
     </form>
-    
     <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
