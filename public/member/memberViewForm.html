@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Regist Form</title>
+    <title>Modify Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<style type="text/css">
 		.form-control shadow {
@@ -36,15 +36,14 @@
 		}
 		
 		th {
-			text-align: center;
 			background-color: #6c9cff;
+			text-align: center;
 		}
-
 	</style>
 </head>
 <body>
     <!-- start -->
-    <form class="m-4 p-5">
+	<form class="m-4 p-5">
 	    <nav class="navbar fixed-top bg-primary">
 	        <div class="container-fluid">
 	            <a class="navbar-brand ps-3 fs-4" href="./memberListForm.html"  style="color: white;"><strong><em>LHN</em></strong></a>
@@ -65,7 +64,7 @@
                                 </a>
 	                        </li>
 	                        <li class="nav-item">
-	                            <a class="nav-link active disabled" href="./memberListForm.html">로그아웃</a>
+	                            <a class="nav-link active disabled" href="#">로그아웃</a>
 	                        </li>
 	                        <hr>
 	                        <li class="nav-item">
@@ -79,14 +78,13 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <!-- Tab -->
-        <div class="mb-3 ms-3 mb-3 mt-5">
+		<div class="mb-3 ms-3 mb-3 mt-5">
             <ul class="nav nav-tabs">
                <li class="nav-item">
-                   <a class="nav-link active" aria-current="page" href="./memberListForm.html">코드그룹관리</a>
+                   <a class="nav-link" aria-current="page" href="./memberListForm.html">코드그룹관리</a>
                </li>
                <li class="nav-item" role="presentation" id="manageCode">
-					<a class="nav-link" href="./memberModForm.html" role="button" aria-expanded="false">코드관리</a>
+					<a class="nav-link active" href="./memberModForm.html" role="button" aria-expanded="false">코드관리</a>
 				</li>
                </li>
                <li class="nav-item">
@@ -96,7 +94,7 @@
         </div>
 		<div class="card container-fluid mb-4 mt-5 shadow-lg">
 			<div class="row m-3">
-	    		<span class="fs-2 col-md-2 offset-md-5 fw-bold">회원관리</span>
+	    		<span class="fs-2 col-md-2 offset-md-5 fw-bold">지원서</span>
 	    	</div>
 	    	<div class="row m-3 p-3 text-center">
 	    		<div class="col-md-1">
@@ -156,7 +154,7 @@
 						</div>
 						<div class="col-md-3">
 							<span>
-								<input type="text" class="form-control shadow" id="name" placeholder="이름" required>
+								<input type="text" class="form-control shadow" disabled id="name" value="이하늘" required>
 							</span>
 						</div>
 						<div class="col-md-3">
@@ -285,7 +283,6 @@
 	    	</div>
     	</div>
     </form>
-    
     <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
