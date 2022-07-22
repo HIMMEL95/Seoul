@@ -49,13 +49,13 @@
         <div class="mb-3 ms-3 mb-3 mt-5">
             <ul class="nav nav-tabs" role="tablist">
                <li class="nav-item" role="presentation" id="manageGroup">
-                   <a class="nav-link active" aria-current="page" href="./memberListForm.html">코드그룹관리</a>
+                   <a class="nav-link active" aria-current="page" href="#">코드그룹관리</a>
                </li>
                <li class="nav-item" role="presentation" id="manageCode">
-                   <a class="nav-link" href="./memberModForm.html" role="button" aria-expanded="false">코드관리</a>
+                   <a class="nav-link" href="#" role="button" aria-expanded="false">코드관리</a>
                </li>
                <li class="nav-item" role="presentation" id="manageUser">
-                   <a class="nav-link" href="./memberRegForm.html">회원관리</a>
+                   <a class="nav-link" href="#">회원관리</a>
                </li>
 			</ul>
         </div>
@@ -152,7 +152,7 @@
                     </tr>
                 </thead>
                 <tbody>
-					<tr data-tr_value="1" onclick=newPage()>
+					<tr data-tr_value="1" onclick="location.href='./memberModForm.html'">
 						<td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" name="checkRow" onclick='checkSelectAll()'></td>
 						<td>1</td>
 						<td>이하늘</td>
@@ -167,7 +167,7 @@
 						<td>정보통신공학과</td>
 						<td>축구</td>
 					</tr>
-					<tr  data-tr_value="2">
+					<tr data-tr_value="2">
 						<td><input class="form-check-input" type="checkbox" name="checkRow" onclick='checkSelectAll()'></td>
 						<td>2</td>
 						<td>박지성</td>
@@ -203,7 +203,7 @@
             <div class="row">
             	<div class="col-md-2 offset-md-5">
 	                <nav aria-label="Page navigation example">
-	                    <ul class="pagination pagination-sm shadow">
+	                    <ul class="pagination pagination-sm">
 	                        <li class="page-item">
 	                            <a class="page-link" href="#" aria-label="Previous">
 	                                <span aria-hidden="true">&laquo;</span>
@@ -338,7 +338,7 @@
 		
 		// row 클릭시 페이지 이동
 		function newPage() {
-			window.location.href = './memberRegForm.html'
+			window.location.href = './memberModForm.html'
 		}
 	
 	</script>
