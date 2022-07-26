@@ -1,59 +1,88 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 <body>
     <!-- start -->
     
     <form class="p-5" method="get" action="#" id="form">
-        <div class="container-fluid">
-            <div class="row text-center">
-                <div class="col-12 mb-5">
-                	<span class="fs-1 fw-bold"><i>LHN</i></span>
-                    <!-- <img class="avatar-img rounded-circle shadow" src="../../../html_tr2/recruit/image/diano.jpg" alt="avatar" style="width: 150px;"> -->
+        <nav class="navbar navbar-expand-lg" style="background-color: #2565D0;">
+            <div class="container-fluid px-3 px-xl-5">
+                <!-- Logo START -->
+                <a class="navbar-brand" href="index.html">
+                    <img class="light-mode-item navbar-brand-item" src="../../image/Logo.png" alt="logo" style="width: 90px;">
+                </a>
+                <!-- Logo END -->
+    
+                <!-- Responsive navbar toggler -->
+                <button class="navbar-toggler ms-auto collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+    
+                <!-- Main navbar START -->
+                <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+                    <!-- Nav Main menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+                        <!-- Nav item 1 Demos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">야구</a>
+                        </li>
+    
+                        <!-- Nav item 2 Pages -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">축구</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-4 offset-4 mb-3">
-                    <input type="text" class="form-control" id="id" placeholder="admin" required>
+                <!-- Main navbar END -->
+    
+                <!-- Profile START -->
+                <div class="dropdown ms-1 ms-lg-0">
+                    <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar" style="width: 30px;">
+                    <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+                        <!-- Profile info -->
+                        <li class="px-3">
+                            <div class="d-flex align-items-center">
+                                <!-- Avatar -->
+                                <div class="avatar me-3">
+                                    <img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg" alt="avatar" style="width: 30px;">
+                                </div>
+                                <div>
+                                    <a class="fs-6 fw-bold" href="#">이하늘</a>
+                                    <p class="small m-0">himmel@gmail.com</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </li>
+                        <!-- Links -->
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Account Settings</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info me-2"></i>Help</a></li>
+                        <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="fa-solid fa-power-off me-2"></i>Sign Out</a></li>
+                        <li> <hr class="dropdown-divider"></li>
+                        <!-- Dark mode switch START -->
+                    
+                    </ul>
                 </div>
-                <div class="col-4 offset-4 mb-3">
-                    <input type="password" class="form-control" id="id" placeholder="***" required>
-                </div>
-                <div class="col-2 offset-4 form-switch mb-3">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Auto login</label>
-                </div>
-                <div class="col-4 offset-4 d-grid mb-3">
-                    <button type="button" class="btn btn-secondary">login</button>
-                </div>
-                <div class="col-4 offset-4 d-grid">
-                    <a class="fs-6" mt-2 mt-sm-0" href="#">Find Id/Password</a>
-                </div>
-                <div class="col-4 offset-4 mb-2">
-                	<hr>
-                </div>
-                <div class="col-4 offset-4 d-grid mb-3">
-                    <button type="button" class="btn btn-warning">Kakao</button>
-                </div>
-                <div class="col-4 offset-4 d-grid mb-3">
-                    <button type="button" class="btn btn-success">Naver</button>
-                </div>
-                <div class="col-4 offset-4 d-grid mb-3">
-                    <button type="button" class="btn btn-danger">Google</button>
-                </div>
-                <div class="col-4 offset-4 d-grid ">
-                    <button type="button" class="btn btn-primary">Facebook</button>
-                </div>
+                <!-- Profile START -->
             </div>
+        </nav>
+        <div class="container pt-5 mt-5">
+            df
+            <img alt="" src="../../image/background.jpg">
         </div>
     </form>
     <!-- end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
-
 </body>
 </html>
