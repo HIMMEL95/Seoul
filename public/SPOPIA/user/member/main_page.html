@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPOPIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.sports/resources/pc/2022/06/14/125812/css/generated/nsportsCss.css">
+    <link rel="stylesheet" type="text/css" href="https://ssl.pstatic.net/static.sports/resources/pc/2022/06/14/125812/css/generated/nsportsHome.css">
+	<link rel="shortcut icon" href="https://www.naver.com/favicon.ico?v=20140228" type="image/x-icon">
+	<link rel="apple-touch-icon" href="https://imgsports.pstatic.net/images/mobile/favicon_20180622/ios/iOS6_57X57_iphone3.png"> 
+	<link rel="apple-touch-icon" sizes="76x76" href="https://imgsports.pstatic.net/images/mobile/favicon_20180622/ios/iOS7_76X76_ipad.png"> 
+	<link rel="apple-touch-icon" sizes="120x120" href="https://imgsports.pstatic.net/images/mobile/favicon_20180622/ios/iOS7_120X120_iphone.png"> 
+	<link rel="apple-touch-icon" sizes="152x152" href="https://imgsports.pstatic.net/images/mobile/favicon_20180622/ios/iOS7_152X152_ipad_retina.png"> 
+	<link rel="apple-touch-icon" sizes="167x167" href="https://imgsports.pstatic.net/images/mobile/favicon_20180622/ios/iOS_167X167_iPadPro.png"> <!-- 레티나 패드 -->
+	<link rel="apple-touch-icon" sizes="180x180" href="https://imgsports.pstatic.net/images/mobile/favicon_20180622/ios/iOS_180X180_iPhone.png"> <!-- 레티나 패드 -->
+	<!-- script -->
+	<script type="text/javascript" src="https://ssl.pstatic.net/static.sports/resources/pc/2022/06/14/125812/js/generated/baseJsTop.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="https://ssl.pstatic.net/static.sports/resources/pc/2022/06/14/125812/js/lib/iscroll/iscroll.js" charset="UTF-8"></script>
+	<script>
+		try {
+			var deployPhase = 'release';
+			if (deployPhase === 'release') {
+				JEagleEyeClient.attachOnError();
+
+			} else if (deployPhase === 'dev') {
+				JEagleEyeClient.setDebugOnly(true);
+				JEagleEyeClient.attachOnError();
+
+			} else {
+				// local
+				JEagleEyeClient.attachOnError();
+			}
+		} catch (e) {
+			console.log(e);
+		}
+	</script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/static.sports/resources/pc/2022/06/14/125812/js/generated/sectionHomeJs.js" charset="UTF-8"></script>
+    <script>
+        window.displaySspAd = window.displaySspAd || new naver.sports.common.DisplayGladAd({
+            sportsAdConfig: [{
+                serviceUnitId : 'p_sports_home',
+                calpParameter : ''
+            }],
+            enablePersist : true
+        });
+    </script>
+    <script>
+    	var nsc = "sports.home";
+    </script>
+	<script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.3.0/gfp-sdk.js" async="" charset="utf-8"></script>
+	<script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.3.0/gfp-ext-nda.js" async="" charset="utf-8"></script>
+	<script type="text/javascript" id="undefined" src="https://ssl.pstatic.net/static/common/js/cs_ops_webncc.js"></script>
+	<script type="text/javascript" id="undefined" src="https://ssl.pstatic.net/static.sports/resources/pc/2022/06/14/125812/js/generated/baseJsBottomLazy.js"></script>
+	<script src="https://ssl.pstatic.net/static.gn/js/clickcrD.js" id="gnb_clickcrD" charset="utf-8"></script>
+    <link href="../user_css/main_page.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+    <!-- start -->
+    
+    <!-- 상단 Navbar -->
+	<form action="#" method="get" id="form">
+	    <nav class="navbar navbar-expand-lg" style="background-color: #2565D0;">
+            <div class="container px-3 px-xl-5">
+                <!-- Logo START -->
+                <a class="navbar-brand" href="index.html">
+                    <img class="light-mode-item navbar-brand-item" src="../../image/SPOPIA_white.png" alt="logo" style="width: 90px;">
+                </a>
+                <!-- Logo END -->
+    
+                <!-- Responsive navbar toggler -->
+                <button class="navbar-toggler ms-auto collapsed border-0 me-2"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </button>
+    
+                <!-- Main navbar START -->
+                <div class="navbar-collapse w-100 collapse me-2" id="navbarCollapse">
+                    <!-- Nav Main menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+                        <!-- Nav item 1 Demos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active text-white fw-bold" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">야구</a>
+                        </li>
+    
+                        <!-- Nav item 2 Pages -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active text-white fw-bold" href="#" id="pagesMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">축구</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Main navbar END -->
+    
+                <!-- Profile START -->
+                <div class="dropdown">
+                    <ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
+                        <li class="me-2">
+                            <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar" style="width: 30px;">
+                            </a>
+                            <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+                                <!-- Profile info -->
+                                <li class="px-3">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Avatar -->
+                                        <div class="avatar me-3">
+                                            <img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg" alt="avatar" style="width: 30px;">
+                                        </div>
+                                        <div>
+                                            <a class="fs-6 fw-bold" href="#">이하늘</a>
+                                            <p class="small m-0">himmel@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </li>
+                                <!-- Links -->
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Edit Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i>Account Settings</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-info me-2"></i>Help</a></li>
+                                <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="fa-solid fa-power-off me-2"></i>Sign Out</a></li>
+                                <li> <hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Sign In</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"><i class="fa-solid fa-user-plus me-2"></i>Sign Up</a>
+                                </li>
+                                <!-- Dark mode switch START -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Profile START -->
+            </div>
+        </nav>
+	    
+		<div class="container" role="main">
+			<div id="spot">
+				<div class="home_spot mt-4">
+					<script id="_section_home_livebox_score_card_template" type="text/x-handlebars-template">
+						<div class="live_box_card {{#if thumbnailImage}}type_live{{/if}}">
+							<div class="category">{{categoryName}}</div>
+							{{#if thumbnailImage}}
+							<div class="image_area">
+								<span class="image"><img src="{{thumbnailImage}}" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+								<span class="common_live_tag"><span class="blind">LIVE</span></span>
+								{{#if liveTotalView}}<span class="live_viewer"><span class="number">{{numberFormat liveTotalView}}</span> 시청</span>{{/if}}
+							</div>
+							{{/if}}
+							<div class="match_info">
+								<div class="match_status">
+									{{#if liveSchedule}}
+										{{#if thumbnailImage}}
+											<span class="status">{{statusInfo}}</span>
+											<span class="league">{{categoryName}}</span>
+										{{else}}
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+											<span class="status">{{statusInfo}}</span>
+										{{/if}}
+									{{else}}
+									<span class="versus">VS</span>
+									<span class="status">{{gameTimeHHmm}} 예정</span>
+									{{/if}}
+								</div>
+								<div class="away_team">
+									{{#if liveSchedule}}
+									<span class="score"><span class="point">{{teamScore1}}</span>
+									{{#ifCond homeTeamPenaltyScore '>=' 0 }}
+										<i class="pso"><span class="blind">승부차기</span>{{homeTeamPenaltyScore}}</i>
+									{{/ifCond}}
+								</span>
+									{{/if}}
+									<span class="team">
+										{{#if teamLogo1}}
+										<span class="emblem"><img src="{{teamLogo1}}" width="30" height="30" alt="{{teamName}}" onerror="imageOnError(this);" ></span>
+										{{/if}}
+									<span class="name">{{teamName1}}</span>
+								</span>
+								</div>
+								<div class="home_team">
+									{{#if liveSchedule}}
+									<span class="score"><span class="point">{{teamScore2}}</span>
+									{{#ifCond awayTeamPenaltyScore '>=' 0 }}
+										<i class="pso"><span class="blind">승부차기</span>{{awayTeamPenaltyScore}}</i>
+									{{/ifCond}}
+								</span>
+									{{/if}}
+									<span class="team">
+										{{#if teamLogo2}}
+										<span class="emblem"><img src="{{teamLogo2}}" width="30" height="30" alt="{{teamName2}}" onerror="imageOnError(this);"></span>
+										{{/if}}
+									<span class="name">{{teamName2}}</span>
+								</span>
+								</div>
+							</div>
+							<a href="https://m.sports.naver.com" + "{{pcUrl}}" class="link_live" aria-label="새창"
+							onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					</script>
+
+					<script id="_section_home_livebox_radio_card_template" type="text/x-handlebars-template">
+						<div class="live_box_card type_live">
+							<div class="category">온에어</div>
+							<div class="image_area">
+								<span class="image"><img src="{{thumbnailImage}}" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+								<span class="common_live_tag"><span class="blind">LIVE</span></span>
+							</div>
+							<div class="onair_info">
+								<div class="onair_title">{{radioTitle}}</div>
+								<div class="onair_press">
+									<span class="channel">{{programTitle}}</span>
+									<span class="cast">{{casters}}</span>
+								</div>
+							</div>
+							<a href="https://m.sports.naver.com" + "{{pcUrl}}" class="link_live" aria-label="새창"
+							onclick="clickcr(this, 'lbx.match', '', '', event);" {{#ifCond visibleUrlEnable '==' 'Y'}} target="_blank" {{/ifCond}} ><span class="blind">영상 보기</span></a>
+						</div>
+					</script>
+
+					<script id="_section_home_livebox_text_card_template" type="text/x-handlebars-template">
+						<div class="live_box_card {{#if thumbnailImage}}type_live{{/if}}">
+							
+							{{#ifCond categoryId '==' 'beijing2022'}}
+								<div class="category"><span class="beijing2022">{{categoryName}}</span></div>
+								{{#if thumbnailImage}}
+									<div class="image_area">
+										<span class="image"><img src="{{thumbnailImage}}" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+										<span class="common_live_tag"><span class="blind">LIVE</span></span>
+										{{#if liveTotalView}}<span class="live_viewer"><span class="number">{{numberFormat liveTotalView}}</span> 시청</span>{{/if}}
+									</div>
+								{{/if}}
+								<div class="general_info">
+									{{#unless thumbnailImage}}
+										<div class="match_status">
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+										</div>
+									{{/unless}}
+									{{#if thumbnailImage}}
+										{{#if matchTitle}}
+											<div class="sub_title">{{title}}</div>
+											<div class="main_title">{{matchTitle}}</div>
+										{{else}}
+											<div class="main_title">{{title}}</div>
+										{{/if}}
+										<div class="match_press">
+											<span class="beijing2022">{{categoryName}}</span>
+										</div>
+									{{else}}
+										{{#if matchTitle}}
+											<div class="main_title">{{title}}</div>
+											<div class="sub_title">{{matchTitle}}</div>
+										{{else}}
+											<div class="main_title">{{title}}</div>
+										{{/if}}
+									{{/if}}
+								</div>
+								<a href="https://m.sports.naver.com" + "{{pcUrl}}" class="link_live" aria-label="새창"
+								onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+							{{else}}
+								<div class="category">{{categoryName}}</div>
+									{{#if thumbnailImage}}
+										<div class="image_area">
+											<span class="image"><img src="{{thumbnailImage}}" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+											{{#if liveTotalView}}<span class="live_viewer"><span class="number">{{numberFormat liveTotalView}}</span> 시청</span>{{/if}}
+										</div>
+									{{/if}}
+								<div class="general_info">
+									{{#unless thumbnailImage}}
+										<div class="match_status">
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+										</div>
+									{{/unless}}
+									<div class="match_title">{{title}}</div>
+									{{#if thumbnailImage}}
+										<div class="match_press">
+											<span class="league">{{categoryName}}</span>
+										</div>
+									{{/if}}
+								</div>
+								<a href="https://m.sports.naver.com" + "{{pcUrl}}" class="link_live" aria-label="새창"
+								onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+							{{/ifCond}}
+						</div>
+					</script>
+
+
+					<script id="_section_home_livebox_text_before_card_template" type="text/x-handlebars-template">
+						<div class="live_box_card">
+							
+							{{#ifCond categoryId '==' 'beijing2022'}}
+								<div class="category"><span class="beijing2022">{{categoryName}}</span></div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">{{gameTimeHHmm}} 예정</span>
+									</div>
+									<div class="main_title">{{title}}</div>
+									{{#if matchTitle}}
+										<div class="sub_title">{{matchTitle}}</div>
+									{{/if}}
+								</div>
+								<a href="{{pcUrl}}" class="link_live" aria-label="새창"
+								onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+							{{else}}
+								<div class="category">{{categoryName}}</div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">{{gameTimeHHmm}} 예정</span>
+									</div>
+									<div class="match_title">{{title}}</div>
+								</div>
+								<a href="https://m.sports.naver.com" + "{{pcUrl}}" class="link_live" aria-label="새창"
+								onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+							{{/ifCond}}
+						</div>
+					</script>
+
+					<script id="_section_home_livebox_scroll_pagination_template" type="text/x-handlebars-template">
+						<li class="page_item" {{#ifCond pageIndex
+						'==' 1}} aria-current="location" {{/ifCond}} data-pageNum="{{pageIndex}}" ><span
+							class="blind">{{pageIndex}}</span></li>
+					</script>
+
+
+					<div class="home_live_box ps-3" style="display:block" id="_section_home_livebox_root">
+						<div class="live_slider">
+							<h2 class="blind">오늘의 경기</h2>
+							<div class="live_card_list new_scroll" id="_section_home_live_scroll_holder" style="touch-action: none;">
+								<div class="scroller" id="_section_home_live_scroll" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+						<div class="live_box_card type_live">
+							
+								<div class="category">제77회 청룡기</div>
+										<div class="image_area">
+											<span class="image"><img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9751731/live/3480910/record/16854693/thumbnail/image_1080.jpg" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+											<span class="live_viewer"><span class="number">19,877</span> 시청</span>
+										</div>
+								<div class="general_info">
+									<div class="match_title">충암고 vs 세광고 - 제77회 청룡기(SPOTV 고교야구 시리즈)</div>
+									<div class="match_press">
+										<span class="league">제77회 청룡기</span>
+									</div>
+								</div>
+								<a href="/game/20220722SPOBB1" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card type_live">
+							
+								<div class="category">테니스</div>
+										<div class="image_area">
+											<span class="image"><img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177554/live/3485436/record/16854866/thumbnail/image_1080.jpg" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+											<span class="live_viewer"><span class="number">2,396</span> 시청</span>
+										</div>
+								<div class="general_info">
+									<div class="match_title">제20회 오동도배 여수오픈 테니스대회</div>
+										<div class="match_press">
+											<span class="league">테니스</span>
+										</div>
+								</div>
+								<a href="/game/20220722TNS1" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card type_live">
+							
+								<div class="category">제55회 대통령배 전국중고배구대회</div>
+										<div class="image_area">
+											<span class="image"><img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177523/live/3487315/record/16854818/thumbnail/image_1080.jpg" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+											<span class="live_viewer"><span class="number">1,920</span> 시청</span>
+										</div>
+								<div class="general_info">
+									<div class="match_title">제55회 대통령배 전국중고배구대회 16세이하 결승</div>
+										<div class="match_press">
+											<span class="league">제55회 대통령배 전국중고배구대회</span>
+										</div>
+								</div>
+								<a href="/game/20220722KMHV1" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card type_live">
+							
+								<div class="category">2022 대한항공배 전국대학배구</div>
+										<div class="image_area">
+											<span class="image"><img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3480858/record/16854406/thumbnail/image_1080.jpg" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
+											<span class="common_live_tag"><span class="blind">LIVE</span></span>
+											<span class="live_viewer"><span class="number">1,772</span> 시청</span>
+										</div>
+								<div class="general_info">
+									<div class="match_title">2022 대한항공배 전국대학배구</div>
+										<div class="match_press">
+											<span class="league">2022 대한항공배 전국대학배구</span>
+										</div>
+								</div>
+								<a href="/game/20220722VOLLEYBALL1" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card">
+							
+								<div class="category">KLPGA</div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">12:00 예정</span>
+									</div>
+									<div class="match_title">호반 서울신문 위민스 클래식</div>
+								</div>
+								<a href="/game/klpga2022070021/leaderboard" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card">
+							
+								<div class="category">제77회 청룡기</div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">13:00 예정</span>
+									</div>
+									<div class="match_title">대구상원고 vs 장충고 - 제77회 청룡기(SPOTV 고교야구 시리즈)</div>
+								</div>
+								<a href="/game/20220722SPOBB2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card ">
+							<div class="category">KBO</div>
+							<div class="match_info">
+								<div class="match_status">
+									<span class="versus">VS</span>
+									<span class="status">18:30 예정</span>
+								</div>
+								<div class="away_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/HT.png" width="30" height="30" alt="" onerror="imageOnError(this);"></span>
+									<span class="name">KIA</span>
+								</span>
+								</div>
+								<div class="home_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/LT.png" width="30" height="30" alt="롯데" onerror="imageOnError(this);"></span>
+									<span class="name">롯데</span>
+								</span>
+								</div>
+							</div>
+							<a href="/game/20220722HTLT02022/relay" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card ">
+							<div class="category">KBO</div>
+							<div class="match_info">
+								<div class="match_status">
+									<span class="versus">VS</span>
+									<span class="status">18:30 예정</span>
+								</div>
+								<div class="away_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/KT.png" width="30" height="30" alt="" onerror="imageOnError(this);"></span>
+									<span class="name">KT</span>
+								</span>
+								</div>
+								<div class="home_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/HH.png" width="30" height="30" alt="한화" onerror="imageOnError(this);"></span>
+									<span class="name">한화</span>
+								</span>
+								</div>
+							</div>
+							<a href="/game/20220722KTHH02022/relay" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card ">
+							<div class="category">KBO</div>
+							<div class="match_info">
+								<div class="match_status">
+									<span class="versus">VS</span>
+									<span class="status">18:30 예정</span>
+								</div>
+								<div class="away_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/LG.png" width="30" height="30" alt="" onerror="imageOnError(this);"></span>
+									<span class="name">LG</span>
+								</span>
+								</div>
+								<div class="home_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/NC.png" width="30" height="30" alt="NC" onerror="imageOnError(this);"></span>
+									<span class="name">NC</span>
+								</span>
+								</div>
+							</div>
+							<a href="/game/20220722LGNC02022/relay" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card ">
+							<div class="category">KBO</div>
+							<div class="match_info">
+								<div class="match_status">
+									<span class="versus">VS</span>
+									<span class="status">18:30 예정</span>
+								</div>
+								<div class="away_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/SK.png" width="30" height="30" alt="" onerror="imageOnError(this);"></span>
+									<span class="name">SSG</span>
+								</span>
+								</div>
+								<div class="home_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/OB.png" width="30" height="30" alt="두산" onerror="imageOnError(this);"></span>
+									<span class="name">두산</span>
+								</span>
+								</div>
+							</div>
+							<a href="/game/20220722SKOB02022/relay" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card ">
+							<div class="category">KBO</div>
+							<div class="match_info">
+								<div class="match_status">
+									<span class="versus">VS</span>
+									<span class="status">18:30 예정</span>
+								</div>
+								<div class="away_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/SS.png" width="30" height="30" alt="" onerror="imageOnError(this);"></span>
+									<span class="name">삼성</span>
+								</span>
+								</div>
+								<div class="home_team">
+									<span class="team">
+										<span class="emblem"><img src="https://sports-phinf.pstatic.net/team/kbo/default/WO.png" width="30" height="30" alt="키움" onerror="imageOnError(this);"></span>
+									<span class="name">키움</span>
+								</span>
+								</div>
+							</div>
+							<a href="/game/20220722SSWO02022/relay" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card">
+							
+								<div class="category">바둑</div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">13:00 예정</span>
+									</div>
+									<div class="match_title">제27기 GS칼텍스배 프로기전</div>
+								</div>
+								<a href="/game/20220722BADUK1" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card">
+							
+								<div class="category">바둑</div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">19:00 예정</span>
+									</div>
+									<div class="match_title">부안 새만금잼버리 vs 순천만국가정원 - NH농협은행 한국여자바둑리그</div>
+								</div>
+								<a href="/game/20220722BAUDK2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					
+						<div class="live_box_card">
+							
+								<div class="category">바둑</div>
+								<div class="general_info">
+									<div class="match_status">
+										<span class="status">23:00 예정</span>
+									</div>
+									<div class="match_title">제15기 YES24배 고교동문전(녹방)</div>
+								</div>
+								<a href="/game/20220722BADUK3" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+						</div>
+					</div>
+							</div>
+						</div>
+						<button type="button" class="button_prev" style="display: none; left: -52px; transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s;">
+							<span class="blind">이전</span>
+							<span class="page">0</span>
+						</button>
+						<button type="button" class="button_next" style="right: -52px; transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s;">
+							<span class="blind">다음</span>
+							<span class="page">14</span>
+						</button>
+					</div>
+
+
+					<script>
+						naver = window.naver || {};
+						naver.sports = naver.sports || {};
+						naver.sports.section = naver.sports.section || {};
+						naver.sports.section.home = naver.sports.section.home || {};
+						naver.sports.section.home.LiveBox = eg.Class({
+
+							_SCROLL_PANNEL_SIZE: 4,
+							_EMPTY_LIVEBOX_CARD: "<div class=\"live_box_card\"></div>",
+
+							construct: function (htOption) {
+								this._initVars(htOption);
+								this._initHandlebarsTemplate();
+								this._init();
+							},
+							_initVars: function (htOption) {
+								this._liveBoxList = htOption.liveBoxList || {};
+								this._liveBoxBeforeList = htOption.liveBoxBeforeList || {};
+								this._totalCardCnt = 0;
+							},
+							_initHandlebarsTemplate: function () {
+								this._sectionHomeLiveBoxTopScoreTemplate = Handlebars.compile($("#_section_home_livebox_score_card_template").html());
+								this._sectionHomeLiveBoxTopRadioTemplate = Handlebars.compile($("#_section_home_livebox_radio_card_template").html());
+								this._sectionHomeLiveBoxTopTextTemplate = Handlebars.compile($("#_section_home_livebox_text_card_template").html());
+								this._sectionHomeLiveBoxTopTextBeforeTemplate = Handlebars.compile($("#_section_home_livebox_text_before_card_template").html());
+								this._sectionHomeLiveBoxFlickingPaginationTemplate = Handlebars.compile($("#_section_home_livebox_scroll_pagination_template").html());
+							},
+							_init: function () {
+								(naver.sports.team && naver.sports.team.MyTeam) ?
+									new naver.sports.team.MyTeam({
+										"callbackFn": $.proxy(function (subscribeList) {
+											this._sort(subscribeList);
+											this._draw();
+										}, this)
+									}) : this._draw();
+							},
+
+							_sort: function (subscribeList) {
+
+								this._liveBoxList = _.sortBy(this._liveBoxList, function (data) {
+									var isSubscribeTeam = _.some(subscribeList, function (subscribeTeam) {
+										return data.fixTopPosition == 'Y' || (
+											subscribeTeam.categoryId == data.categoryId
+											&& (subscribeTeam.teamCode == data.teamCode1 || subscribeTeam.teamCode == data.teamCode2));
+									});
+
+									return isSubscribeTeam ? 0 : 1;
+								});
+
+								this._liveBoxBeforeList = _.sortBy(this._liveBoxBeforeList, function (data) {
+									var isSubscribeTeam = _.some(subscribeList, function (subscribeTeam) {
+										return subscribeTeam.categoryId == data.categoryId
+											&& (subscribeTeam.teamCode == data.teamCode1 || subscribeTeam.teamCode == data.teamCode2);
+									});
+
+									return isSubscribeTeam ? 0 : 1;
+								});
+
+							},
+
+							_draw: function () {
+								if (this._liveBoxList.length < 1) {
+									$("#_section_home_livebox_root").hide();
+									return;
+								}
+
+								$("#_section_home_live_scroll").html("");
+
+								var cards = _.map(this._liveBoxList.concat(this._liveBoxBeforeList), $.proxy(function (item) {
+									if (item.contentsId.indexOf("radio") > -1) {
+										return this._sectionHomeLiveBoxTopRadioTemplate(item);
+									} else if (item.contentsId.indexOf("schedule") > -1 && item.teamName1.length > 0) {
+										return this._sectionHomeLiveBoxTopScoreTemplate(item);
+									} else if (!item.liveSchedule) {
+										return this._sectionHomeLiveBoxTopTextBeforeTemplate(item);
+									} else {
+										return this._sectionHomeLiveBoxTopTextTemplate(item);
+									}
+								}, this));
+
+								this._totalCardCnt = cards.length;
+
+								var emptyCardSize = this._SCROLL_PANNEL_SIZE - this._totalCardCnt;
+								for (var i = 0; i < emptyCardSize; ++i) {
+									cards.push(this._EMPTY_LIVEBOX_CARD);
+								}
+
+								_.each(cards, $.proxy(function (card) {
+									$("#_section_home_live_scroll").append(card);
+
+								}, this));
+
+								if (cards.length > 4) {
+									this._initScrolling();
+								}
+
+								// $("#veta_skin_left").length > 0 ? $("#veta_skin_left").css("top", "316px") : "";
+								// $("#veta_skin_right").length > 0 ? $("#veta_skin_right").css("top", "316px") : "";
+							},
+
+							_initScrolling: function () {
+								this._scroll = new IScroll("#_section_home_live_scroll_holder", {
+									scrollbars: false,
+									scrollX: true,
+									scrollY: false,
+									mouseWheel: true,
+									snap: $('.live_box_card'),
+									bounce: true,
+									preventDefault: true,
+								});
+								this._prevButton = $("#_section_home_livebox_root button.button_prev");
+								this._nextButton = $("#_section_home_livebox_root button.button_next");
+
+								// cards.length > 4 일 때 init 발생, 초기 두 개의 값을 통해 card 간 padding 계산
+								var pages = this._scroll.pages;
+								var cardPadding = pages[0][0].x - pages[1][0].x;
+								var pageLength = this._scroll.pages.length;
+								var buttonHideCss = "-52px";
+								var buttonShowCss = "0px";
+
+								//  좌우 여백으로 인한 버그로 인해 마지막 카드와 이전 카드 사이 간격이 일정하지 않을경우 이전 카드를 마지막 카드로 대체하는 코드
+								if (pages[pageLength - 2][0].x - pages[pageLength - 1][0].x < cardPadding) {
+									pages[pageLength - 2] = pages[pageLength - 1];
+									pages.splice(pageLength-1, 1);
+								}
+
+								/* events */
+								var fnFadeOut = $.proxy(function () {
+									// 양쪽 끝에서 스크롤할 시 scrollEnd 이벤트가 발생 안되는 버그에 대한 방어 코드
+									this._nextButton.find("span.page").fadeOut(200).delay(200).fadeIn();
+									this._prevButton.find("span.page").fadeOut(200).delay(200).fadeIn();
+								}, this);
+
+								var fnRearrange = $.proxy(function () {
+									// 화면에 보이는 마지막 카드 인덱스
+									var lastCardIndex = Math.min(Math.floor((-this._scroll.currentPage.x + this._scroll.wrapperOffset.left + $(window).width()) / cardPadding), this._totalCardCnt);
+									var prevCnt = Math.ceil((-this._scroll.currentPage.x + this._scroll.wrapperOffset.left) / cardPadding);
+									var nextCnt = this._totalCardCnt - lastCardIndex;
+									prevCnt > 0 ? this._prevButton.show() : this._prevButton.hide();
+									nextCnt > 0 ? this._nextButton.show() : this._nextButton.hide();
+									this._prevButton.find("span.page").html(prevCnt);
+									this._nextButton.find("span.page").html(nextCnt);
+									this._prevButton.find("span.page").fadeIn();
+									this._nextButton.find("span.page").fadeIn();
+								}, this);
+
+								this._scroll.on('scrollEnd', fnRearrange);
+								this._scroll.on('scrollCancel', fnRearrange);
+								this._scroll.on('scrollStart', fnFadeOut);
+
+								// 현재 창 비활성화시 발생하는 커서 버그 방어 코드
+								$("#_section_home_livebox_root").hover(
+									$.proxy(function () {
+										this._nextButton.css({right: buttonShowCss});
+										this._prevButton.css({left: buttonShowCss});
+									}, this),
+									$.proxy(function () {
+										this._nextButton.css({right: buttonHideCss});
+										this._prevButton.css({left: buttonHideCss});
+									}, this));
+								$(window).on("resize", fnRearrange);
+								fnRearrange();
+
+								/* buttons */
+								this._prevButton.on("click", $.proxy(function (e) {
+									clickcr(this, 'lbx.search', '', '', e);
+									fnFadeOut();
+									this._scroll.goToPage(Math.max(this._scroll.currentPage.pageX - this._SCROLL_PANNEL_SIZE, 0), 0, 200);
+								}, this));
+
+								this._nextButton.on("click", $.proxy(function (e) {
+									clickcr(this, 'lbx.search', '', '', e);
+									fnFadeOut();
+									this._scroll.goToPage(Math.min(this._scroll.currentPage.pageX + this._SCROLL_PANNEL_SIZE, this._totalCardCnt), 0, 200);
+								}, this));
+
+							}
+
+						});
+						window.livebox = new naver.sports.section.home.LiveBox({
+							"liveBoxList": [{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbaseballetc","categoryName":"제77회 청룡기","gameId":"20220722SPOBB1","statusCode":"STARTED","statusInfo":"","cancel":"N","isEnableNvm":"Y","gameInfo":null,"gameDateTime":"2022-07-22 10:00:00","gameTimeHHmm":"10:00","title":"충암고 vs 세광고 - 제77회 청룡기(SPOTV 고교야구 시리즈)","stadium":"목동야구장","isScheduledTv":"Y","isOnairTv":"Y","isOnairText":"N","liveTotalView":19877,"liveCurrentView":3481,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722SPOBB1","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,376000000],"displayType":"text","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9751731/live/3480910/record/16854693/thumbnail/image_1080.jpg","pcUrl":"/game/20220722SPOBB1","gameContents":{"homeStarterId":"","winPitcherId":"","winPitcherName":"","awayStarterId":"","losePitcherName":"","homeStarterName":"","awayStarterName":"","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":"충암고 vs 세광고 - 제77회 청룡기(SPOTV 고교야구 시리즈)","liveSchedule":true,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_0","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722SPOBB1","thumbnailImage":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9751731/live/3480910/record/16854693/thumbnail/image_1080.jpg"},{"superCategoryId":"general","upperCategoryId":"others","categoryId":"etc","categoryName":"테니스","gameId":"20220722TNS1","statusCode":"STARTED","statusInfo":"","cancel":"N","isEnableNvm":"N","gameInfo":null,"gameDateTime":"2022-07-22 10:00:00","gameTimeHHmm":"10:00","title":"제20회 오동도배 여수오픈 테니스대회","stadium":"진남테니스장","isScheduledTv":"Y","isOnairTv":"Y","isOnairText":"N","liveTotalView":2396,"liveCurrentView":233,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722TNS1","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,467000000],"displayType":"text","mainSubPriority":1,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177554/live/3485436/record/16854866/thumbnail/image_1080.jpg","pcUrl":"/game/20220722TNS1","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"제20회 오동도배 여수오픈 테니스대회","liveSchedule":true,"mainSubType":"SUB","whiteList":false,"dataId":"AUTO_1","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722TNS1","thumbnailImage":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177554/live/3485436/record/16854866/thumbnail/image_1080.jpg"},{"superCategoryId":"volleyball","upperCategoryId":"kvolleyball","categoryId":"volleyballetc","categoryName":"제55회 대통령배 전국중고배구대회","gameId":"20220722KMHV1","statusCode":"STARTED","statusInfo":"","cancel":"N","isEnableNvm":"N","gameInfo":null,"gameDateTime":"2022-07-22 10:00:00","gameTimeHHmm":"10:00","title":"제55회 대통령배 전국중고배구대회 16세이하 결승","stadium":"원통 체육관","isScheduledTv":"Y","isOnairTv":"Y","isOnairText":"N","liveTotalView":1920,"liveCurrentView":172,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722KMHV1","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,443000000],"displayType":"text","mainSubPriority":1,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177523/live/3487315/record/16854818/thumbnail/image_1080.jpg","pcUrl":"/game/20220722KMHV1","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"제55회 대통령배 전국중고배구대회 16세이하 결승","liveSchedule":true,"mainSubType":"SUB","whiteList":false,"dataId":"AUTO_2","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722KMHV1","thumbnailImage":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177523/live/3487315/record/16854818/thumbnail/image_1080.jpg"},{"superCategoryId":"volleyball","upperCategoryId":"kvolleyball","categoryId":"volleyballetc","categoryName":"2022 대한항공배 전국대학배구","gameId":"20220722VOLLEYBALL1","statusCode":"STARTED","statusInfo":"","cancel":"N","isEnableNvm":"N","gameInfo":null,"gameDateTime":"2022-07-22 09:30:00","gameTimeHHmm":"09:30","title":"2022 대한항공배 전국대학배구","stadium":"무안스포츠파크 실내체육관","isScheduledTv":"Y","isOnairTv":"Y","isOnairText":"N","liveTotalView":1772,"liveCurrentView":147,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722VOLLEYBALL1","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,434000000],"displayType":"text","mainSubPriority":1,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3480858/record/16854406/thumbnail/image_1080.jpg","pcUrl":"/game/20220722VOLLEYBALL1","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"2022 대한항공배 전국대학배구","liveSchedule":true,"mainSubType":"SUB","whiteList":false,"dataId":"AUTO_3","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722VOLLEYBALL1","thumbnailImage":"https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3480858/record/16854406/thumbnail/image_1080.jpg"}],
+							"liveBoxBeforeList": [{"superCategoryId":"general","upperCategoryId":"golf","categoryId":"klpga","categoryName":"KLPGA","gameId":"klpga2022070021","statusCode":"STARTED","statusInfo":"202207222022070021KLPGA","cancel":"N","isEnableNvm":"Y","gameInfo":"{\"tournamentInfo\":{\"startDate\":{\"year\":2022,\"month\":7,\"day\":22,\"dateStr\":\"2022-07-22\"},\"endDate\":{\"year\":2022,\"month\":7,\"day\":24,\"dateStr\":\"2022-07-24\"},\"gameType\":\"stroke\",\"currentRound\":{\"roundNo\":1,\"status\":\"inprogress\"},\"stadium\":\"H1\",\"earning\":{\"currency\":\"KRW\",\"total\":\"1,000,000,000원\",\"win\":\"-\"},\"courses\":[{\"name\":\"마운틴/레이크\",\"holes\":[{\"holeNo\":1,\"par\":4,\"yard\":385},{\"holeNo\":2,\"par\":4,\"yard\":363},{\"holeNo\":3,\"par\":4,\"yard\":387},{\"holeNo\":4,\"par\":4,\"yard\":343},{\"holeNo\":5,\"par\":3,\"yard\":161},{\"holeNo\":6,\"par\":5,\"yard\":515},{\"holeNo\":7,\"par\":4,\"yard\":390},{\"holeNo\":8,\"par\":3,\"yard\":178},{\"holeNo\":9,\"par\":5,\"yard\":531},{\"holeNo\":10,\"par\":4,\"yard\":392},{\"holeNo\":11,\"par\":5,\"yard\":536},{\"holeNo\":12,\"par\":4,\"yard\":388},{\"holeNo\":13,\"par\":4,\"yard\":387},{\"holeNo\":14,\"par\":3,\"yard\":164},{\"holeNo\":15,\"par\":4,\"yard\":366},{\"holeNo\":16,\"par\":5,\"yard\":607},{\"holeNo\":17,\"par\":3,\"yard\":196},{\"holeNo\":18,\"par\":4,\"yard\":365}]}]},\"tournamentBestRecords\":{\"greenPct\":null,\"driveAcc\":null,\"driveAvg\":null,\"puttAvg\":null},\"winnerInfo\":null,\"defendingChampion\":null}","gameDateTime":"2022-07-22 12:00:00","gameTimeHHmm":"12:00","title":"호반 서울신문 위민스 클래식","stadium":"H1","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/golf/gamecenter/klpga/index?gameId=klpga2022070021","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,458000000],"displayType":"text","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":null,"pcUrl":"/game/klpga2022070021/leaderboard","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"호반 서울신문 위민스 클래식","liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_4","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.klpga2022070021","thumbnailImage":""},{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbaseballetc","categoryName":"제77회 청룡기","gameId":"20220722SPOBB2","statusCode":"BEFORE","statusInfo":"","cancel":"N","isEnableNvm":"Y","gameInfo":null,"gameDateTime":"2022-07-22 13:00:00","gameTimeHHmm":"13:00","title":"대구상원고 vs 장충고 - 제77회 청룡기(SPOTV 고교야구 시리즈)","stadium":"목동야구장","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722SPOBB2","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,387000000],"displayType":"text","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722SPOBB2","gameContents":{"homeStarterId":"","winPitcherId":"","winPitcherName":"","awayStarterId":"","losePitcherName":"","homeStarterName":"","awayStarterName":"","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":"대구상원고 vs 장충고 - 제77회 청룡기(SPOTV 고교야구 시리즈)","liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_5","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722SPOBB2","thumbnailImage":""},{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbo","categoryName":"KBO","gameId":"20220722HTLT02022","statusCode":"BEFORE","statusInfo":"경기전","cancel":"N","isEnableNvm":"Y","gameInfo":"{\"game_id\":\"20220722HTLT02022\",\"current_inning\":\"\",\"home_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"away_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"home_team_rheb\":\"\",\"away_team_rheb\":\"\",\"home_starter_name\":\"반즈\",\"home_starter_code\":\"52528\",\"away_starter_name\":\"파노니\",\"away_starter_code\":\"52606\",\"win_pitcher_name\":\"\",\"win_pitcher_code\":\"\",\"lose_pitcher_name\":\"\",\"lose_pitcher_code\":\"\",\"pts_flag\":\"1\",\"is_vod\":\"N\",\"home_starter_w\":\"9\",\"home_starter_l\":\"6\",\"home_starter_era\":\"2.74\",\"home_starter_inn2\":374,\"away_starter_w\":\"0\",\"away_starter_l\":\"1\",\"away_starter_era\":\"8.31\",\"away_starter_inn2\":13,\"home_comp_inng\":\"6.0\",\"home_comp_era\":\"2.7433155080213907\",\"home_comp_whip\":\"1.11\",\"home_comp_innk\":\"7.9399999999999995\",\"home_comp_qs\":\"14\",\"home_comp_war\":\"3.26\",\"away_comp_inng\":\"4.1\",\"away_comp_era\":\"8.307692307692308\",\"away_comp_whip\":\"1.62\",\"away_comp_innk\":\"2.08\",\"away_comp_qs\":\"0\",\"away_comp_war\":\"-0.09\",\"broad_channel\":\"MBC SPORTS+\",\"home_short_name\":\"롯데\",\"home_full_name\":\"롯데 자이언츠\",\"away_short_name\":\"KIA\",\"away_full_name\":\"KIA 타이거즈\",\"info\":\"\",\"status\":\"ORDINARY\",\"region_id\":\"13202715\",\"away_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"home_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"dheader\":\"0\",\"game_no\":\"0\",\"is_after_first_game\":true}","gameDateTime":"2022-07-22 18:30:00","gameTimeHHmm":"18:30","title":"KIA VS 롯데","stadium":"사직","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"KIA","teamName2":"롯데","teamCode1":"HT","teamCode2":"LT","teamLogo1":"https://sports-phinf.pstatic.net/team/kbo/default/HT.png","teamLogo2":"https://sports-phinf.pstatic.net/team/kbo/default/LT.png","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"롯데","awayTeamName":"KIA","homeTeamCode":"LT","awayTeamCode":"HT","homeTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/LT.png","awayTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/HT.png","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/baseball/gamecenter/kbo/index?gameId=20220722HTLT02022","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"반즈","awayCurrentPitcherName":"파노니","templateCreateDateTime":[2022,7,22,11,22,0,387000000],"displayType":"vs","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"kbo_r","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722HTLT02022/relay","gameContents":{"homeStarterId":"52528","winPitcherId":"","winPitcherName":"","awayStarterId":"52606","losePitcherName":"","homeStarterName":"반즈","awayStarterName":"파노니","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":null,"liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_6","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722HTLT02022","thumbnailImage":""},{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbo","categoryName":"KBO","gameId":"20220722KTHH02022","statusCode":"BEFORE","statusInfo":"경기전","cancel":"N","isEnableNvm":"Y","gameInfo":"{\"game_id\":\"20220722KTHH02022\",\"current_inning\":\"\",\"home_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"away_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"home_team_rheb\":\"\",\"away_team_rheb\":\"\",\"home_starter_name\":\"라미레즈\",\"home_starter_code\":\"52707\",\"away_starter_name\":\"벤자민\",\"away_starter_code\":\"52043\",\"win_pitcher_name\":\"\",\"win_pitcher_code\":\"\",\"lose_pitcher_name\":\"\",\"lose_pitcher_code\":\"\",\"pts_flag\":\"1\",\"is_vod\":\"N\",\"home_starter_w\":\"0\",\"home_starter_l\":\"1\",\"home_starter_era\":\"1.4\",\"home_starter_inn2\":58,\"away_starter_w\":\"1\",\"away_starter_l\":\"1\",\"away_starter_era\":\"3.66\",\"away_starter_inn2\":59,\"home_comp_inng\":\"4.2\",\"home_comp_era\":\"1.396551724137931\",\"home_comp_whip\":\"1.03\",\"home_comp_innk\":\"5.12\",\"home_comp_qs\":\"2\",\"home_comp_war\":\"0.41\",\"away_comp_inng\":\"4.2\",\"away_comp_era\":\"3.6610169491525424\",\"away_comp_whip\":\"1.27\",\"away_comp_innk\":\"9.15\",\"away_comp_qs\":\"2\",\"away_comp_war\":\"0.34\",\"broad_channel\":\"KBS N SPORTS\",\"home_short_name\":\"한화\",\"home_full_name\":\"한화 이글스\",\"away_short_name\":\"KT\",\"away_full_name\":\"kt wiz\",\"info\":\"\",\"status\":\"ORDINARY\",\"region_id\":\"11831114\",\"away_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"home_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"dheader\":\"0\",\"game_no\":\"0\",\"is_after_first_game\":true}","gameDateTime":"2022-07-22 18:30:00","gameTimeHHmm":"18:30","title":"KT VS 한화","stadium":"대전","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"KT","teamName2":"한화","teamCode1":"KT","teamCode2":"HH","teamLogo1":"https://sports-phinf.pstatic.net/team/kbo/default/KT.png","teamLogo2":"https://sports-phinf.pstatic.net/team/kbo/default/HH.png","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"한화","awayTeamName":"KT","homeTeamCode":"HH","awayTeamCode":"KT","homeTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/HH.png","awayTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/KT.png","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/baseball/gamecenter/kbo/index?gameId=20220722KTHH02022","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"라미레즈","awayCurrentPitcherName":"벤자민","templateCreateDateTime":[2022,7,22,11,22,0,387000000],"displayType":"vs","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"kbo_r","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722KTHH02022/relay","gameContents":{"homeStarterId":"52707","winPitcherId":"","winPitcherName":"","awayStarterId":"52043","losePitcherName":"","homeStarterName":"라미레즈","awayStarterName":"벤자민","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":null,"liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_7","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722KTHH02022","thumbnailImage":""},{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbo","categoryName":"KBO","gameId":"20220722LGNC02022","statusCode":"BEFORE","statusInfo":"경기전","cancel":"N","isEnableNvm":"Y","gameInfo":"{\"game_id\":\"20220722LGNC02022\",\"current_inning\":\"\",\"home_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"away_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"home_team_rheb\":\"\",\"away_team_rheb\":\"\",\"home_starter_name\":\"구창모\",\"home_starter_code\":\"65933\",\"away_starter_name\":\"켈리\",\"away_starter_code\":\"69103\",\"win_pitcher_name\":\"\",\"win_pitcher_code\":\"\",\"lose_pitcher_name\":\"\",\"lose_pitcher_code\":\"\",\"pts_flag\":\"1\",\"is_vod\":\"N\",\"home_starter_w\":\"4\",\"home_starter_l\":\"2\",\"home_starter_era\":\"0.99\",\"home_starter_inn2\":137,\"away_starter_w\":\"12\",\"away_starter_l\":\"1\",\"away_starter_era\":\"2.28\",\"away_starter_inn2\":296,\"home_comp_inng\":\"5.2\",\"home_comp_era\":\"0.9854014598540146\",\"home_comp_whip\":\"0.99\",\"home_comp_innk\":\"8.87\",\"home_comp_qs\":\"3\",\"home_comp_war\":\"2.19\",\"away_comp_inng\":\"6.0\",\"away_comp_era\":\"2.2804054054054057\",\"away_comp_whip\":\"1.06\",\"away_comp_innk\":\"8.12\",\"away_comp_qs\":\"12\",\"away_comp_war\":\"3.34\",\"broad_channel\":\"SPOTV2\",\"home_short_name\":\"NC\",\"home_full_name\":\"NC 다이노스\",\"away_short_name\":\"LG\",\"away_full_name\":\"LG 트윈스\",\"info\":\"\",\"status\":\"ORDINARY\",\"region_id\":\"36516872\",\"away_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"home_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"dheader\":\"0\",\"game_no\":\"0\",\"is_after_first_game\":true}","gameDateTime":"2022-07-22 18:30:00","gameTimeHHmm":"18:30","title":"LG VS NC","stadium":"창원","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"LG","teamName2":"NC","teamCode1":"LG","teamCode2":"NC","teamLogo1":"https://sports-phinf.pstatic.net/team/kbo/default/LG.png","teamLogo2":"https://sports-phinf.pstatic.net/team/kbo/default/NC.png","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"NC","awayTeamName":"LG","homeTeamCode":"NC","awayTeamCode":"LG","homeTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/NC.png","awayTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/LG.png","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/baseball/gamecenter/kbo/index?gameId=20220722LGNC02022","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"구창모","awayCurrentPitcherName":"켈리","templateCreateDateTime":[2022,7,22,11,22,0,387000000],"displayType":"vs","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"kbo_r","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722LGNC02022/relay","gameContents":{"homeStarterId":"65933","winPitcherId":"","winPitcherName":"","awayStarterId":"69103","losePitcherName":"","homeStarterName":"구창모","awayStarterName":"켈리","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":null,"liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_8","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722LGNC02022","thumbnailImage":""},{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbo","categoryName":"KBO","gameId":"20220722SKOB02022","statusCode":"BEFORE","statusInfo":"경기전","cancel":"N","isEnableNvm":"Y","gameInfo":"{\"game_id\":\"20220722SKOB02022\",\"current_inning\":\"\",\"home_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"away_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"home_team_rheb\":\"\",\"away_team_rheb\":\"\",\"home_starter_name\":\"스탁\",\"home_starter_code\":\"52234\",\"away_starter_name\":\"김광현\",\"away_starter_code\":\"77829\",\"win_pitcher_name\":\"\",\"win_pitcher_code\":\"\",\"lose_pitcher_name\":\"\",\"lose_pitcher_code\":\"\",\"pts_flag\":\"1\",\"is_vod\":\"N\",\"home_starter_w\":\"7\",\"home_starter_l\":\"6\",\"home_starter_era\":\"3.21\",\"home_starter_inn2\":311,\"away_starter_w\":\"9\",\"away_starter_l\":\"1\",\"away_starter_era\":\"1.65\",\"away_starter_inn2\":278,\"home_comp_inng\":\"5.2\",\"home_comp_era\":\"3.2122186495176845\",\"home_comp_whip\":\"1.5\",\"home_comp_innk\":\"7.8100000000000005\",\"home_comp_qs\":\"10\",\"home_comp_war\":\"1.44\",\"away_comp_inng\":\"6.0\",\"away_comp_era\":\"1.6510791366906474\",\"away_comp_whip\":\"1.05\",\"away_comp_innk\":\"8.26\",\"away_comp_qs\":\"11\",\"away_comp_war\":\"3.59\",\"broad_channel\":\"SPOTV\",\"home_short_name\":\"두산\",\"home_full_name\":\"두산 베어스\",\"away_short_name\":\"SSG\",\"away_full_name\":\"SSG 랜더스\",\"info\":\"\",\"status\":\"ORDINARY\",\"region_id\":\"13202577\",\"away_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"home_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"dheader\":\"0\",\"game_no\":\"0\",\"is_after_first_game\":true}","gameDateTime":"2022-07-22 18:30:00","gameTimeHHmm":"18:30","title":"SSG VS 두산","stadium":"잠실","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"SSG","teamName2":"두산","teamCode1":"SK","teamCode2":"OB","teamLogo1":"https://sports-phinf.pstatic.net/team/kbo/default/SK.png","teamLogo2":"https://sports-phinf.pstatic.net/team/kbo/default/OB.png","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"두산","awayTeamName":"SSG","homeTeamCode":"OB","awayTeamCode":"SK","homeTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/OB.png","awayTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/SK.png","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/baseball/gamecenter/kbo/index?gameId=20220722SKOB02022","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"스탁","awayCurrentPitcherName":"김광현","templateCreateDateTime":[2022,7,22,11,22,0,387000000],"displayType":"vs","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"kbo_r","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722SKOB02022/relay","gameContents":{"homeStarterId":"52234","winPitcherId":"","winPitcherName":"","awayStarterId":"77829","losePitcherName":"","homeStarterName":"스탁","awayStarterName":"김광현","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":null,"liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_9","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722SKOB02022","thumbnailImage":""},{"superCategoryId":"baseball","upperCategoryId":"kbaseball","categoryId":"kbo","categoryName":"KBO","gameId":"20220722SSWO02022","statusCode":"BEFORE","statusInfo":"경기전","cancel":"N","isEnableNvm":"Y","gameInfo":"{\"game_id\":\"20220722SSWO02022\",\"current_inning\":\"\",\"home_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"away_team_score_by_inning\":\"-,-,-,-,-,-,-,-,-\",\"home_team_rheb\":\"\",\"away_team_rheb\":\"\",\"home_starter_name\":\"안우진\",\"home_starter_code\":\"68341\",\"away_starter_name\":\"원태인\",\"away_starter_code\":\"69446\",\"win_pitcher_name\":\"\",\"win_pitcher_code\":\"\",\"lose_pitcher_name\":\"\",\"lose_pitcher_code\":\"\",\"pts_flag\":\"1\",\"is_vod\":\"N\",\"home_starter_w\":\"10\",\"home_starter_l\":\"4\",\"home_starter_era\":\"2.02\",\"home_starter_inn2\":334,\"away_starter_w\":\"4\",\"away_starter_l\":\"5\",\"away_starter_era\":\"3.7\",\"away_starter_inn2\":277,\"home_comp_inng\":\"6.1\",\"home_comp_era\":\"2.020958083832335\",\"home_comp_whip\":\"0.96\",\"home_comp_innk\":\"10.1\",\"home_comp_qs\":\"13\",\"home_comp_war\":\"4.35\",\"away_comp_inng\":\"6.0\",\"away_comp_era\":\"3.703971119133574\",\"away_comp_whip\":\"1.29\",\"away_comp_innk\":\"7.21\",\"away_comp_qs\":\"6\",\"away_comp_war\":\"1.8199999999999998\",\"broad_channel\":\"SBS SPORTS\",\"home_short_name\":\"키움\",\"home_full_name\":\"키움 히어로즈\",\"away_short_name\":\"삼성\",\"away_full_name\":\"삼성 라이온즈\",\"info\":\"\",\"status\":\"ORDINARY\",\"region_id\":\"18967604\",\"away_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"home_series_outcome\":{\"w\":\"0\",\"d\":\"0\",\"l\":\"0\"},\"dheader\":\"0\",\"game_no\":\"0\",\"is_after_first_game\":true}","gameDateTime":"2022-07-22 18:30:00","gameTimeHHmm":"18:30","title":"삼성 VS 키움","stadium":"고척","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"삼성","teamName2":"키움","teamCode1":"SS","teamCode2":"WO","teamLogo1":"https://sports-phinf.pstatic.net/team/kbo/default/SS.png","teamLogo2":"https://sports-phinf.pstatic.net/team/kbo/default/WO.png","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"키움","awayTeamName":"삼성","homeTeamCode":"WO","awayTeamCode":"SS","homeTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/WO.png","awayTeamLogo":"https://sports-phinf.pstatic.net/team/kbo/default/SS.png","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/baseball/gamecenter/kbo/index?gameId=20220722SSWO02022","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"안우진","awayCurrentPitcherName":"원태인","templateCreateDateTime":[2022,7,22,11,22,0,387000000],"displayType":"vs","mainSubPriority":0,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"kbo_r","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722SSWO02022/relay","gameContents":{"homeStarterId":"68341","winPitcherId":"","winPitcherName":"","awayStarterId":"69446","losePitcherName":"","homeStarterName":"안우진","awayStarterName":"원태인","losePitcherId":""},"winnerPredictPercentage":0,"templateTitle":null,"liveSchedule":false,"mainSubType":"MAIN","whiteList":false,"dataId":"AUTO_10","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722SSWO02022","thumbnailImage":""},{"superCategoryId":"general","upperCategoryId":"others","categoryId":"etc","categoryName":"바둑","gameId":"20220722BADUK1","statusCode":"BEFORE","statusInfo":"","cancel":"N","isEnableNvm":"N","gameInfo":null,"gameDateTime":"2022-07-22 13:00:00","gameTimeHHmm":"13:00","title":"제27기 GS칼텍스배 프로기전","stadium":"바둑TV 스튜디오","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722BADUK1","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,472000000],"displayType":"text","mainSubPriority":1,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722BADUK1","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"제27기 GS칼텍스배 프로기전","liveSchedule":false,"mainSubType":"SUB","whiteList":false,"dataId":"AUTO_11","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722BADUK1","thumbnailImage":""},{"superCategoryId":"general","upperCategoryId":"others","categoryId":"etc","categoryName":"바둑","gameId":"20220722BAUDK2","statusCode":"BEFORE","statusInfo":"","cancel":"N","isEnableNvm":"N","gameInfo":null,"gameDateTime":"2022-07-22 19:00:00","gameTimeHHmm":"19:00","title":"부안 새만금잼버리 vs 순천만국가정원 - NH농협은행 한국여자바둑리그","stadium":"바둑TV 스튜디오","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722BAUDK2","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,472000000],"displayType":"text","mainSubPriority":1,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722BAUDK2","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"부안 새만금잼버리 vs 순천만국가정원 - NH농협은행 한국여자바둑리그","liveSchedule":false,"mainSubType":"SUB","whiteList":false,"dataId":"AUTO_12","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722BAUDK2","thumbnailImage":""},{"superCategoryId":"general","upperCategoryId":"others","categoryId":"etc","categoryName":"바둑","gameId":"20220722BADUK3","statusCode":"BEFORE","statusInfo":"","cancel":"N","isEnableNvm":"N","gameInfo":null,"gameDateTime":"2022-07-22 23:00:00","gameTimeHHmm":"23:00","title":"제15기 YES24배 고교동문전(녹방)","stadium":"바둑TV 스튜디오","isScheduledTv":"Y","isOnairTv":"N","isOnairText":"N","liveTotalView":0,"liveCurrentView":0,"teamName1":"","teamName2":"","teamCode1":"","teamCode2":"","teamLogo1":"","teamLogo2":"","teamScore1":0,"teamScore2":0,"winner":null,"homeTeamName":"","awayTeamName":"","homeTeamCode":"","awayTeamCode":"","homeTeamLogo":"","awayTeamLogo":"","homeTeamScore":0,"awayTeamScore":0,"homeAwayWinner":"DRAW","disciplineId":null,"disciplineName":null,"matchTitle":null,"url":"/general/gamecenter/etc/index?gameId=20220722BADUK3","homeTeamPenaltyScore":-1,"awayTeamPenaltyScore":-1,"homeCurrentPitcherName":"","awayCurrentPitcherName":"","templateCreateDateTime":[2022,7,22,11,22,0,472000000],"displayType":"text","mainSubPriority":1,"lolSetInfoList":[],"esportsLeague":null,"commentCount":0,"roundCode":"","channelCode":"","thumbnail":null,"pcUrl":"/game/20220722BADUK3","gameContents":null,"winnerPredictPercentage":0,"templateTitle":"제15기 YES24배 고교동문전(녹방)","liveSchedule":false,"mainSubType":"SUB","whiteList":false,"dataId":"AUTO_13","isEnable":"Y","fixTopPosition":"N","image":"","contentsId":"schedule.20220722BADUK3","thumbnailImage":""}],
+						});
+					</script>
+				</div>
+			</div>
+	
+			<!-- 하단 게시물 영역-->
+			<div id="content">
+				<div class="main_wrap">
+					<div class="today_section type_no_da">
+						<h3 class="blind">오늘의 스포츠</h3>
+						<ul class="today_list">
+							<li class="today_item">
+								<a href="/news?oid=382&amp;aid=0000994097" class="link_today" title="‘60홈런 조준’ 저지, 34호 아치 ‘NYY는 더블헤더 연패’" onclick="clickcr(this, 'rnk*r.list', '382_0000994097', '1', event);" data-not-edited="Y">
+									<div class="image_area">
+										<!-- [D] 썸네일 이미지 alt 값 비워주세요. -->
+										<img src="https://dthumb-phinf.pstatic.net?src=http://imgnews.naver.net/image/382/2022/07/22/0000994097_001_20220722110801547.jpg&amp;type=nf160_95&amp;service=sports" onerror="imageOnError(this);" width="160" height="95" alt="">
+									</div>
+									<div class="text_area">
+										<strong class="title">'60홈런 조준' 저지, 34호 아치 'NYY는 더블헤더 연패'</strong>
+										<!-- [D] 내용 두줄 말줄임 적용해주세요. -->
+										<p class="news">
+											애런 저지. 사진=게티이미지코리아[동아닷컴]메이저리그 홈런 전체 단독 선두를 달리고 있는 애런 저지(30, 뉴욕 양키스)가 후반기 첫 홈런을 때렸다. 하지만..."
+										</p>
+										<div class="information">
+											<span>스포츠동아</span>
+											<span>메이저리그</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="today_item">
+								<a href="/news?oid=410&amp;aid=0000883353" class="link_today" title="KIA엔 자리 없는 나지완, 트레이드로 도전 나서는 건 어떨까" onclick="clickcr(this, 'rnk*r.list', '410_0000883353', '2', event);" data-not-edited="Y">
+									<div class="image_area">
+										<!-- [D] 썸네일 이미지 alt 값 비워주세요. -->
+
+										<img src="https://dthumb-phinf.pstatic.net?src=http://imgnews.naver.net/image/410/2022/07/22/0000883353_001_20220722080801577.jpg&amp;type=nf160_95&amp;service=sports" onerror="imageOnError(this);" width="160" height="95" alt="">
+									</div>
+									<div class="text_area">
+										<strong class="title">KIA엔 자리 없는 나지완, 트레이드로 도전 나서는 건 어떨까</strong>
+										<!-- [D] 내용 두줄 말줄임 적용해주세요. -->
+										<p class="news">
+											한 팀에 입단해 기록을 세우고 명예롭게 은퇴하는 것은 모든 선수들이 꿈꾸는 이상적인 엔딩이다. '원 클럽 맨'은 그 자체 만으로도 의미가 있다. 한 팀에 야..."
+										</p>
+										<div class="information">
+											<span>MK스포츠 </span>
+											<span>KBO리그</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="today_item">
+								
+								<a href="/news?oid=411&amp;aid=0000012611" class="link_today" title="'민심 폭락' 노이어, 잃어버린 지갑 찾아주러 120km 간 택시 기사 '무시'" onclick="clickcr(this, 'rnk*r.list', '411_0000012611', '3', event);" data-not-edited="Y">
+
+									<div class="image_area">
+										<!-- [D] 썸네일 이미지 alt 값 비워주세요. -->
+
+										<img src="https://dthumb-phinf.pstatic.net?src=http://imgnews.naver.net/image/411/2022/07/21/0000012611_001_20220721225101515.jpg&amp;type=nf160_95&amp;service=sports" onerror="imageOnError(this);" width="160" height="95" alt="">
+									</div>
+									<div class="text_area">
+										<strong class="title">'민심 폭락' 노이어, 잃어버린 지갑 찾아주러 120km 간 택시 기사 '무시'</strong>
+										<!-- [D] 내용 두줄 말줄임 적용해주세요. -->
+										<p class="news">
+											[포포투=이규학]민심이 폭락하고 있다. 마누엘 노이어가 지갑을 찾아준 택시 기사에게 고맙다는 말도 안 한 사연이 퍼지고 있다.독일 '스카이스포츠'는 21일(..."
+										</p>
+										<div class="information">
+											<span>포포투</span>
+											<span>분데스리가</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="today_item">
+								
+								<a href="/news?oid=109&amp;aid=0004662467" class="link_today" title="'멘탈도 괴물' 홀란드, 1600억 원 동료에게 &quot;난 네 반값이라 괜찮아&quot;" onclick="clickcr(this, 'rnk*r.list', '109_0004662467', '4', event);" data-not-edited="Y">
+
+									<div class="image_area">
+										<!-- [D] 썸네일 이미지 alt 값 비워주세요. -->
+
+										<img src="https://dthumb-phinf.pstatic.net?src=http://imgnews.naver.net/image/109/2022/07/22/0004662467_001_20220722083508615.jpeg&amp;type=nf160_95&amp;service=sports" onerror="imageOnError(this);" width="160" height="95" alt="">
+									</div>
+									<div class="text_area">
+										<strong class="title">'멘탈도 괴물' 홀란드, 1600억 원 동료에게 "난 네 반값이라 괜찮아"</strong>
+										<!-- [D] 내용 두줄 말줄임 적용해주세요. -->
+										<p class="news">
+											[사진] ⓒGettyimages(무단전재 및 재배포 금지)[OSEN=고성환 기자] 괴물 공격수 엘링 홀란드(22, 맨체스터 시티)가 남다른 멘탈을 자랑했다...."
+										</p>
+										<div class="information">
+											<span>OSEN</span>
+											<span>프리미어리그</span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="today_item">
+								
+								<a href="/news?oid=445&amp;aid=0000061323" class="link_today" title="이국적 외모의 배재고 문수완, &quot;100% 한국 선수입니다&quot;" onclick="clickcr(this, 'rnk*r.list', '445_0000061323', '5', event);" data-not-edited="Y">
+
+									<div class="image_area">
+										<!-- [D] 썸네일 이미지 alt 값 비워주세요. -->
+
+										<img src="https://dthumb-phinf.pstatic.net?src=http://imgnews.naver.net/image/445/2022/07/22/0000061323_001_20220722085701608.jpg&amp;type=nf160_95&amp;service=sports" onerror="imageOnError(this);" width="160" height="95" alt="">
+									</div>
+									<div class="text_area">
+										<strong class="title">이국적 외모의 배재고 문수완 "100% 한국 선수입니다"</strong>
+										<!-- [D] 내용 두줄 말줄임 적용해주세요. -->
+										<p class="news">
+											한 눈에 봐도 이국적인 외모를 지닌 문수완. 하지만, 그의 외적인 면모보다 야구 실력에 더 기대가 된다. 사진ⓒ김현희 기자(MHN스포츠 목동, 김현희 기자)..."
+										</p>
+										<div class="information">
+											<span>MHN스포츠</span>
+											<span>야구 일반</span>
+										</div>
+									</div>
+								</a>
+							</li>	
+						</ul>
+					</div>
+
+					<script>
+						$("._sports_home_most_viewed_vod_title").dotdotdot({'height' : 36});
+
+						$(".vod_button_area").on("click", "button", function(e) {
+							$(".vod_item").show();
+							$("._sports_home_most_viewed_vod_title").dotdotdot({'height' : 36});
+							$(e.currentTarget).hide();
+							clickcr(this, 'rnk*m.more', '', '', e);
+						});
+					</script>
+
+					<script>
+						$.ajax("https://proxy-gateway.sports.naver.com/airs/recommends?start=1&display=12", {
+							dataType: 'json',
+							timeout: 3000,
+							xhrFields: { withCredentials:true },
+							success: function (res) {
+								$("#_sports_home_airs_area").html(
+									Handlebars.compile($("#_sports_home_airs_template").html())(res.result.recommend)
+								);
+							},
+							error: function(res) {
+								JEagleEyeClient.sendError(new Error(res));
+							},
+							complete: function(res) {
+								if (res.statusText === 'timeout') {
+									console.log('timeout');
+									JEagleEyeClient.sendError(new Error(res));
+								}
+							}
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+		<!-- 하단 게시물 영역-->
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer_inner">
+                <!--[주]고객센터,제휴문의,서비스안내-->
+                <ul class="footer_link" id="footer_link">
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html" id="fot.agreement"><span class="text">이용약관</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html" id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html" id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span class="text">회원정보 고객센터</span></a></li>
+                </ul>
+                <div class="footer_copy">
+                    <a id="fot.naver" target="_blank" href="https://www.navercorp.com">
+                        <img src="../../image/SPOPIA1.png" alt="logo" style="width: 45px;">
+                    </a>
+                    <span class="text">Copyright</span>
+                    <span class="corp">© SPOPIA Corp.</span>
+                    <span class="text">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+</body>
+</html>
