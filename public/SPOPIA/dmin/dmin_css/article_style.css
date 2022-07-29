@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
