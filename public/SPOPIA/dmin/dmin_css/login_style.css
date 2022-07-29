@@ -143,17 +143,6 @@ li {
     height: 16px;
 }
 
-.menu_id.on::after {
-    content: '';
-    position: absolute;
-    top: -1px;
-    right: -8px;
-    background-position: 0 -139px;
-    background-repeat: no-repeat;
-    width: 15px;
-    height: 62px;
-}
-
 .menu_id.on .menu_text::before {
     background-position: -142px -172px;
     background-repeat: no-repeat;
