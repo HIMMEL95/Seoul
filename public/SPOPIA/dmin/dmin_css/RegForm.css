@@ -218,15 +218,6 @@ element.style {
     text-align: center !important;
 }
 
-.avatar1 {
-    height: 3rem;
-    width: 3rem;
-    position: relative;
-    display: inline-block;
-    -ms-flex-negative: 0 !important;
-    flex-shrink: 0 !important;
-}
-
 .mt-n5 {
     margin-top: -3rem !important;
 }
@@ -347,4 +338,9 @@ strong {
 
 option {
     font-weight: bold;
+}
+
+.container {
+    max-width: 768px;
+
 }
