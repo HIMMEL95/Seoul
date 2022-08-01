@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>SPOPIA : 회원가입</title>
-    <link href="../dmin_css/signUp.css" rel="stylesheet" type="text/css"> 
+    <link href="../user_css/signUp.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
     <form class="needs-validation p-3" novalidate>
         <div class="container">
@@ -33,7 +37,8 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button type="button" class="btn fw-bold text-white" style="background-color: #03c75a;">중복확인</button>
+                                <button type="button" class="btn fw-bold text-white"
+                                    style="background-color: #03c75a;">중복확인</button>
                             </div>
                         </div>
                     </div>
@@ -54,14 +59,15 @@
                     </div>
                     <div class="col-4  mb-3">
                         <label for="email" class="form-label fw-bold">이메일</label>
-                        <input type="email" class="form-control" id="email" value="" placeholder="email@naver.com" required>
+                        <input type="email" class="form-control" id="email" value="" placeholder="email@naver.com"
+                            required>
                         <div class="valid-feedback"></div>
                     </div>
                     <div class="col-4 offset-2 mb-3">
                         <label for="dob" class="form-label fw-bold">생년월일</label>
                         <input type="text" class="form-control" id="dob" value="" placeholder="1900-01-01" required>
                         <div class="valid-feedback"></div>
-                    </div>   
+                    </div>
                     <div class="col-4  mb-3">
                         <label for="tel" class="form-label fw-bold">전화번호</label>
                         <input type="tel" class="form-control" id="tel" value="" placeholder="010-1234-1234" required>
@@ -69,19 +75,20 @@
                     </div>
                     <div class="col-4 offset-2 mb-3">
                         <label for="gender" class="form-label fw-bold">성별</label>
-                        <select class="form-select form-select-lg mb-3 fs-6" id="gender" aria-label=".form-select-lg example" required>
+                        <select class="form-select form-select-lg mb-3 fs-6" id="gender"
+                            aria-label=".form-select-lg example" required>
                             <option value="">선택</option>
                             <option value="남성">남성</option>
                             <option value="여성">여성</option>
                         </select>
                         <div class="valid-feedback"></div>
-                    </div> 
+                    </div>
                     <div class="col-4"></div>
                     <div class="col-4 offset-2 mb-3">
                         <label for="zip" class="form-label fw-bold">우편번호</label>
                         <input type="text" class="form-control" id="zip" value="" required>
                         <div class="valid-feedback"></div>
-                    </div> 
+                    </div>
                     <div class="col-2 mb-3 col-lg-3 align-items-center">
                         <div class="row">
                             <div class="col">
@@ -90,7 +97,8 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <button type="button" class="btn fw-bold text-white" style="background-color: #03c75a;">주소검색</button>
+                                <button type="button" class="btn fw-bold text-white"
+                                    style="background-color: #03c75a;">주소검색</button>
                             </div>
                         </div>
                     </div>
@@ -98,12 +106,12 @@
                         <label for="address" class="form-label fw-bold">주소</label>
                         <input type="text" class="form-control" id="address" value="" required>
                         <div class="valid-feedback"></div>
-                    </div> 
+                    </div>
                     <div class="col-9 offset-2 mb-3">
                         <label for="detailAddress" class="form-label fw-bold">상세주소</label>
                         <input type="text" class="form-control" id="detailAddress" value="" required>
                         <div class="valid-feedback"></div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-9 offset-2">
@@ -115,28 +123,34 @@
                     <div class="col-4 offset-2 mb-3">
                         <label for="job" class="form-label fw-bold">직업</label>
                         <input type="text" class="form-control" id="job">
-                    </div>  
+                    </div>
                     <div class="col-4  mb-5">
                         <label for="team" class="form-label fw-bold">좋아하는 팀</label>
                         <input type="text" class="form-control" id="team">
-                    </div> 
+                    </div>
                     <div class="col-4 offset-4 d-grid">
-                        <button type="submit" class="btn" style="background-color: #03c75a;" onclick="location.href='../login/loginForm.html'">
+                        <button type="submit" class="btn" style="background-color: #03c75a;"
+                            onclick="location.href='../login/loginForm.html'">
                             <span class="btn_text text-white fw-bold">회원가입</span>
                         </button>
-                    </div> 
+                    </div>
                 </div>
-            </div>           
+            </div>
         </div>
         <!-- footer -->
         <div class="footer">
             <div class="footer_inner">
                 <!--[주]고객센터,제휴문의,서비스안내-->
                 <ul class="footer_link" id="footer_link">
-                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html" id="fot.agreement"><span class="text">이용약관</span></a></li>
-                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html" id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
-                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html" id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
-                    <li><a target="_blank" class="footer_item" href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span class="text">회원정보 고객센터</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html"
+                            id="fot.agreement"><span class="text">이용약관</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html"
+                            id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html"
+                            id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
+                    <li><a target="_blank" class="footer_item"
+                            href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span
+                                class="text">회원정보 고객센터</span></a></li>
                 </ul>
                 <div class="footer_copy">
                     <a id="fot.naver" target="_blank" href="https://www.navercorp.com">
@@ -150,8 +164,10 @@
         </div>
     </form>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-	<script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         (() => {
             'use strict'
@@ -162,15 +178,16 @@
             // Loop over them and prevent submission
             Array.from(forms).forEach(form => {
                 form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
 
-                form.classList.add('was-validated')
+                    form.classList.add('was-validated')
                 }, false)
             })
         })()
     </script>
 </body>
+
 </html>
