@@ -80,11 +80,11 @@
     <main>
         <div style="height: 80px;"></div>
         <div class="container">
-            <div class="card ps-5 pe-5 pt-4 pb-4">
+            <div class="text-center pb-3">
+                <span class="fs-1 fw-bold">게시물 등록</span>
+            </div>
+            <div class="card ps-5 pe-5 pt-4 pb-4 shadow">
                 <div class="row mb-4">
-                    <div class="col-12 text-center pb-4">
-                        <span class="fs-1 fw-bold">게시물 등록</span>
-                    </div>
                     <div class="col-5">
                         <label for="title" class="form-label fw-bold">제목</label>
                         <input type="text" class="form-control" id="title" value="" required>
@@ -99,11 +99,32 @@
                 <div class="row mb-4">
                     <div class="col">
                         <label for="newspaper" class="form-label fw-bold">신문사</label>
-                        <input type="text" class="form-control" id="newspaper" value="" required>
+                        <select id="newspaper" class="form-select form-select fw-bold"
+                            aria-label=".form-select example">
+                            <option value="" selected>선택</option>
+                            <option value="1">스포츠동아</option>
+                            <option value="2">스포츠조선</option>
+                            <option value="3">스포츠경향</option>
+                            <option value="4">스포츠서울</option>
+                            <option value="5">일간스포츠</option>
+                            <option value="6">스포츠월드</option>
+                            <option value="7">한국스포츠경제</option>
+                            <option value="8">스포츠한국</option>
+                            <option value="9">스포츠투데이</option>
+                            <option value="10">굿데이</option>
+                            <option value="11">OSEN</option>
+                            <option value="12">엑스포츠뉴스</option>
+                        </select>
                     </div>
                     <div class="col">
                         <label for="event" class="form-label fw-bold">종목</label>
-                        <input type="text" class="form-control" id="event" value="" required>
+                        <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example">
+                            <option value="" selected>선택</option>
+                            <option value="1">축구</option>
+                            <option value="2">해외축구</option>
+                            <option value="3">야구</option>
+                            <option value="4">해외야구</option>
+                        </select>
                     </div>
                     <div class="col">
                         <label for="reporter" class="form-label fw-bold">기자</label>
@@ -118,11 +139,11 @@
                 </div>
                 <div class="row">
                     <div class="col-2">
-                        <a class="btn btn-primary text-white fw-bold" href="../article/articleList.html"
+                        <a class="btn btn-primary btn-sm text-white fw-bold shadow" href="../article/articleList.html"
                             role="button">취소</a>
                     </div>
                     <div class="col-2 offset-8" align="right">
-                        <a class="btn btn-primary text-white fw-bold" href="../article/articleList.html"
+                        <a class="btn btn-primary btn-sm text-white fw-bold shadow" href="../article/articleList.html"
                             role="button">등록</a>
                     </div>
                 </div>
