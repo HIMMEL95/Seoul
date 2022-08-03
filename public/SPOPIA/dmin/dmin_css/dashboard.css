@@ -82,7 +82,7 @@ a {
 }
 
 a:-webkit-any-link {
-    color: black;
+    color: #132144;
     cursor: pointer;
 }
 
@@ -93,7 +93,7 @@ main {
 
 /* offcanvas */
 .nav-link-secondary .nav-item .nav-link {
-    color: black;
+    color: #132144;
 }
 
 element.style {
@@ -122,7 +122,7 @@ element.style {
     flex-direction: column;
     max-width: 100%;
     visibility: hidden;
-    background-color: #fff;
+    background-color: #Edf2f9;
     background-clip: padding-box;
     outline: 0;
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
