@@ -1,0 +1,13 @@
+사용자 탭 
+	통신사 - SKT, KT, LGT
+	성별 - 남성, 여성
+
+관리자 탭
+	신문사
+	종목 - 야구, 해외야구, 축구, 해외축구
+	리그 - KBO, national League, American League, Central League, Pacific League, K League1, 
+	         K League2, EPL, Laliga, Budesliga, Serie A, Ligue 1
+	팀 - 고정 - KBO, National League, American League, Central League, Pacific League
+	    - 비고정 - K League1, K League2, EPL, Laliga, Budesliga, Serie A, Ligue1
+	경기장 - 고정 - KBO, National League, American League, Central League, Pacific League
+	         - 비고정 - K League1, K League2, EPL, Laliga, Budesliga, Serie A, Ligue1
