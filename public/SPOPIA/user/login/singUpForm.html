@@ -72,7 +72,17 @@
                             <option value="여성">여성</option>
                         </select>
                     </div>
-                    <div class="col-4 offset-2 mb-3">
+                    <div class="col-2 offset-2 mb-3">
+                        <label for="gender" class="form-label fw-bold">통신사</label>
+                        <select class="form-select form-select-md fs-6 fw-bold" id="gender"
+                            aria-label=".form-select-lg example" required>
+                            <option value="">선택</option>
+                            <option value="1">SKT</option>
+                            <option value="2">KT</option>
+                            <option value="3">LGT</option>
+                        </select>
+                    </div>
+                    <div class="col-4 mb-3">
                         <label for="tel" class="form-label fw-bold">전화번호</label>
                         <input type="tel" class="form-control" id="tel" value="" required>
                     </div>
@@ -106,7 +116,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4"></div>
                     <div class="col-4 offset-2 mb-3">
                         <label for="zip" class="form-label fw-bold">우편번호</label>
                         <input type="text" class="form-control" id="zip" value="" required>
