@@ -7,7 +7,7 @@
     <title>Article Reg Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="../dmin_css/RegForm.css" rel="stylesheet" type="text/css">
+    <link href="../dmin_css/dashboard.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -79,7 +79,7 @@
 
     <main>
         <div style="height: 80px;"></div>
-        <div class="container">
+        <div class="container" style="max-width: 900px;">
             <div class="text-center pb-3">
                 <span class="fs-1 fw-bold">게시물 등록</span>
             </div>
@@ -99,22 +99,7 @@
                 <div class="row mb-4">
                     <div class="col">
                         <label for="newspaper" class="form-label fw-bold">신문사</label>
-                        <select id="newspaper" class="form-select form-select fw-bold"
-                            aria-label=".form-select example">
-                            <option value="" selected>선택</option>
-                            <option value="1">스포츠동아</option>
-                            <option value="2">스포츠조선</option>
-                            <option value="3">스포츠경향</option>
-                            <option value="4">스포츠서울</option>
-                            <option value="5">일간스포츠</option>
-                            <option value="6">스포츠월드</option>
-                            <option value="7">한국스포츠경제</option>
-                            <option value="8">스포츠한국</option>
-                            <option value="9">스포츠투데이</option>
-                            <option value="10">굿데이</option>
-                            <option value="11">OSEN</option>
-                            <option value="12">엑스포츠뉴스</option>
-                        </select>
+                        <input type="text" class="form-control" id="newspaper" value="" required>
                     </div>
                     <div class="col">
                         <label for="event" class="form-label fw-bold">종목</label>

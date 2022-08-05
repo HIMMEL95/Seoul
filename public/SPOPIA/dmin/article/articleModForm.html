@@ -7,7 +7,7 @@
     <title>Article Mod Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="../dmin_css/RegForm.css" rel="stylesheet" type="text/css">
+    <link href="../dmin_css/dashboard.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -85,29 +85,48 @@
             </div>
             <div class="card ps-5 pe-5 pt-4 pb-4 shadow">
                 <div class="row mb-4">
-                    <div class="col-5">
+                    <div class="col-12">
                         <label for="title" class="form-label fw-bold">제목</label>
-                        <input type="text" class="form-control sho" id="title" value="" required>
+                        <input type="text" class="form-control" id="title" value="최지만 2타수 무안타 후 교체, 탬파베이는 3-2 역전승" required>
                     </div>
                 </div>
                 <div class="row mb-4">
                     <div class="col-12">
                         <label for="content" class="form-label fw-bold">본문</label>
-                        <textarea class="form-control" style="height: 200px;" aria-label="content"></textarea>
+                        <textarea class="form-control" id="content" style="height: 200px;" aria-label="content">
+                            최지만(31·탬파베이 레이스)이 안타 없이 두 타석만 소화하고 교체됐다. 특히 역전 찬스에서 곧바로 교체돼 아쉬움을 남겼다.
+
+                            최지만은 13일 오전(한국시간) 미국 플로리다주 세인트피터즈버그 트로피카나필드에서 열린 미국프로야구 메이저리그 보스턴과 경기에 6번 타자(1루수)로 선발 출전해
+                            2타수 무안타를 남겼다. 최지만의 타율은 0.283에서 0.280으로 하락했다.
+
+                            최지만은 2회 말 1사에서 크리스 세일의 슬라이더에 헛스윙 삼진으로 물러났고, 4회 1사 3루에서는
+                            세일의 초구를 쳤지만 2루수 땅볼로 아웃됐다. 탬파베이는 0-2로 뒤진 6회 2사 1, 2루에서 최지만 타석 때 보스턴이 좌완 맷 스트람으로 교체하자 곧바로 대타
+                            프란시스코
+                            메히아를 투입했다.
+
+                            스위치 타자인 메히아는 1타점 중전 적시타를 쳤다. 탬파베이는 이어진 1사 1, 2루에서 테일러 윌스가 투수 강습 타구를 날렸고, 상대 실책이 연거푸 나오면서 2점을
+                            뽑아 3-2로 역전했다. 탬파베이는 1점 차 리드를 끝까지 지켜 이겼다.
+                        </textarea>
                     </div>
                 </div>
                 <div class="row mb-4">
                     <div class="col">
                         <label for="newspaper" class="form-label fw-bold">신문사</label>
-                        <input type="text" class="form-control" id="newspaper" value="" required>
+                        <input type="text" class="form-control" id="newspaper" value="문화일보" required>
                     </div>
                     <div class="col">
                         <label for="event" class="form-label fw-bold">종목</label>
-                        <input type="text" class="form-control" id="event" value="" required>
+                        <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example">
+                            <option value="">선택</option>
+                            <option value="1">축구</option>
+                            <option value="2">해외축구</option>
+                            <option value="3" selected>야구</option>
+                            <option value="4">해외야구</option>
+                        </select>
                     </div>
                     <div class="col">
                         <label for="reporter" class="form-label fw-bold">기자</label>
-                        <input type="text" class="form-control" id="reporter" value="" required>
+                        <input type="text" class="form-control" id="reporter" value="정세영" required>
                     </div>
                 </div>
                 <div class="row mb-4">
