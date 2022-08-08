@@ -80,112 +80,355 @@
 	<!-- start -->
 
 	<!-- 상단 Navbar -->
-	<form action="#" method="get" id="form">
-		<nav class="navbar navbar-expand-lg" style="background-color: #2565D0;">
-			<div class="container px-3 px-xl-5">
-				<!-- Logo START -->
-				<a class="navbar-brand" href="./main_page.html">
-					<img class="light-mode-item navbar-brand-item" src="../../image/SPOPIA_white.png" alt="logo"
-						style="width: 90px;">
-				</a>
-				<!-- Logo END -->
-
-				<!-- Responsive navbar toggler -->
-				<button class="navbar-toggler ms-auto collapsed border-0 me-2" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<i class="fa-solid fa-bars text-white"></i>
-				</button>
-
-				<!-- Profile START -->
-				<div class="dropdown">
-					<ul class=" nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
-						<li class="me-2">
-							<a class="avatar avatar-sm p-0" href="../member/memberView.html" id="profileDropdown"
-								role="button" data-bs-auto-close="outside" data-bs-display="static"
-								data-bs-toggle="dropdown" aria-expanded="false">
-								<img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar"
-									style="width: 30px;">
-							</a>
-							<ul class="dropdown-menu dropdown-animation dropdown-menu-end pt-3"
-								aria-labelledby="profileDropdown">
-								<!-- Profile info -->
-								<li class="px-3">
-									<div class="d-flex align-items-center">
-										<!-- Avatar -->
-										<div class="avatar me-3">
-											<img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg"
-												alt="avatar" style="width: 30px;">
-										</div>
-										<div>
-											<a class="fs-6 fw-bold" href="../member/memberView.html">이하늘</a>
-											<p class="small m-0">himmel@gmail.com</p>
+	<header>
+		<div id="header" class="header">
+			<div class="sports_header" role="banner">
+		
+		
+				<div class="snb_area">
+					<h1 class="logo_group">
+						<a href="https://www.naver.com" class="logo_naver"
+							onclick="clickcr(this, 'STA.naverlogo', '', '', event);"><span class="blind">네이버</span></a>
+						<a href="https://sports.news.naver.com/" class="logo_sports"
+							onclick="clickcr(this, 'STA.sports', '', '', event);"><span class="blind">스포츠</span></a>
+					</h1>
+				</div>
+				<!-- GNB -->
+				<div class="gnb_area">
+					<div class="gnb_one" id="gnb"><strong class="blind">사용자 링크</strong>
+						<ul class="gnb_lst" id="gnb_lst" style="display: block;">
+							<li class="gnb_login_li" id="gnb_login_layer" style="display: inline-block;"><a
+									class="gnb_btn_login"
+									href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsports.news.naver.com%2Findex"
+									id="gnb_login_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span
+										class="gnb_txt">로그인</span></a></li>
+							<li class="gnb_my_li" id="gnb_my_layer" style="display:none">
+								<div class="gnb_my_namebox" id="gnb_my_namebox"
+									style="background-image: url(&quot;https://ssl.pstatic.net/static/common/gnb/2014/ico_arrow_wh.gif&quot;);">
+									<a href="javascript:;" class="gnb_my"
+										onclick="gnbUserLayer.clickToggle(); return false;"><img id="gnb_profile_img"
+											src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+											onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8PDw5ubm+vr6+/v76enp+Pj47e3t5+fn9/f37Ozs9PT08vLy7+/v6urq9fX15OTk/f39pqwodgAAAQNJREFUeNrs11EOgyAMgOEWUAF19f6n3cMeplJHoSZbsv4H+DIWaCNsNwcGGmiggQZ+D/Q5reuasr8H9ID0CsHfALpA74JTgwPSPnRK0Ac6FrwOXOjcogIdlTkNuDDgogGRAVEBDsQ19IMzC879ILAgGNgAZhbMP3RttonxJs1Lgea/sDYcyreHXjW+oPUHVid2MWC1K+A0sqsDW7CksGmlCNZoFt9pIfjYgY8bwMMexUENQuOtqYCxfHtT7AddYodDcp0gIPEh9IBxous+nBuaTis4Nw/OSLVwloN+JEmjGJR5FyIDRpIWZeAoBkcZGMRgkIEkz0D7GjXQQAMN/GvwKcAAEGGHJh0mmaAAAAAASUVORK5CYII='"
+											width="26" height="26" alt="내 프로필 이미지"><span id="gnb_profile_filter_mask"
+											class="filter_mask"></span> <span class="gnb_name" id="gnb_name1"></span><em
+											class="blind">내정보 보기</em><span class="ico_arrow"></span></a><a href="#"
+										class="gnb_emp" id="gnb_emp">(임직원혜택)</a></div>
+								<div class="gnb_my_lyr" id="gnb_my_lyr">
+									<div class="gnb_my_content">
+										<div class="gnb_img_area"><span class="gnb_mask"></span><img
+												src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D"
+												onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRF8PDw5ubm+vr6+/v76enp+Pj47e3t5+fn9/f37Ozs9PT08vLy7+/v6urq9fX15OTk/f39pqwodgAAAQNJREFUeNrs11EOgyAMgOEWUAF19f6n3cMeplJHoSZbsv4H+DIWaCNsNwcGGmiggQZ+D/Q5reuasr8H9ID0CsHfALpA74JTgwPSPnRK0Ac6FrwOXOjcogIdlTkNuDDgogGRAVEBDsQ19IMzC879ILAgGNgAZhbMP3RttonxJs1Lgea/sDYcyreHXjW+oPUHVid2MWC1K+A0sqsDW7CksGmlCNZoFt9pIfjYgY8bwMMexUENQuOtqYCxfHtT7AddYodDcp0gIPEh9IBxous+nBuaTis4Nw/OSLVwloN+JEmjGJR5FyIDRpIWZeAoBkcZGMRgkIEkz0D7GjXQQAMN/GvwKcAAEGGHJh0mmaAAAAAASUVORK5CYII='"
+												width="80" height="80" alt="프로필 이미지"><a
+												href="https://nid.naver.com/user2/api/naverProfile?m=checkIdType"
+												class="gnb_change"><span class="blind">프로필 사진 변경</span></a></div>
+										<div class="gnb_txt_area">
+											<p class="gnb_account"><span class="gnb_name" id="gnb_name2"><a class="gnb_nick"
+														href="https://nid.naver.com/user2/api/naverProfile?m=checkIdType">_</a>님</span><a
+													class="gnb_btn_login"
+													href="https://nid.naver.com/nidlogin.logout?returl=https%3A%2F%2Fsports.news.naver.com%2Findex"
+													id="gnb_logout_button"><span class="gnb_bg"></span><span
+														class="gnb_bdr"></span><span class="gnb_txt">로그아웃</span></a></p><a
+												href="https://mail.naver.com" class="gnb_mail_address">@naver.com</a>
+											<ul class="gnb_edit_lst">
+												<li class="gnb_info"><a
+														href="https://nid.naver.com/user2/help/myInfo?menu=home">네이버ID</a></li>
+												<li class="gnb_secure" id="gnb_secure_lnk"><a
+														href="https://nid.naver.com/user2/help/myInfo?m=viewSecurity&amp;menu=security">보안설정</a>
+												</li>
+												<li class="gnb_cert" id="gnb_cert_lnk"><a
+														href="https://nid.naver.com/user2/eSign/v1/home/land">내인증서</a></li>
+											</ul>
+											<div class="gnb_pay_check" id="gnb_pay_check">
+												<p class="gnb_membership" style="display: none;" id="gnb_membership"><a
+														href="https://nid.naver.com/membership/my" class="gnb_my_membership"><i
+															class="blind">네이버 멤버쉽</i></a></p><em>N Pay</em><a
+													href="https://pay.naver.com" id="gnb_pay_point"><span
+														style="display: none">내 페이포인트</span></a>
+											</div>
 										</div>
 									</div>
-									<hr>
+									<div class="gnb_my_community"><a href="https://blog.naver.com/MyBlog.naver"
+											class="gnb_blog">내 블로그</a><a href="https://section.cafe.naver.com"
+											class="gnb_cafe">가입한 카페</a><a href="https://pay.naver.com" class="gnb_pay"><span>N
+												Pay</span></a></div><a href="#" class="gnb_my_interface"
+										style="display:none"><span class="blind">환경설정</span></a>
+								</div><iframe id="gnb_my_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0"
+									height="0" scrolling="no" frameborder="0"
+									style="top: 55px; right: 10px; width: 320px; height: 158px; display: none; opacity: 0;"></iframe>
+							</li>
+							<li class="gnb_notice_li" id="gnb_notice_layer" style="display:none"><a href="javascript:;"
+									class="gnb_notice" onclick="gnbNaverMeLayer.clickToggle(); return false;"><span
+										class="blind">알림</span><span class="gnb_icon"></span><em class="gnb_ico_num"
+										id="gnb_me_menu" style="display:none"><span class="gnb_ico_new"><span class="gnb_count"
+												id="gnb_me_count"></span></span></em><span class="ico_arrow"></span></a>
+								<div class="gnb_notice_lyr" id="gnb_notice_lyr">
+									<div class="svc_noti svc_panel">
+										<div class="svc_scroll">
+											<div class="svc_head"><strong class="gnb_tit">전체 알림</strong>
+												<div class="task_right"><button
+														onclick="gnbNaverMeLayer.deleteReadList(this, event);"
+														id="gnb_btn_read_noti_del">읽은 알림 삭제</button><button
+														onclick="gnbNaverMeLayer.showDeleteAlert();"
+														id="gnb_btn_all_noti_del">모두 삭제</button></div>
+											</div>
+											<div class="svc_body" id="gnb_naverme_layer"></div>
+										</div>
+										<div class="gnb_ly_alert" id="gnb_ly_alert" style="display: none;">
+											<p class="gnb_msg"><strong>알림을 모두 삭제하시겠습니까?</strong></p>
+											<div class="gnb_btns"><button id="ly_alert_confirm"
+													onclick="gnbNaverMeLayer.deleteAllList(this, event);">확인</button><button
+													onclick="gnbNaverMeLayer.hideDeleteAlert();">취소</button></div><button
+												class="gnb_btn_close" onclick="gnbNaverMeLayer.hideDeleteAlert();"><i>레이어
+													닫기</i></button>
+										</div><a href="https://noti.naver.com/index.nhn" class="gnb_notice_all">내 알림 전체보기</a>
+									</div>
+								</div><iframe id="gnb_notice_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding"
+									width="0" height="0" scrolling="no" frameborder="0"
+									style="top: 55px; right: 10px; width: 299px; height: 332px; display: none; opacity: 0;"></iframe>
+							</li>
+							<li class="mail_li" id="gnb_mail_layer" style="display:none"><a href="https://mail.naver.com"
+									class="gnb_mail"><span class="blind">메일</span><span class="gnb_icon"></span><em
+										class="gnb_ico_num" id="gnb_mail_menu" style="display:none"><span
+											class="gnb_ico_new"><span class="gnb_count"
+												id="gnb_mail_count"></span></span></em></a></li>
+							<li class="gnb_service_li" id="gnb_service_layer" style="display: inline-block;"><a
+									href="javascript:;" class="gnb_service"
+									onclick="gnbMoreLayer.clickToggle(); return false;"><span class="blind">서비스 더보기</span><span
+										class="gnb_icon"></span><span class="ico_arrow"></span></a>
+								<div class="gnb_service_lyr" id="gnb_service_lyr">
+									<div class="gnb_svc_more" id="gnb_svc_more" style="display: none;"><strong class="blind">네이버
+											주요 서비스</strong>
+										<div class="gnb_bg_top"></div>
+										<div class="gnb_svc_hd" id="gnb_svc_hd"><strong class="gnb_svc_tit">바로가기
+												설정</strong><span class="link"><a href="https://www.naver.com/more.html">전체 서비스
+													보기</a></span></div>
+										<div class="svc_btnwrp">
+											<div class="svc_btns"><button class="gnb_save"
+													onclick="if(gnbFavorite.addService()){gnbMoreLayer.clickToggleWhole()} return false;"><strong
+														class="blind">확인</strong></button><button class="gnb_close"
+													onclick="gnbFavorite.cancel(); return false;"><span
+														class="blind">취소</span></button><button class="gnb_return"
+													onclick="gnbFavorite.resetService(); return false;"><span class="blind">초기
+														설정으로 변경</span></button></div>
+										</div>
+										<div class="gnb_bg_btm"></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- GNB -->
+			</div>
+			<div class="sports_menu" role="navigation" id="_sports_lnb_menu">
+				<div class="menu_area">
+					<h2 class="blind">메인 메뉴</h2>
+					<ul class="main_menu_list" role="menubar">
+		
+						<li class="main_menu_item" role="presentation">
+							<a href="/index" class="link_main_menu" role="menuitem" aria-current="page" onclick="clickcr(this,
+																											   'LNB.sportshome',
+																											   'sportshome', '',
+																											   event);">스포츠홈</a>
+							<ul class="sub_menu_list" role="menubar">
+							</ul>
+						</li>
+		
+						<li class="main_menu_item" role="presentation">
+							<a href="/kbaseball/index" class="link_main_menu" role="menuitem" onclick="clickcr(this,
+																											   'LNB.baseball',
+																											   'baseball', '',
+																											   event);">야구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
 								</li>
-								<!-- Links -->
-								<li><a class="dropdown-item" href="../member/memberView.html"><i
-											class="fa-solid fa-user me-2"></i>Edit
-										Profile</a></li>
-								<li><a class="dropdown-item" href="../../dmin/Dashboard/Dashboard.html"><i
-											class="fa-solid fa-gear me-2"></i>Admin
-										Page</a></li>
-								<li><a class="dropdown-item" href="#"><i
-											class="fa-solid fa-circle-info me-2"></i>Help</a>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
 								</li>
-								<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
-											class="fa-solid fa-power-off me-2"></i>Sign Out</a></li>
-								<li>
-									<hr class="dropdown-divider">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=kbo" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
 								</li>
-								<li>
-									<a class="dropdown-item" href="../login/loginForm.html"><i
-											class="fa-solid fa-arrow-right-to-bracket me-2"></i>Sign In</a>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
 								</li>
-								<li>
-									<a class="dropdown-item" href="../login/singUpForm.html"><i
-											class="fa-solid fa-user-plus me-2"></i>Sign Up</a>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/record/index?category=kbo" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.datacenter', 'datacenter', '', event);">
+										기록/순위
+									</a>
 								</li>
-								<!-- Dark mode switch START -->
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/column/columnistList" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.issue', 'issue', '', event);">
+										구단/협회
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="https://m.sports.naver.com/kbo40/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.kbo40th', 'kbo40th', '', event);">
+										<img src="https://ssl.pstatic.net/static/sports/2022/m/07/12/logo_kbo40.png" width="67"
+											height="36" alt="KBO40">
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="https://m.sports.naver.com/kbollect" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.', '', '', event);">
+										<img src="https://ssl.pstatic.net/static/sports/2022/pc/07/22/logo_kbollect.png"
+											width="92" height="36" alt="KBOLLECT">
+									</a>
+								</li>
+							</ul>
+						</li>
+		
+						<li class="main_menu_item" role="presentation">
+							<a href="/wbaseball/index" class="link_main_menu" role="menuitem" onclick="clickcr(this,
+																											   'LNB.worldbaseball',
+																											   'worldbaseball', '',
+																											   event);">해외야구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=mlb" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/record/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.record', 'record', '', event);">
+										기록/순위
+									</a>
+								</li>
+							</ul>
+						</li>
+		
+						<li class="main_menu_item" role="presentation">
+							<a href="/kfootball/index" class="link_main_menu" role="menuitem" onclick="clickcr(this,
+																											   'LNB.soccer',
+																											   'soccer', '',
+																											   event);">축구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=kfootball" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/record/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.record', 'record', '', event);">
+										기록/순위
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/column/columnistList" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.', '', '', event);">
+										구단/협회
+									</a>
+								</li>
+							</ul>
+						</li>
+		
+						<li class="main_menu_item" role="presentation">
+							<a href="/wfootball/index" class="link_main_menu" role="menuitem" onclick="clickcr(this,
+																											   'LNB.worldfootball',
+																											   'worldfootball', '',
+																											   event);">해외축구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=wfootball" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/record/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.record', 'record', '', event);">
+										기록/순위
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="https://m.sports.naver.com/wfootball/predict" class="link_sub_menu" role="menuitem"
+										target="_blank" onclick="clickcr(this, 'LNB.predict', 'predict', '', event);">
+										<img src="https://sports-phinf.pstatic.net/20220107_20/1641522453127ianDL_PNG/7cc53600-6fac-11ec-8738-ecfde1d86295.png"
+											width="58" height="36" alt="승부예측">
+									</a>
+								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
-
-				<!-- Main navbar START -->
-				<div class="navbar-collapse w-100 collapse me-2" id="navbarCollapse">
-					<!-- Nav Main menu START -->
-					<ul class="navbar-nav navbar-nav-scroll me-auto">
-						<!-- Nav item 1 Demos -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="demoMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">야구</a>
-						</li>
-
-						<!-- Nav item 2 Pages -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="pagesMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">해외야구</a>
-						</li>
-
-						<!-- Nav item 3 Pages -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="pagesMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">축구</a>
-						</li>
-
-						<!-- Nav item 4 Pages -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="pagesMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">해외축구</a>
-						</li>
-					</ul>
-				</div>
-				<!-- Main navbar END -->
 			</div>
-		</nav>
+		</div>
+	</header>
 
+	<main>
 		<div id="container" role="main">
 			<div id="spot">
 				<div class="home_spot">
@@ -440,7 +683,7 @@
 										<div class="match_info">
 											<div class="match_status">
 												<span class="versus">VS</span>
-												<span class="status">17:00 예정</span>
+												<span class="status">18:00 예정</span>
 											</div>
 											<div class="away_team">
 												<span class="team">
@@ -470,7 +713,7 @@
 										<div class="match_info">
 											<div class="match_status">
 												<span class="versus">VS</span>
-												<span class="status">17:00 예정</span>
+												<span class="status">18:00 예정</span>
 											</div>
 											<div class="away_team">
 												<span class="team">
@@ -500,7 +743,7 @@
 										<div class="match_info">
 											<div class="match_status">
 												<span class="versus">VS</span>
-												<span class="status">17:00 예정</span>
+												<span class="status">18:00 예정</span>
 											</div>
 											<div class="away_team">
 												<span class="team">
@@ -528,7 +771,7 @@
 										<div class="match_info">
 											<div class="match_status">
 												<span class="versus">VS</span>
-												<span class="status">17:00 예정</span>
+												<span class="status">18:00 예정</span>
 											</div>
 											<div class="away_team">
 												<span class="team">
@@ -557,7 +800,7 @@
 										<div class="match_info">
 											<div class="match_status">
 												<span class="versus">VS</span>
-												<span class="status">17:00 예정</span>
+												<span class="status">18:00 예정</span>
 											</div>
 											<div class="away_team">
 												<span class="team">
@@ -2522,7 +2765,9 @@
 				];
 			</script> -->
 		</div>
+	</main>
 
+	<footer>
 		<!-- 하단 게시물 영역-->
 		<!-- footer -->
 		<div class="footer">
@@ -2549,7 +2794,8 @@
 				</div>
 			</div>
 		</div>
-	</form>
+	</footer>
+
 	<!-- end -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
