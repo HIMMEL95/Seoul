@@ -480,14 +480,32 @@
                                                         <strong class="u_vc">댓글 입력</strong>
                                                         <div class="u_cbox_inbox">
                                                             <textarea title="응원톡" id="cbox_module__write_textarea" class="u_cbox_text"
-                                                                rows="3" cols="30" data-log="RPC.input">
-                                                                                                    </textarea>
+                                                                rows="3" cols="30" data-log="RPC.input"></textarea>
                                                             <label for="cbox_module__write_textarea" class="u_cbox_guide"
                                                                 data-action="write#placeholder" data-param="@event">
                                                                 댓글을 작성하려면
-                                                                <a href="#" class="u_cbox_link">로그인</a>
+                                                                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#modal">로그인</button>
                                                                 해주세요
                                                             </label>
+                                                            <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLabel">로그인 여부</h5>
+                                                                            <button type="button" class="btn-close text-black" data-bs-dismiss="modal" aria-label="Close">
+                                                                                <i class="fa-solid fa-xmark"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            로그인 하시겠습니까?
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                            <a role="button" class="btn bg-white" href="../login/loginForm.html">Login</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="u_cbox_upload_image" style="display:none">

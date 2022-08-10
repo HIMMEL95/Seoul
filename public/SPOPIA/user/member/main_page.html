@@ -80,112 +80,271 @@
 	<!-- start -->
 
 	<!-- 상단 Navbar -->
-	<form action="#" method="get" id="form">
-		<nav class="navbar navbar-expand-lg" style="background-color: #2565D0;">
-			<div class="container px-3 px-xl-5">
-				<!-- Logo START -->
-				<a class="navbar-brand" href="./main_page.html">
-					<img class="light-mode-item navbar-brand-item" src="../../image/SPOPIA_white.png" alt="logo"
-						style="width: 90px;">
-				</a>
-				<!-- Logo END -->
-
-				<!-- Responsive navbar toggler -->
-				<button class="navbar-toggler ms-auto collapsed border-0 me-2" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<i class="fa-solid fa-bars text-white"></i>
-				</button>
-
-				<!-- Profile START -->
-				<div class="dropdown">
-					<ul class=" nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
-						<li class="me-2">
-							<a class="avatar avatar-sm p-0" href="../member/memberView.html" id="profileDropdown"
-								role="button" data-bs-auto-close="outside" data-bs-display="static"
-								data-bs-toggle="dropdown" aria-expanded="false">
-								<img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar"
-									style="width: 30px;">
-							</a>
-							<ul class="dropdown-menu dropdown-animation dropdown-menu-end pt-3"
-								aria-labelledby="profileDropdown">
-								<!-- Profile info -->
-								<li class="px-3">
-									<div class="d-flex align-items-center">
-										<!-- Avatar -->
-										<div class="avatar me-3">
-											<img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg"
-												alt="avatar" style="width: 30px;">
+	<header>
+		<div id="header" class="header">
+			<div class="container-fluid" role="banner">
+				<div class="row align-items-center">
+					<div class="col-2 ms-3 p-2">
+						<a href="../member/main_page.html">
+							<img src="../../image/SPOPIA_white.png" alt="logo" style="height: 30px;">
+						</a>
+					</div>
+					<div class="col-3 offset-6">
+						<ul>
+							<li style="display: inline-block">
+								<a role="button" class="btn border-0 text-white" href="../login/loginForm.html">로그인</a>
+							</li>
+							<li class="dropdown" style="display: inline-block">
+								<button type="button" class="btn border-0" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="../../image/diano.jpg" class="rounded-circle" alt="profile"
+										style="width: 35px;">
+								</button>
+								<ul class="dropdown-menu dropdown-animation dropdown-menu-end pt-3"
+									aria-labelledby="profileDropdown">
+									<!-- Profile info -->
+									<li class="px-3">
+										<div class="d-flex align-items-center">
+											<!-- Avatar -->
+											<div class="avatar me-3">
+												<img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg"
+													alt="avatar" style="width: 30px;">
+											</div>
+											<div>
+												<a class="fs-6 fw-bold" href="../member/memberView.html">이하늘</a>
+												<p class="small m-0">himmel@gmail.com</p>
+											</div>
 										</div>
-										<div>
-											<a class="fs-6 fw-bold" href="../member/memberView.html">이하늘</a>
-											<p class="small m-0">himmel@gmail.com</p>
-										</div>
-									</div>
-									<hr>
+										<hr>
+									</li>
+									<!-- Links -->
+									<li><a class="dropdown-item" href="../member/memberView.html"><i
+												class="fa-solid fa-user me-2"></i>Edit
+											Profile</a></li>
+									<li><a class="dropdown-item" href="../../dmin/Dashboard/Dashboard.html"><i
+												class="fa-solid fa-gear me-2"></i>Admin
+											Page</a></li>
+									<li><a class="dropdown-item" href="#"><i
+												class="fa-solid fa-circle-info me-2"></i>Help</a>
+									</li>
+									<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
+												class="fa-solid fa-power-off me-2"></i>Sign Out</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li>
+										<a class="dropdown-item" href="../login/loginForm.html"><i
+												class="fa-solid fa-arrow-right-to-bracket me-2"></i>Sign In</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../login/singUpForm.html"><i
+												class="fa-solid fa-user-plus me-2"></i>Sign Up</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+	
+					</div>
+				</div>
+			</div>
+			<div class="sports_menu" role="navigation" id="_sports_lnb_menu">
+				<div class="menu_area">
+					<h2 class="blind">메인 메뉴</h2>
+					<ul class="main_menu_list" role="menubar">
+						<li class="main_menu_item" role="presentation">
+							<a href="/index" class="link_main_menu" role="menuitem" aria-current="page"
+								onclick="clickcr(this, 'LNB.sportshome', 'sportshome', '', event);">스포츠홈</a>
+							<ul class="sub_menu_list" role="menubar">
+							</ul>
+						</li>
+						<li class="main_menu_item" role="presentation">
+							<a href="/kbaseball/index" class="link_main_menu" role="menuitem"
+								onclick="clickcr(this, 'LNB.baseball', 'baseball', '', event);">야구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
 								</li>
-								<!-- Links -->
-								<li><a class="dropdown-item" href="../member/memberView.html"><i
-											class="fa-solid fa-user me-2"></i>Edit
-										Profile</a></li>
-								<li><a class="dropdown-item" href="../../dmin/Dashboard/Dashboard.html"><i
-											class="fa-solid fa-gear me-2"></i>Admin
-										Page</a></li>
-								<li><a class="dropdown-item" href="#"><i
-											class="fa-solid fa-circle-info me-2"></i>Help</a>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
 								</li>
-								<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
-											class="fa-solid fa-power-off me-2"></i>Sign Out</a></li>
-								<li>
-									<hr class="dropdown-divider">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=kbo" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
 								</li>
-								<li>
-									<a class="dropdown-item" href="../login/loginForm.html"><i
-											class="fa-solid fa-arrow-right-to-bracket me-2"></i>Sign In</a>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
 								</li>
-								<li>
-									<a class="dropdown-item" href="../login/singUpForm.html"><i
-											class="fa-solid fa-user-plus me-2"></i>Sign Up</a>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/record/index?category=kbo" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.datacenter', 'datacenter', '', event);">
+										기록/순위
+									</a>
 								</li>
-								<!-- Dark mode switch START -->
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kbaseball/column/columnistList" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.issue', 'issue', '', event);">
+										구단/협회
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="https://m.sports.naver.com/kbo40/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.kbo40th', 'kbo40th', '', event);">
+										<img src="https://ssl.pstatic.net/static/sports/2022/m/07/12/logo_kbo40.png"
+											width="67" height="36" alt="KBO40">
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="https://m.sports.naver.com/kbollect" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.', '', '', event);">
+										<img src="https://ssl.pstatic.net/static/sports/2022/pc/07/22/logo_kbollect.png"
+											width="92" height="36" alt="KBOLLECT">
+									</a>
+								</li>
+							</ul>
+						</li>
+	
+						<li class="main_menu_item" role="presentation">
+							<a href="/wbaseball/index" class="link_main_menu" role="menuitem"
+								onclick="clickcr(this, 'LNB.worldbaseball', 'worldbaseball', '', event);">해외야구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=mlb" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wbaseball/record/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.record', 'record', '', event);">
+										기록/순위
+									</a>
+								</li>
+							</ul>
+						</li>
+	
+						<li class="main_menu_item" role="presentation">
+							<a href="/kfootball/index" class="link_main_menu" role="menuitem"
+								onclick="clickcr(this, 'LNB.soccer', 'soccer', '', event);">축구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=kfootball" class="link_sub_menu"
+										role="menuitem" onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/record/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.record', 'record', '', event);">
+										기록/순위
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/kfootball/column/columnistList" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.', '', '', event);">
+										구단/협회
+									</a>
+								</li>
+							</ul>
+						</li>
+	
+						<li class="main_menu_item" role="presentation">
+							<a href="/wfootball/index" class="link_main_menu" role="menuitem"
+								onclick="clickcr(this,'LNB.worldfootball','worldfootball', '', event);">해외축구</a>
+							<ul class="sub_menu_list" role="menubar">
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/news/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.news', 'news', '', event);">
+										최신뉴스
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/vod/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.video', 'video', '', event);">
+										영상
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/photocenter/albumList?category=wfootball" class="link_sub_menu"
+										role="menuitem" onclick="clickcr(this, 'LNB.album', 'album', '', event);">
+										생생화보
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/schedule/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.schedule', 'schedule', '', event);">
+										일정/결과
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="/wfootball/record/index" class="link_sub_menu" role="menuitem"
+										onclick="clickcr(this, 'LNB.record', 'record', '', event);">
+										기록/순위
+									</a>
+								</li>
+								<li class="sub_menu_item " role="presentation">
+									<a href="https://m.sports.naver.com/wfootball/predict" class="link_sub_menu"
+										role="menuitem" target="_blank"
+										onclick="clickcr(this, 'LNB.predict', 'predict', '', event);">
+										<img src="https://sports-phinf.pstatic.net/20220107_20/1641522453127ianDL_PNG/7cc53600-6fac-11ec-8738-ecfde1d86295.png"
+											width="58" height="36" alt="승부예측">
+									</a>
+								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
-
-				<!-- Main navbar START -->
-				<div class="navbar-collapse w-100 collapse me-2" id="navbarCollapse">
-					<!-- Nav Main menu START -->
-					<ul class="navbar-nav navbar-nav-scroll me-auto">
-						<!-- Nav item 1 Demos -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="demoMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">야구</a>
-						</li>
-
-						<!-- Nav item 2 Pages -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="pagesMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">해외야구</a>
-						</li>
-
-						<!-- Nav item 3 Pages -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="pagesMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">축구</a>
-						</li>
-
-						<!-- Nav item 4 Pages -->
-						<li class="nav-item dropdown">
-							<a class="nav-link active text-white fw-bold" href="#" id="pagesMenu"
-								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">해외축구</a>
-						</li>
-					</ul>
-				</div>
-				<!-- Main navbar END -->
 			</div>
-		</nav>
+		</div>
+	</header>
 
+	<main>
 		<div id="container" role="main">
 			<div id="spot">
 				<div class="home_spot">
@@ -2519,9 +2678,9 @@
 				];
 			</script> -->
 		</div>
+	</main>
 
-		<!-- 하단 게시물 영역-->
-		<!-- footer -->
+	<footer>
 		<div class="footer">
 			<div class="footer_inner">
 				<!--[주]고객센터,제휴문의,서비스안내-->
@@ -2546,7 +2705,7 @@
 				</div>
 			</div>
 		</div>
-	</form>
+	</footer>
 	<!-- end -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

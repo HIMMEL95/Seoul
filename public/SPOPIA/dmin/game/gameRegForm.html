@@ -86,16 +86,25 @@
             <div class="card ps-5 pe-5 pt-4 pb-4 shadow">
                 <div class="row pt-4">
                     <div class="col mb-4">
-                        <select class="form-select form-select" aria-label=".form-select example">
-                            <option selected>종목</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <label for="abroadNY" class="form-label fw-bold">해외여부</label>
+                        <select class="form-select form-select" id="abroadNY" aria-label=".form-select example">
+                            <option selected>선택</option>
+                            <option value="1">국내</option>
+                            <option value="2">해외</option>
                         </select>
                     </div>
                     <div class="col mb-4">
-                        <select class="form-select form-select" aria-label=".form-select example">
-                            <option selected>리그</option>
+                        <label for="event" class="form-label fw-bold">종목</label>
+                        <select class="form-select form-select" id="event" aria-label=".form-select example">
+                            <option selected>선택</option>
+                            <option value="1">축구</option>
+                            <option value="2">야구</option>
+                        </select>
+                    </div>
+                    <div class="col mb-4">
+                        <label for="league" class="form-label fw-bold">리그</label>
+                        <select class="form-select form-select" id="league" aria-label=".form-select example">
+                            <option selected>선택</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
@@ -110,6 +119,16 @@
                     <div class="col">
                         <label for="awayTeam" class="form-label fw-bold">원정팀</label>
                         <input type="text" class="form-control" id="awayTeam" value="" required>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <label for="homeTeamScore" class="form-label fw-bold">홈팀 선발</label>
+                        <input type="text" class="form-control" id="player_home" value="" required>
+                    </div>
+                    <div class="col">
+                        <label for="awayTeamScore" class="form-label fw-bold">원정팀 선발</label>
+                        <input type="text" class="form-control" id="player_away" value="" required>
                     </div>
                 </div>
                 <div class="row mb-4">
