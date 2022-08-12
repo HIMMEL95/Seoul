@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Search com html puro - @programador.cs</title>
+	<link href="../css/countTime.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1></h1>
+	<input type="datetime-local" value="2023-01-01T00:00">
+	<script type="text/javascript">
+		const output = document.querySelector("h1");
+		
+		const countDown = () => {
+			const input = document.querySelector("input");
+
+			const countDownDate = new Date(input.value).getTime();
+			const now = new Date().getTime();
+
+			const distance = countDownDate - now;
+
+			const dd = Math.floor(
+				distance / (1000 * 60 * 60 * 24) 
+			);
+
+			const hh = Math.floor(
+				(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) 
+			);
+
+			const mm = Math.floor(
+				(distance % (1000 * 60 * 60)) / (1000 * 60) 
+			);
+
+			const ss = Math.floor(
+				(distance % (1000 * 60)) / 1000 
+			);
+
+			output.innerText = `${dd}d ${hh}h ${mm}m ${ss}s`;
+
+			if (distance < 0) {
+				output.innerText = "EXPIRADO";
+			}
+		};
+
+		countDown();
+		setInterval(countDown, 1000);
+	</script>
+</body>
+
+</html>
