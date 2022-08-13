@@ -1,8 +1,42 @@
 header {
-  padding: 0 20px;
-  border-bottom: 1px solid black;
-  height: 55px;
+  background-color: blue;
+  padding: 5px 20px;
+  height: 50px;
   display: flex;
   justify-content: space-between;  /* 주축 */
   align-items: center;    /* 서브 축 */
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  color: white;
+}
+
+main {
+  background-color: red;
+  height: 700px;
+}
+
+.container {
+  width: 100%;
+}
+
+.gameList {
+  background-color: gray;
+  height: 150px;
+
+}
+
+.articleList {
+  background-color: yellow;
+  height: 100%;
+  width: 75%;
+}
+
+footer {
+  background-color: green;
+  height: 150px;
 }
