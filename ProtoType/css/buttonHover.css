@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/* body {
+  font-family: 'Open Sans', sans-serif;
+  background: #2c3e50;
+} */
+
+nav {
+  position: relative;
+  margin: 270px auto 0;
+  width: 600px;
+  height: 50px;
+  /* background: #34495e; */
+  background: white;
+  border-radius: 8px;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+
+nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: blakc;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+nav .animation {
+  position: absolute;
+  height:  5px;
+  bottom: 0;
+  z-index: 0;
+  background: #1abc9c;
+  width: 150px;
+  border-radius: 8px;
+  transition: all .5s ease 0s;
+}
+
+a:nth-child(1) {
+  width: 150px;
+}
+
+nav .start-home, a:nth-child(1):hover~ .animation {
+  width: 150px;
+  left: 0;
+}
+
+a:nth-child(2) {
+  width: 75px;
+}
+
+nav .start-baseball, a:nth-child(2):hover~ .animation {
+  width: 75px;
+  left: 150px;
+}
+
+a:nth-child(3) {
+  width: 150px;
+}
+
+nav .start-abBaseball, a:nth-child(3):hover~ .animation {
+  width: 150px;
+  left: 225px;
+
+}
+
+a:nth-child(4) {
+  width: 75px;
+}
+
+nav .start-football, a:nth-child(4):hover~ .animation {
+  width: 75px;
+  left: 375px;
+
+}
+
+a:nth-child(5) {
+  width: 150px;
+}
+
+nav .start-abFootball, a:nth-child(5):hover~ .animation {
+  width: 150px;
+  left: 450px;
+
+}

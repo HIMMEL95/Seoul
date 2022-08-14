@@ -1,10 +1,16 @@
-header {
-  background-color: blue;
+
+.topbar {
+  background-color: #2565D0;
+  display: flex;
+  height: 45px;
   padding: 5px 20px;
-  height: 50px;
   display: flex;
   justify-content: space-between;  /* 주축 */
   align-items: center;    /* 서브 축 */
+}
+
+.logo_img {
+  width: 80px;
 }
 
 a {
@@ -13,6 +19,86 @@ a {
 
 .login {
   color: white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+.menu {
+  font-family: 'Open Sans', sans-serif;
+  background: #ffffff;
+  display: flex;
+}
+
+.menuBar { 
+  width: 600px;
+  height: 50px;
+  background: white;
+  font-size: 0;
+}
+
+.menuBar .menu_link {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: black;
+  line-height: 45px;
+  display: inline-block;
+  text-align: center;
+}
+
+.menuBar .animation {
+  position: relative;
+  height: 5px;
+  top: 0;
+  background: #1abc9c;
+  width: 150px;
+  border-radius: 8px;
+  transition: all .5s ease 0s;
+}
+
+.menu_link:nth-child(1) {
+  width: 150px;
+}
+
+.menuBar .start-home, .menu_link:nth-child(1):hover~ .animation {
+  width: 150px;
+  left: 0;
+}
+
+.menu_link:nth-child(2) {
+  width: 75px;
+}
+
+.menuBar .start-baseball, .menu_link:nth-child(2):hover~ .animation {
+  width: 75px;
+  left: 150px;
+}
+
+.menu_link:nth-child(3) {
+  width: 150px;
+}
+
+.menuBar .start-abBaseball, .menu_link:nth-child(3):hover~ .animation {
+  width: 150px;
+  left: 225px;
+
+}
+
+.menu_link:nth-child(4) {
+  width: 75px;
+}
+
+.menuBar .start-football, .menu_link:nth-child(4):hover~ .animation {
+  width: 75px;
+  left: 375px;
+
+}
+
+.menu_link:nth-child(5) {
+  width: 150px;
+}
+
+.menuBar .start-abFootball, .menu_link:nth-child(5):hover~ .animation {
+  width: 150px;
+  left: 450px;
 }
 
 main {

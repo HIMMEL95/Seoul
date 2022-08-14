@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>navBar</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            })
+        })
+    </script>
+    <link rel="stylesheet" href="../css/navBar.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Sign In</a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>이미지</span>
+                    <!-- <img src="../../public/SPOPIA/image/diano.jpg" alt=""> -->
+                </a>
+            </li>
+        </ul>
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <section>
+        
+    </section>
+    <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
