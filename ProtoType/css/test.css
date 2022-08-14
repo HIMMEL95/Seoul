@@ -1,4 +1,4 @@
-
+/* header */
 .topbar {
   background-color: #2565D0;
   display: flex;
@@ -21,87 +21,136 @@ a {
   color: white;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-.menu {
-  font-family: 'Open Sans', sans-serif;
-  background: #ffffff;
-  display: flex;
+.navigation ul {
+  float: right;
 }
 
-.menuBar { 
-  width: 600px;
-  height: 50px;
-  background: white;
-  font-size: 0;
-}
-
-.menuBar .menu_link {
-  font-size: 15px;
-  text-transform: uppercase;
-  color: black;
-  line-height: 45px;
+.navigation li {
   display: inline-block;
-  text-align: center;
+  margin: 0 10px;
+  line-height: 55px;
 }
 
-.menuBar .animation {
-  position: relative;
-  height: 5px;
-  top: 0;
-  background: #1abc9c;
-  width: 150px;
-  border-radius: 8px;
-  transition: all .5s ease 0s;
+.navigation a {
+  font-size: 17px;
 }
 
-.menu_link:nth-child(1) {
-  width: 150px;
+.avatar {
+  width: 35px;
+  margin: 0px 5px;
+  align-items: center;
 }
 
-.menuBar .start-home, .menu_link:nth-child(1):hover~ .animation {
-  width: 150px;
-  left: 0;
+/* navbar */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
-.menu_link:nth-child(2) {
-  width: 75px;
+body {
+  font-family: montserrat;
 }
 
-.menuBar .start-baseball, .menu_link:nth-child(2):hover~ .animation {
-  width: 75px;
-  left: 150px;
+nav {
+  height: 50px;
+  width: 100%;
+  background: #fff;
 }
 
-.menu_link:nth-child(3) {
-  width: 150px;
+nav ul {
+  float: left;
+  margin-left: 40px;
 }
 
-.menuBar .start-abBaseball, .menu_link:nth-child(3):hover~ .animation {
-  width: 150px;
-  left: 225px;
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 50px;
+}
+
+nav a {
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+a.active, a:hover {
+  border: 1px solid white;
+  transition: .5s;
+}
+
+nav #icon {
+  color: black;
+  font-size: 30px;
+  line-height: 50px;
+  float: left;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  nav ul {
+    margin-left: 0px;
+  }
+
+  nav a {
+    font-size: 17px;
+  }
+
+  nav #icon {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 576px) {
+  nav #icon {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2f3640;
+    top: 105px;
+    right: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  a.active, a:hover {
+    border: none;
+    color: #3498db;
+  }
+
+  nav ul.show {
+    left: 0;
+  }
 
 }
 
-.menu_link:nth-child(4) {
-  width: 75px;
+section {
+  background: url() no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
 }
 
-.menuBar .start-football, .menu_link:nth-child(4):hover~ .animation {
-  width: 75px;
-  left: 375px;
-
-}
-
-.menu_link:nth-child(5) {
-  width: 150px;
-}
-
-.menuBar .start-abFootball, .menu_link:nth-child(5):hover~ .animation {
-  width: 150px;
-  left: 450px;
-}
-
-main {
+/* main {
   background-color: red;
   height: 700px;
 }
@@ -125,4 +174,4 @@ main {
 footer {
   background-color: green;
   height: 150px;
-}
+} */

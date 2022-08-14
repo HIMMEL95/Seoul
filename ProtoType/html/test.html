@@ -5,6 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>test</title>
     <link rel="stylesheet" href="../css/test.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            })
+        })
+    </script>
 </head>
 <body>
     <header>
@@ -16,16 +24,28 @@
                     </a>
                 </div>
                 <div class="navigation">
-                    <a class="login" href="#">로그인</a>
+                    <ul>
+                        <li><a class="login" href="#">로그인</a></li>
+                        <li>
+                            <a>
+                                <img class="avatar" src="../../public/SPOPIA/image/diano.jpg">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="menu" role="menubar">
                 <nav class="menuBar">
-                    <a class="menu_link" href="#">스포츠 홈</a>
-                    <a class="menu_link" href="#">야구</a>
-                    <a class="menu_link" href="#">해외야구</a>
-                    <a class="menu_link" href="#">축구</a>
-                    <a class="menu_link" href="#">해외축구</a>
+                    <label id="icon">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul>
+                        <li><a class="menu_link" href="#">스포츠 홈</a></li>
+                        <li><a class="menu_link" href="#">야구</a></li>
+                        <li><a class="menu_link" href="#">해외야구</a></li>
+                        <li><a class="menu_link" href="#">축구</a></li>
+                        <li><a class="menu_link" href="#">해외축구</a></li>
+                    </ul>
                     <div class="animation start-home"></div>
                 </nav>
             </div>
@@ -51,6 +71,7 @@
 
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
