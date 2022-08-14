@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dropdown</title>
+
+    <link rel="stylesheet" href="../css/userDropdown.css">
+</head>
+<body>
+    <div class="action">
+        <div class="profile" onclick="menuToggle();">
+            <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+        </div>
+        <div class="menu">
+            <h3>
+                Someone Famous
+                <br>
+                <span>Website Designer</span>
+            </h3>
+            <ul>
+                <li>
+                    <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+                    <a href="#">My Profile</a>
+                </li>
+                <li>
+                    <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+                    <a href="#">My Profile</a>
+                </li>
+                <li>
+                    <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+                    <a href="#">My Profile</a>
+                </li>
+                <li>
+                    <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+                    <a href="#">My Profile</a>
+                </li>
+                <li>
+                    <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+                    <a href="#">My Profile</a>
+                </li>
+                <li>
+                    <img src="../../public/SPOPIA/image/diano.jpg" width="35">
+                    <a href="#">My Profile</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
