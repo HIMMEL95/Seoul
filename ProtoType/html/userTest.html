@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+    <link rel="stylesheet" href="../css/userTest.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../../public/SPOPIA/image/SPOPIA_white.png" class="logo_img">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li><a class="login" href="#">로그인</a></li>
+                        <li>
+                            <div class="action">
+                                <div class="profile" onclick="menuToggle();">
+                                    <img class="pro_img" src="../../public/SPOPIA/image/diano.jpg" width="35">
+                                </div>
+                                <div class="menu">
+                                    <h3>
+                                        hIMMEL
+                                        <br>
+                                        <span>Website Designer</span>
+                                    </h3>
+                                    <ul class="pro_ul">
+                                        <li class="pro_li">
+                                            <a class="pro_a" href="#">
+                                                <i class="fa-solid fa-user me-2"></i>
+                                                Edit Profile
+                                            </a>
+                                        </li>
+                                        <li class="pro_li">
+                                            <a class="pro_a" href="#">
+                                                <i class="fa-solid fa-gear me-2"></i>
+                                                Admin Page
+                                            </a>
+                                        </li>
+                                        <li class="pro_li">
+                                            <a class="pro_a" href="#">
+                                                <i class="fa-solid fa-circle-info me-2"></i>
+                                                Help
+                                            </a>
+                                        </li>
+                                        <li class="pro_li">
+                                            <a class="pro_a" href="#">
+                                                <i class="fa-solid fa-power-off me-2"></i>
+                                                Sign Out
+                                            </a>
+                                        </li>
+                                        <hr>                                        
+                                        <li class="pro_li">
+                                            <a class="pro_a" href="#">
+                                                <i class="fa-solid fa-arrow-right-to-bracket me-2"></i>
+                                                Sign In
+                                            </a>
+                                        </li>
+                                        <li class="pro_li">
+                                            <a class="pro_a" href="#">
+                                                <i class="fa-solid fa-user-plus me-2"></i>
+                                                Sign Up
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="topbar">Topbar</div>
+        </header>
+        <main>
+            <div id="game">Game</div>
+            <div id="article">Article</div>
+            <div id="content">Content</div>
+        </main>
+        <footer>Footer</footer>
+    </div>
+    
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
