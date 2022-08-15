@@ -303,7 +303,7 @@ main {
   grid-area: main;
   display: grid;
   grid-template-columns: 1.5fr .5fr;
-  grid-template-rows: .5fr 2.0fr;
+  grid-template-rows: .8fr 2.0fr;
   grid-template-areas: 
     "game game"
     "article content";
@@ -311,11 +311,48 @@ main {
 }
 
 #game {
-  background: #6fffd2;
+  background: #edf0f6;
   grid-area: game;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 } 
+
+/* card 뷰 영역 */
+.card {
+  width: 250px;
+  height: 120px;
+  border-radius: 15px;
+  margin: 20px 40px;
+  position: absolute;
+  background: #fff;
+  box-shadow: 5px 5px 10px gray;
+  cursor: pointer;
+  display: flex;
+}
+
+.head {
+  height: 25%;
+  border-bottom: 1px solid black;
+  font-size: 17px;
+  padding: 0 20px;
+}
+
+.head span {
+  margin: 0 5px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 70px 70px 70px;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.content .info {
+  font-size: 16px;
+}
 
 #article {
   background: #64ffda;
