@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>test</title>
+    <title>userTest</title>
     <link rel="stylesheet" href="../css/userTest.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
@@ -24,8 +24,8 @@
                     </a>
                 </div>
                 <div class="navigation">
-                    <ul>
-                        <li><a class="login" href="#">로그인</a></li>
+                    <ul class="nav_ul">
+                        <li class="nav_li"><a class="login" href="#">로그인</a></li>
                         <li>
                             <div class="action">
                                 <div class="profile" onclick="menuToggle();">
@@ -33,9 +33,9 @@
                                 </div>
                                 <div class="menu">
                                     <h3>
-                                        hIMMEL
+                                        Himmel
                                         <br>
-                                        <span>Website Designer</span>
+                                        <a href="#" style="text-transform: none;">himmel@gmail.com</a>
                                     </h3>
                                     <ul class="pro_ul">
                                         <li class="pro_li">
@@ -82,7 +82,21 @@
                     </ul>
                 </div>
             </div>
-            <div id="topbar">Topbar</div>
+            <div id="topbar" role="menubar">
+                <nav class="menuBar">
+                    <label id="icon">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul>
+                        <li><a class="menu_link" href="#">스포츠 홈</a></li>
+                        <li><a class="menu_link" href="#">야구</a></li>
+                        <li><a class="menu_link" href="#">해외야구</a></li>
+                        <li><a class="menu_link" href="#">축구</a></li>
+                        <li><a class="menu_link" href="#">해외축구</a></li>
+                    </ul>
+                    <div class="animation start-home"></div>
+                </nav>
+            </div>
         </header>
         <main>
             <div id="game">Game</div>

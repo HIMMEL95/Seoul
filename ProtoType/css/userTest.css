@@ -25,24 +25,17 @@ header {
   grid-area: header;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr;
   grid-template-areas:
     "nav"
     "topbar";
   grid-gap: 0.2rem;
 }
 
-nav {
-  background: #a7ffeb;
-  grid-area: nav;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-}
-
 .nav {
   background-color: #2565D0;
   display: flex;
-  height: 45px;
+  height: 100%;
   padding: 5px 20px;
   display: flex;
   justify-content: space-between;  /* 주축 */
@@ -51,6 +44,7 @@ nav {
 
 .logo_img {
   width: 80px;
+  margin-left: 20px;
 }
 
 a {
@@ -61,28 +55,30 @@ a {
   color: white;
 }
 
-.navigation ul {
+.navigation .nav_ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 50px;
+  list-style: none;
 }
 
-.navigation li {
+.navigation .nav_li {
   display: inline-block;
   margin: 0 10px;
   line-height: 55px;
+  margin-right: 20px;
 }
 
 .navigation a {
-  font-size: 17px;
+  font-size: 15px;
 }
 
-.navigation li a {
+.navigation .nav_li a {
   height: 55px;
   border: 1px solid transparent;
   margin: 0;
 }
 
-.navigation li .avatar-img {
+.navigation .nav_li .avatar-img {
   width: 35px;
   margin-left: auto;
   margin-right: auto;
@@ -102,16 +98,17 @@ a {
   position: fixed;
   top:  8px;
   right: 10px;
-  margin-right: 10px;
 }
 
 .action .profile {
   position: relative;
   width:  40px;
   height: 40px;
+  top: 5px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .action .profile .pro_img {
@@ -126,7 +123,7 @@ a {
 .action .menu {
   position: absolute;
   top:120px;
-  right: -10px;
+  right: 10px;
   padding: 10px 20px;
   background: #fff;
   width: 200px;
@@ -212,6 +209,94 @@ a {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 } 
+
+.menuBar ul {
+  float: left;
+  margin-top: 8px;
+}
+
+.menuBar li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 100%;
+}
+
+.menuBar a {
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+a.active, a:hover {
+  border: 1px solid white;
+  transition: .5s;
+}
+
+.menuBar #icon {
+  color: black;
+  font-size: 30px;
+  line-height: 100%;
+  float: left;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+@media (min-width: 910px) {
+  .menuBar ul {
+    margin-left: 0px;
+  }
+
+  .menuBar a {
+    font-size: 17px;
+  }
+
+  .menuBar #icon {
+    visibility: hidden;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 910px) {
+  .menuBar #icon {
+    display: block;
+    margin-left: 40px;
+  }
+
+  .menuBar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:  white;
+    top: 100px;
+    right: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  .menuBar li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .menuBar a {
+    font-size: 20px;
+    color: black;
+  }
+
+  a.active, a:hover {
+    border: none;
+    color: #3498db;
+  }
+
+  .menuBar ul.show {
+    left: 0;
+  }
+
+}
 
 main {
   background: #84ffff;
