@@ -224,13 +224,17 @@ a {
 
 .menuBar ul {
   /* float: left; */
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .menuBar li {
   display: inline-block;
-  margin: 0 8px;
+  margin: 10px 8px;
   line-height: 100%;
+}
+
+.menuBar li:hover {
+  border-bottom: 3px solid #1abc9c;
 }
 
 .menuBar a {
