@@ -478,36 +478,58 @@ main {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr ;
   grid-template-rows: 0.1fr auto;
   grid-template-areas: 
     "header"
-    "contents";
+    "content";
   grid-gap: 0.2rem;
   align-items: center;
 } 
 
 .content_header {
   grid-area: header;
-  justify-content: space-around;
-  padding: 0 20px;
+  padding: 10px 20px;
+}
+
+.content_header h3 {
+  float: left;
+}
+
+.content_pagination {
+  float: right;
 }
 
 .contents {
+  grid-area: content;
+}
+
+.contents_card {
+  margin: 5px 10px;
+  grid-area: content;
   display: grid;
-  grid-area: contents;
-  grid-template-columns: 0.3fr 1.5fr;
-  grid-template-rows: auto;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.8fr 0.5fr;
   grid-template-areas: 
-    "contents_img contents_content";
-  grid-gap: 0.2rem;
+    "contents_img contents_title"
+    "contents_img contents_info";
 }
 
 .contents_img {
   grid-area: contents_img;
+  border-radius: 5px;
   width: 110px;
 }
 
+.contents_title {
+  grid-area: contents_title;
+  font-size: 13px;
+}
+
+.contents_info {
+  font-size: 11px;
+  grid-area: contents_info;
+}
 
 /* footer 영역 */
 footer {
