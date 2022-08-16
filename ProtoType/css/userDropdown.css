@@ -11,9 +11,10 @@ body {
 }
 
 .action {
-  position: fixed;
+  /* position: fixed; */
   top: 20px;
   right: 30px;
+  display: flex;
 }
 
 .action .profile {
@@ -50,6 +51,7 @@ body {
 
 .action .menu.active {
   top: 80px;
+  left: 10px;
   visibility: visible;
   opacity: 1;
 }
@@ -86,7 +88,7 @@ body {
   list-style: none;
   padding: 10px 0;
   border-top: 1px solid rgba(0,0,0,0.05);
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 

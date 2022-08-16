@@ -1,7 +1,7 @@
-:root {
+/* :root {
   --main-radius: 5px;
   --main-padding: 5px;
-}
+} */
 
 .container {
   display: grid;
@@ -20,6 +20,7 @@
   text-align: center;
 }
 
+/* header */
 header {
   background: #2565D0; 
   grid-area: header;
@@ -34,55 +35,105 @@ header {
 
 .nav {
   background-color: #2565D0;
-  display: flex;
+  display: grid;
   height: 100%;
-  padding: 5px 20px;
-  display: flex;
-  justify-content: space-between;  /* 주축 */
-  align-items: center;    /* 서브 축 */
+  grid-template-columns: 2fr 0.5fr;
+  grid-template-areas: "logo menu";
+  grid-gap: 0.2rem;
+  align-items: center;
 }
 
 .logo_img {
   width: 80px;
-  margin-left: 20px;
+  margin-left: 40px;
+  grid-area: logo;
+  float: left;
 }
 
 a {
   text-decoration: none;
 }
 
-.login {
-  color: white;
-}
-
 .navigation .nav_ul {
+  margin: 0 20px;
+  grid-area: menu;
   float: right;
-  margin-right: 50px;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "login img";
+  grid-gap: 0.2rem;
+  align-items: center;
 }
 
 .navigation .nav_li {
   display: inline-block;
-  margin: 0 10px;
-  line-height: 55px;
-  margin-right: 20px;
+  margin: 0;
+  line-height: 50px;
 }
 
 .navigation a {
   font-size: 15px;
 }
 
+.navigation .login {
+  color: white;
+}
+
 .navigation .nav_li a {
-  height: 55px;
+  height: 100%;
   border: 1px solid transparent;
   margin: 0;
 }
 
-.navigation .nav_li .avatar-img {
+.navigation .nav_li .pro_img {
   width: 35px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
+}
+
+@media (min-width: 909px) {
+  .nav {
+    background-color: #2565D0;
+    min-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 0.5fr;
+    grid-template-areas: "logo menu";
+    grid-gap: 0.2rem;
+    align-items: center;
+  }
+
+    .action .menu.active {
+      top: 80px;
+      right: 245px;
+      visibility: visible;
+      opacity: 1;
+    }
+}
+
+@media (max-width: 909px) {
+  .navigation .nav_ul {
+    margin: 0;
+    grid-area: menu;
+    float: right;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "login img";
+    grid-gap: 0.2rem;
+    align-items: center;
+  }
+
+  .navigation .nav_li {
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 50px;
+  }
 }
 
 /* user dropdown */
@@ -95,7 +146,6 @@ a {
 }
 
 .action {
-  position: fixed;
   top:  8px;
   right: 10px;
 }
@@ -104,7 +154,6 @@ a {
   position: relative;
   width:  40px;
   height: 40px;
-  top: 5px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
@@ -112,7 +161,7 @@ a {
 }
 
 .action .profile .pro_img {
-  position: absolute;
+  /* position: relative; */
   top: 0;
   left: 0;
   width: 100%;
@@ -135,6 +184,7 @@ a {
 }
 
 .action .menu.active {
+  background: #F6F7D5;
   top: 80px;
   visibility: visible;
   opacity: 1;
@@ -147,7 +197,7 @@ a {
   right: 28px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: #F6F7D5;
   transform: rotate(45deg);
 }
 
@@ -156,7 +206,7 @@ a {
   text-align: center;
   font-size: 18px;
   padding: 20px 0;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 18px;
   color : #555;
   line-height: 1.2em;
@@ -191,7 +241,7 @@ a {
   display: inline-block;
   text-decoration: none;
   color: #555;
-  font-weight: 500;
+  font-weight: 800;
   transition: 0.5s;
 }
 
@@ -206,8 +256,9 @@ a {
 #topbar {
   background: #fff;
   grid-area: topbar;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+  padding-top: 5px;
+  /* border-radius: var(--main-radius);
+  padding-top: var(--main-padding); */
 } 
 
 .menuBar ul {
@@ -236,6 +287,7 @@ a.active, a:hover {
 }
 
 .menuBar #icon {
+  padding-bottom: 5px;
   color: black;
   font-size: 30px;
   line-height: 100%;
@@ -270,7 +322,7 @@ a.active, a:hover {
     width: 100%;
     height: 100vh;
     background:  white;
-    top: 100px;
+    top: 90px;
     right: -100%;
     text-align: center;
     transition: all .5s;
@@ -305,7 +357,7 @@ main {
   grid-area: main;
   display: grid;
   grid-template-columns: 1.5fr .5fr;
-  grid-template-rows: .8fr 2.0fr;
+  grid-template-rows: 0.5fr 2.0fr;
   grid-template-areas: 
     "game game"
     "article content";
@@ -313,10 +365,11 @@ main {
 }
 
 #game {
-  background: #edf0f6;
   grid-area: game;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+  /* border-radius: var(--main-radius);
+  padding-top: var(--main-padding); */
+  display: flex;
+  margin: 0 30px;
 } 
 
 /* card 뷰 영역 */
@@ -324,8 +377,7 @@ main {
   width: 250px;
   height: 120px;
   border-radius: 15px;
-  margin: 25px 40px;
-  position: absolute;
+  margin: 25px 10px;
   /* background-image: url('https://sports-phinf.pstatic.net/liveThumbnail/202208153509168.jpg?type=f640_360'); */
   background: white;
   box-shadow: 5px 5px 10px gray;
@@ -354,7 +406,6 @@ main {
 .game_content {
   display: grid;
   grid-area: game_content;
-  grid-template-columns: 70px 70px 70px;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   align-items: center;
@@ -366,30 +417,30 @@ main {
 }
 
 #article {
-  background: #64ffda;
+  background: white;
   grid-area: article;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+  /* border-radius: var(--main-radius);
+  padding-top: var(--main-padding); */
   padding: 15px 0;
 } 
 
 .article_card {
-  margin: 0 5px;
+  margin: 5px 40px;
   display: grid;
-  grid-template-columns: .5fr 1.5fr;
-  grid-template-rows: 0.4fr 0.6fr 0.2fr;
+  grid-template-columns: .3fr 1.5fr;
+  grid-template-rows: 0.5fr;
   grid-template-areas: 
-    "article_img article_title"
-    "article_img article_context"
-    "article_img article_info";
+    "article_img article_title";
   grid-gap: 0.5rem;
 }
 
 .article_img {
+  margin: 0 10px;
   grid-area: article_img;
-  margin-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
   width: 140px;
-  border-radius: var(--main-radius);
+  border-radius: 10px;
 }
 
 .article_title {
@@ -426,27 +477,119 @@ main {
   grid-area: content;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr auto;
+  grid-template-areas: 
+    "header"
+    "contents";
+  grid-gap: 0.2rem;
+  align-items: center;
 } 
 
-footer {
+.content_header {
+  grid-area: header;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.contents {
   display: grid;
-  background: #1de9b6;
+  grid-area: contents;
+  grid-template-columns: 0.3fr 1.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "contents_img contents_content";
+  grid-gap: 0.2rem;
+}
+
+.contents_img {
+  grid-area: contents_img;
+  width: 110px;
+}
+
+
+/* footer 영역 */
+footer {
+  border-top: 1px solid gray;
+  display: grid;
+  background: white;
   grid-area: footer;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 } 
-/* 
-@media only screen and (max-width:550px) {
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas: 
-      "nav"
-      "sidebar"
-      "main"
-      "content1"
-      "content2"
-      "content3"
-      "footer";
-  }
-} */
+
+.footer {
+  margin: 0 40px;
+}
+
+.footer {
+  padding: 63px 0 32px;
+  box-sizing: border-box;
+}
+
+.footer .footer_inner {
+  position: relative;
+  text-align: center;
+}
+
+.footer .footer_link li {
+  display: inline-block;
+}
+
+.footer .corp,
+.footer .text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -.5px;
+  color: #888;
+}
+
+.footer .footer_link li+li {
+  position: relative;
+  padding-left: 13px;
+}
+
+.footer .footer_link li {
+  display: inline-block;
+}
+
+.footer .footer_link li+li::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 1px;
+  height: 11px;
+  background-color: #dadada;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* 저작권 영역 */
+.footer .footer_link+.footer_copy {
+  margin-top: 9px;
+}
+
+.footer .footer_copy .footer_logo {
+  display: inline-block;
+  vertical-align: top;
+  background-position: -157px -51px;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 15px;
+}
+
+.footer .footer_copy .corp,
+.footer .footer_copy .text {
+  line-height: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.footer .footer_copy .corp {
+  padding: 0 2px;
+  font-weight: 500;
+  color: #000;
+}
