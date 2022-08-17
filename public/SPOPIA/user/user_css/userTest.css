@@ -55,7 +55,12 @@ header {
 
 a {
   text-decoration: none;
+  color: #3E3E3E;
 }
+
+/* a:hover {
+  border: 1px solid transparent;
+} */ 
 
 .navigation .nav_ul {
   margin: 0 20px;
@@ -361,11 +366,14 @@ main {
   float: left;
   text-align: start;
   margin: 5px 25px;
+  font-size: 18px;
+  font-weight: 800;
+  color: black;
 }
 
 .article_context {
   grid-area: article_context;
-  font-size: 10px;
+  font-size: 13px;
   float: left;
   margin: 0 20px;
   text-align: start;
@@ -373,6 +381,7 @@ main {
 }
 
 .article_info {
+  color: black;
   grid-area: article_info;
   font-size: 14px;
   float: left;
@@ -451,7 +460,7 @@ main {
 }
 
 .contents_info span {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 /* footer 영역 */
