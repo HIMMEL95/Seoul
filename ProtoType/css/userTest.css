@@ -581,7 +581,7 @@ main {
   background: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.7fr;
+  grid-template-rows: 0.1fr 0.7fr;
   grid-template-areas: 
     "ra_title"
     "ra_content";
@@ -590,24 +590,59 @@ main {
 .recommend_title {
   grid-area: ra_title;
   text-align: start;
-  padding: 20px 40px;
+  padding: 0 40px;
+  padding-top: 20px;
   font-size: 20px;
   font-weight: 800;
 }
 
 .recommend_info {
-  grid-area: ra_content;
-  display: grid;
-  grid-template-columns: 0.5fr 0.8fr;
-  grid-template-rows: 0.8fr 0.2fr;
-  grid-template-areas: 
-    "rc_img rc_title"
-    "rc_img rc_newspaper";
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.recommend_info img {
-  width: 192px;
+.rc {
+  grid-area: ra_content;
+  display: grid;
+  grid-template-columns: 0.2fr 0.1fr;
+  grid-template-rows: 0.2fr;
+  grid-template-areas: 
+    "rc_img rc_title";
+  text-align: center;
+  align-items: center;
+  width: 33%;
+  border-bottom: 1px solid #dfe3ec;
+  padding: 15px 0;
 }
+
+.rc img {
+  grid-area: rc_img;
+  width: 160px;
+  margin-right: 10px;
+}
+
+.rc_info {
+  grid-area: rc_title;
+}
+
+.rc_content {
+  width: 180px;
+  font-size: 15px;
+  font-weight: 800;
+  color: black;
+  text-align: start;
+  margin: 10px 0;
+}
+
+.rc_newspaper {
+  text-align: start;
+  font-size: 12px;
+  margin: 10px 0;
+  color: #2565d0;
+}
+
 
 /* footer 영역 */
 footer {
