@@ -261,11 +261,12 @@ main {
   grid-area: main;
   display: grid;
   grid-template-columns: 1.5fr .5fr;
-  grid-template-rows: 0.5fr 2.0fr;
+  grid-template-rows: 0.5fr 1.5fr 0.8fr 1.2fr;
   grid-template-areas: 
     "game game"
-    "article content";
-  grid-gap: 0.2rem;
+    "article content"
+    "vod vod"
+    "recommend_art recommend_art";
 }
 
 #game {
@@ -328,6 +329,9 @@ main {
   /* border-radius: var(--main-radius);
   padding-top: var(--main-padding); */
   padding: 20px 0;
+  border-top: 1px solid #dfe3ec;
+  border-right: 1px solid #dfe3ec;
+  border-bottom: 1px solid #dfe3ec;
 } 
 
 .article_card {
@@ -379,7 +383,7 @@ main {
 }
 
 #content {
-  background: #73ffba;
+  background: white;
   grid-area: content;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
@@ -391,6 +395,9 @@ main {
     "content";
   grid-gap: 0.2rem;
   align-items: center;
+  border-top: 1px solid #dfe3ec;
+  border-left: 1px solid #dfe3ec;
+  border-bottom: 1px solid #dfe3ec;
 } 
 
 .content_header {
@@ -445,6 +452,161 @@ main {
 
 .contents_info span {
   margin-right: 10px;
+}
+
+#vod {
+  height: 480px;
+  background: white;
+  grid-area: vod;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.4fr 0.1fr;
+  grid-template-areas:
+    "vod_header"
+    "vod_content"
+    "vod_btn";
+  align-items: center;
+  border-bottom: 1px solid #dfe3ec;
+}
+
+.vod_title {
+  grid-area: vod_header;
+  text-align: start;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.vod_title .vods {
+  color: black;
+  cursor: pointer;
+}
+
+.vod_title i {
+  color: #a6aaaf;
+}
+
+.vod_content {
+  grid-area: vod_content;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.vods {
+  grid-area: vods;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  grid-template-areas: 
+    "vod_video"
+    "vod_info";
+  width: 20%;
+  margin: 10px 0;
+}
+
+.video {
+  grid-area: vod_video;
+  position: relative;
+}
+
+.video span {
+  color: white;
+}
+
+.vods_img {
+  width: 194px;
+  border-radius: 10px;
+}
+
+.vod_rank {
+  position: absolute;
+  bottom: 10px;
+  left: 25px;
+  font-size: 27px;
+  font-weight: 700;
+  text-shadow: 3px 2px 0px black;
+}
+
+.vod_time {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0px 5px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
+.vod_info {
+  grid-area: vod_info;
+  text-align: start;
+  margin: 0 12px;
+  font-size: 14px;
+  color: black;
+  font-weight: 800;
+}
+
+.moreBtn {
+  grid-area: vod_btn;
+}
+
+.more {
+  position: relative;
+  display: block;
+  min-width: 162px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,15%);
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #909aaa;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 10px;
+  bottom: 5px;
+}
+
+.more i {
+  margin: 0 5px;
+}
+
+#recommend_art {
+  grid-area: recommend_art;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.7fr;
+  grid-template-areas: 
+    "ra_title"
+    "ra_content";
+}
+
+.recommend_title {
+  grid-area: ra_title;
+  text-align: start;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.recommend_info {
+  grid-area: ra_content;
+  display: grid;
+  grid-template-columns: 0.5fr 0.8fr;
+  grid-template-rows: 0.8fr 0.2fr;
+  grid-template-areas: 
+    "rc_img rc_title"
+    "rc_img rc_newspaper";
+}
+
+.recommend_info img {
+  width: 192px;
 }
 
 /* footer 영역 */
