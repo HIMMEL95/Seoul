@@ -53,6 +53,7 @@ header {
 
 a {
   text-decoration: none;
+  color: #000063;
 }
 
 .navigation .nav_ul {
@@ -142,10 +143,10 @@ a {
 }
 
 .action .menu.active {
-  background: #F6F7D5;
+  background: #F6F6F2;
   top: 80px;
   visibility: visible;
-  opacity: 1;
+  opacity: 0.5;
   position: fixed;
 }
 
@@ -156,7 +157,7 @@ a {
   right: 28px;
   width: 20px;
   height: 20px;
-  background: #F6F7D5;
+  background: #F6F6F2;
   transform: rotate(45deg);
 }
 
@@ -360,29 +361,35 @@ main {
   grid-area: article_title;
   float: left;
   text-align: start;
+  font-size: 16px;
+  font-weight: bold;
   margin: 5px 25px;
+  line-height: 21px;
 }
 
 .article_context {
   grid-area: article_context;
-  font-size: 10px;
+  font-size: 12px;
   float: left;
   margin: 0 20px;
   text-align: start;
   color: #5e5e5e;
+  line-height: 18px;
 }
 
 .article_info {
   grid-area: article_info;
-  font-size: 14px;
+  font-size: 12px;
   float: left;
   text-align: start;
   margin-left: 10px;
   margin-top: 5px;
+  line-height: 18px;
 }
 
 .article_info span {
   margin-left: 10px;
+  color: #A0a4aa;
 }
 
 #content {
@@ -443,6 +450,8 @@ main {
   padding: 0 10px;
   margin-bottom: 10px;
   font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
   text-align: start;
 }
 
@@ -451,10 +460,12 @@ main {
   margin-bottom: 5px;
   font-size: 11px;
   padding-right: 10px;
+  color: #A0a4aa;
 }
 
 .contents_info span {
   margin-right: 10px;
+  color: #A0a4aa;
 }
 
 #vod {
@@ -823,5 +834,36 @@ strong {
 
   .menuBar ul.show {
     left: 0;
+  }
+
+  #game {
+    grid-area: game;
+    /* border-radius: var(--main-radius);
+  padding-top: var(--main-padding); */
+    display: flex;
+    margin: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* card 뷰 영역 */
+  .game_card {
+    width: 250px;
+    height: 120px;
+    border-radius: 15px;
+    margin: 25px 10px;
+    /* background-image: url('https://sports-phinf.pstatic.net/liveThumbnail/202208153509168.jpg?type=f640_360'); */
+    background: white;
+    box-shadow: 5px 5px 10px gray;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-areas:
+      "head"
+      "game_content";
+    grid-gap: 0.2rem;
+    width: 100%;
   }
 }

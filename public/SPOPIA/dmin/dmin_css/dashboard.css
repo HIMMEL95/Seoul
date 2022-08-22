@@ -1,3 +1,11 @@
+#my-chart.line {
+    padding: 20px;
+    height: 200px;
+    max-width: 100%;
+    margin: 0 auto;
+    --labels-size: 2rem;
+}
+
 /* header */
 .fixed-top {
     position: fixed;
