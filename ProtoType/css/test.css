@@ -1,276 +1,107 @@
-/* header */
-.topbar {
-  background-color: #2565D0;
-  display: flex;
-  height: 45px;
-  padding: 5px 20px;
-  display: flex;
-  justify-content: space-between;  /* 주축 */
-  align-items: center;    /* 서브 축 */
-}
-
-.logo_img {
-  width: 80px;
-}
-
-a {
-  text-decoration: none;
-}
-
-.login {
-  color: white;
-}
-
-.navigation ul {
-  float: right;
-  margin-right: 20px;
-}
-
-.navigation li {
-  display: inline-block;
-  margin: 0 10px;
-  line-height: 55px;
-}
-
-.navigation a {
-  font-size: 17px;
-}
-
-.navigation li a {
-  height: 55px;
-  border: 1px solid transparent;
-  margin: 0;
-}
-
-.navigation li .avatar-img {
-  width: 35px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-}
-
-@media (min-width: 576px) {
-  nav ul {
-    margin-left: -60px;
-  }
-
-  nav a {
-    font-size: 17px;
-  }
-
-  nav #icon {
-    visibility: hidden;
-  }
-}
-
-@media (max-width: 576px) {
-  nav #icon {
-    display: block;
-  }
-
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2f3640;
-    top: 105px;
-    right: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-
-  nav li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  nav a {
-    font-size: 20px;
-  }
-
-  a.active, a:hover {
-    border: none;
-    color: #3498db;
-  }
-
-  nav ul.show {
-    right: 0;
-  }
-}
-
-/* main 영역 */
-main {
-  background-color: red;
-  height: 700px;
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
 }
 
 .container {
-  width: 100%;
-}
-
-.gameList {
-  background-color: #edf0f6;
-  height: 150px;
-}
-
-/* card 뷰 영역 */
-.card {
-  width: 250px;
-  height: 120px;
-  border-radius: 15px;
-  margin: 14px 40px;
-  position: absolute;
-  background: #fff;
-  box-shadow: 5px 5px 10px gray;
-  cursor: pointer;
-}
-
-.head {
-  height: 25%;
-  border-bottom: 1px solid black;
-  font-size: 17px;
-  padding: 0 20px;
-}
-
-.head span {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0 5px;
-}
-
-.content {
   display: grid;
-  grid-template-columns: 70px 70px 70px;
-  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr .8fr;
+  grid-template-areas:
+    "sidebar nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #004d40;
   text-align: center;
+}
+
+nav {
+  background: #a7ffeb;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+main {
+  background: #84ffff;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#sidebar {
+  background: rgba(158, 82, 190);
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+.side_img img{
+  width: 130px;
+  height: 50px;
+}
+
+.side_info ul {
+  margin: 0 5px;
+  text-align: left;
   align-items: center;
-  padding: 10px 0;
-}
-
-.content .info {
-  font-size: 16px;
-}
-
-/* user dropdown */
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.action {
-  position: fixed;
-  top:  8px;
-  right: 10px;
-  margin-right: 10px;
-}
-
-.action .profile {
-  position: relative;
-  width:  40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.action .profile .pro_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.action .menu {
-  position: absolute;
-  top:120px;
-  right: -10px;
-  padding: 10px 20px;
-  background: #fff;
-  width: 200px;
-  box-sizing: 0 5px 25px rgba(0,0,0,.1);
-  border-radius: 15px;
-  transition: 0.5s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.action .menu.active {
-  top: 80px;
-  visibility: visible;
-  opacity: 1;
-}
-
-.action .menu::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  right: 28px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  transform: rotate(45deg);
-}
-
-.action .menu h3 {
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px 0;
-  font-weight: 500;
-  font-size: 18px;
-  color : #555;
-  line-height: 1.2em;
-}
-
-.action .menu h3 span {
-  font-size: 14px;
-  color: #cecece;
-  font-weight: 400;
-}
-
-.action .menu .pro_ul .pro_li {
   list-style: none;
-  padding: 10px 0;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  display: flex;
-  align-items: center;
 }
 
-.action .menu .pro_ul .pro_li .pro_img {
-  max-width: 20px;
-  margin-right: 10px;
-  opacity: 0.5;
-  transition: 0.5s;
+.side_info li i {
+  margin: 10px 0;
 }
 
-.action .menu .pro_ul .pro_li:hover .pro_img {
-  opacity: 1s;
+li i:hover {
+  background: none;
+  color: rgb(233, 231, 58);
 }
 
-.action .menu .pro_ul .pro_li .pro_a {
-  display: inline-block;
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  transition: 0.5s;
+#content1 {
+  background: #6fffd2;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
 }
 
-.action .menu .pro_ul .pro_li:hover .pro_a {
-  color: #ff5d94;
+#content2 {
+  background: #64ffda;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
 }
 
-/* .articleList {
-  background-color: yellow;
-  height: 100%;
-  width: 75%;
+#content3 {
+  background: #73ffba;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
 }
 
 footer {
-  background-color: green;
-  height: 150px;
-} */
+  background: #1de9b6;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+@media only screen and (max-width:550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
