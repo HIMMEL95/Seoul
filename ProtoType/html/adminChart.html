@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>adminChart.html</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"      rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/test.css">
+</head>
+<body style="background-color: rgb(224, 224, 224);">
+	<!-- start -->
+    <div class="container">
+        <main>
+            <div>
+                <h4 class="pt-3 ms-2">통계</h4>
+            </div>
+            <div class="cd2">
+                <div class="newmem row">
+                    <p class="ms-3 col mt-4" style="font-weight: bold;">
+                        Today 신규가입자 수:
+                        <span class="num">nn</span>
+                        명
+                    </p>
+                    <p class="ps-3 offset-md-3 col-5 mt-4" style="font-size: 12px; text-align: right;">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: red;"></i>
+                        고객의 유입량이 어제보다 
+                        <span class="persent">13%</span>
+                        감소하였습니다.
+                    </p>
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                    </figure>
+                </div>
+                <div class="newmem2 mt-4">
+                    <div class="row">
+                       <p class="ms-4 col mt-3" style="font-weight: bold;">
+                            Today 신규가입자 아이디:
+                            <span class="num">nn</span>
+                            명
+                        </p>
+                        <p class="offset-md-3 col-5 m-3" style="font-size: 12px; text-align: right;">
+                            더보기
+                            <i class="fa-solid fa-angle-right"></i>
+                        </p> 
+                    </div>
+                    <div class="ms-3 scroll" style="height: 200px; text-align: left;">
+                        <p></p>
+                        <p>안녕프렌체스카</p>
+                        <p>새로운 아이디</p>
+                        <p>NEW ID</p>
+                        <p>새로운 멤버</p>
+                        <p>NEW MEMBER</p>
+                        <p>안녕프렌체스카</p>
+                        <p>새로운 아이디</p>
+                        <p>NEW ID</p>
+                        <p>새로운 멤버</p>
+                        <p>NEW MEMBER</p>
+                    </div>
+                </div>
+                <div class="newmem2 mt-4" style="height: 280px;">
+                    <div class="row">
+                        <p class="ms-4 col mt-3" style="font-weight: bold;">
+                            Today New Share Pot:
+                            <span class="num">nn</span>
+                            개
+                        </p>
+                        <p class="offset-md-3 col-5 m-3" style="font-size: 12px; text-align: right;">
+                            더보기
+                            <i class="fa-solid fa-angle-right"></i>
+                        </p>
+                    </div>
+                    <div class="scroll" style="height: 200px; text-align: left;">
+                        <div class="sharepot">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>  
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>  
+                        <div class="sharepot mt-3 mb-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="newmem2 mt-4" style="height: 280px;">
+                    <div class="row">
+                        <p class="ms-4 col mt-3" style="font-weight: bold;">
+                            Today New Share
+                            <span class="hot">Hot</span>
+                        </p>
+                        <p class="offset-md-3 col-5 m-3" style="font-size: 12px; text-align: right;">
+                            더보기
+                            <i class="fa-solid fa-angle-right"></i>
+                        </p>
+                    </div>
+                    <div class="scroll" style="height: 200px; text-align: left;">
+                        <div class="sharepot">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                        <div class="sharepot mt-3 mb-3">
+                            <div class="row">
+                                <div class="col-3">피자나라 콤비네이션</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">1/2인</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">14:00</div>
+                                <div class="col-1">|</div>
+                                <div class="col-2">15,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="sidebar">
+            <div class="side_img">
+                <img id="home" src="../../user/img/fullLogo_w.png">
+            </div>
+            <div class="side_info">
+                <hr style="color: white;">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-sliders" onclick="location.href='../admin/adminChart.html'">&nbsp 통계</i>
+                    </li>
+                    <li>
+                        <i class="fas fa-light fa-user" onclick="location.href='../admin/adminUser.html'">&nbsp 사용자 관리</i>
+                    </li>
+                    <li>
+                        <i class="fas fa-regular fa-ban">&nbsp 신고자 관리</i>
+                    </li>
+                    <li>
+                        <i class="fas fa-regular fa-clipboard-list">&nbsp 쉐어리스트</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <ul class="side">
+		<img id="home" class="ms-2 mt-1" src="../../user/img/fullLogo_w.png" style="width: 130px; height: 50px;">
+		<li><hr style="color: white;"></li>
+		<li><i class="fa-solid fa-sliders mb-2 ms-2" style="color: rgb(233, 231, 58);" onclick="location.href='../admin/adminChart.html'">&nbsp 통계</i></li>
+		<li><i class="fas fa-light fa-user mb-2 ms-2"  onclick="location.href='../admin/adminUser.html'">&nbsp 사용자 관리</i></li>
+		<li><i class="fas fa-regular fa-ban mb-2 ms-2">&nbsp 신고자 관리</i></li>
+        <li><i class="fas fa-regular fa-clipboard-list ms-2">&nbsp 쉐어리스트</i></li>
+	</ul>
+    <div class="cd1">
+        <h4 class="pt-3">통계</h4>
+    </div>
+    <div class="cd2">
+        <div class="newmem row">
+            <p class="ps-3 col mt-4" style="font-weight: bold;">
+                Today 신규가입자 수:
+                <span class="num">nn</span>
+                명
+            </p>
+            <p class="ps-3 offset-md-3 col-5 mt-4" style="font-size: 12px; text-align: right;">
+                <i class="fa-solid fa-triangle-exclamation" style="color: red;"></i>
+                고객의 유입량이 어제보다 
+                <span class="persent">13%</span>
+                감소하였습니다.
+            </p>
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+            </figure>
+        </div>
+        <div class="newmem2 row mt-4">
+            <p class="ps-3 col mt-3" style="font-weight: bold;">
+                Today 신규가입자 아이디:
+                <span class="num">nn</span>
+                명
+            </p>
+            <p class="ps-3 offset-md-3 col-5 m-3" style="font-size: 12px; text-align: right;">
+                더보기
+                <i class="fa-solid fa-angle-right"></i>
+            </p>
+            <div style="overflow:auto; height: 200px;">
+                <p></p>
+                <p>안녕프렌체스카</p>
+                <p>새로운 아이디</p>
+                <p>NEW ID</p>
+                <p>새로운 멤버</p>
+                <p>NEW MEMBER</p>
+                <p>안녕프렌체스카</p>
+                <p>새로운 아이디</p>
+                <p>NEW ID</p>
+                <p>새로운 멤버</p>
+                <p>NEW MEMBER</p>
+            </div>
+        </div>
+        <div class="newmem2 row mt-4" style="overflow:auto; height: 180px;">
+            <p class="ps-3 col mt-3" style="font-weight: bold;">
+                Today New Share Pot:
+                <span class="num">nn</span>
+                개
+            </p>
+            <p class="ps-3 offset-md-3 col-5 m-3" style="font-size: 12px; text-align: right;">
+                더보기
+                <i class="fa-solid fa-angle-right"></i>
+            </p>
+            <div class="sharepot">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div> 
+            <div class="sharepot mt-3">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div>  
+            <div class="sharepot mt-3">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div>  
+            <div class="sharepot mt-3 mb-3">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div>   
+        </div>
+        <div class="newmem2 row mt-4" style="overflow:auto; height: 180px;">
+            <p class="ps-3 col mt-3" style="font-weight: bold;">
+                Today New Share
+                <span class="hot">HOT</span>
+            </p>
+            <p class="ps-3 offset-md-3 col-5 m-3" style="font-size: 12px; text-align: right;">
+                더보기
+                <i class="fa-solid fa-angle-right"></i>
+            </p>
+            <div class="sharepot">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div> 
+            <div class="sharepot mt-3">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div>  
+            <div class="sharepot mt-3">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div>  
+            <div class="sharepot mt-3 mb-3">
+                <div class="row">
+                    <div class="col-3">피자나라 콤비네이션</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">1/2인</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">14:00</div>
+                    <div class="col-1">|</div>
+                    <div class="col-2">15,000원</div>
+                </div>
+            </div>     
+        </div>
+    </div> -->
+	<!-- end --> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script type="text/javascript">
+		Highcharts.chart('container', {
+    chart: {
+        type: 'spline'
+    },
+    xAxis: {
+        categories: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일','토요일'],
+        accessibility: {
+            description: 'Weekend'
+        }
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        labels: {
+            formatter: function () {
+                return this.value + '명';
+            }
+        }
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        name: '오늘',
+        marker: {
+            symbol: 'square'
+        },
+        data: [{
+            y: 26.4,
+            accessibility: {
+                description: 'Sunny symbol, this is the warmest point in the chart.'
+            }
+        }, 360, 355, 258, 220, 210, 158]
+
+    }, {
+        name: '어제',
+        marker: {
+            symbol: 'diamond'
+        },
+        data: [{
+            y: 1.5,
+            accessibility: {
+                description: 'Snowy symbol, this is the coldest point in the chart.'
+            }
+        }, 210, 320, 120, 110, 160, 280]
+        }]
+    });
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
