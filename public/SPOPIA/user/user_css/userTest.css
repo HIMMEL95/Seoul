@@ -303,11 +303,12 @@ main {
 }
 
 .head {
+  width: 100%;
   height: 100%;
   border-bottom: 1px solid black;
   grid-area: head;
   font-size: 17px;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .head span {
@@ -315,6 +316,7 @@ main {
 }
 
 .game_content {
+  width: 100%;
   display: grid;
   grid-area: game_content;
   grid-template-columns: repeat(3, 1fr);
@@ -325,6 +327,80 @@ main {
 
 .game_content .info {
   font-size: 16px;
+}
+
+.game_live {
+  width: 250px;
+  height: 120px;
+  border-radius: 15px;
+  margin: 25px 10px;
+  left: 0;
+  /* background-image: url('https://sports-phinf.pstatic.net/liveThumbnail/202208153509168.jpg?type=f640_360'); */
+  background: white;
+  box-shadow: 5px 5px 10px gray;
+  cursor: pointer;
+  position: relative;
+  color: white;
+}
+
+.game_live img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.image_area {
+  display: flex;
+}
+
+.live_tag, .live_viewer {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.live_tag {
+  width: 36px;
+  height: 16px;
+  padding: 2px 2px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 2px;
+  background: red;
+  left: 10px;
+}
+
+.live_viewer {
+  display: inline-block;
+  padding: 0 5px 0 8px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  color: #fff;
+  font-size: 10px;
+}
+
+.number {
+  text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: -0.5px;
+}
+
+.general_info {
+  position: absolute;
+  display: flex;
+  margin: 0 5px;
+  bottom: 10px;
+  left: 5px;
+  color: white;
 }
 
 #article {
