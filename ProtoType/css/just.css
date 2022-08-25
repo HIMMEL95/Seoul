@@ -1,0 +1,838 @@
+@charset "UTF-8";
+
+:root {
+    --color-title: #222;
+    --color-sub-title: #666;
+    --color-feed-title: #000;
+    --color-main-text: #000;
+    --color-main-text2: #222;
+    --color-main-text3: #333;
+    --color-sub-text: #858a8c;
+    --color-sub-text2: #8f8f8f;
+    --color-sub-text3: #888;
+    --color-sub-text4: #7f828a;
+    --color-sub-text5: #999;
+    --color-sub-text6: #9a9ea1;
+    --color-sub-text7: #818287;
+    --color-sub-text8: #666;
+    --color-sub-text9: #444;
+    --color-sub-text10: #82878b;
+    --color-point-text: #2995f3;
+    --color-point-text2: #3680f7;
+    --color-point-text3: #3461c8;
+    --color-point-text4: #2565d0;
+    --color-point-text5: #2968d1;
+    --color-point-text6: #ff0031;
+    --color-point-text7: #ff2a00;
+    --color-point-text8: #3270db;
+    --color-point-text9: #1565c0;
+    --color-point-text10: #f13a6d;
+    --color-button-text: #333;
+    --color-gnb-text: #555;
+    --color-search-text: #f56f94;
+    --color-calendar-text: #a3a3a3;
+    --color-calendar-text2: #2565d0;
+    --color-calendar-text3: #424447;
+    --color-calendar-text4: #ccc;
+    --color-calendar-text5: #9eabba;
+    --color-calendar-text6: #ff5252;
+    --color-sub-info: #8f8f8f;
+    --color-sub-info2: #a9a9a9;
+    --color-title-point: #3780ed;
+    --color-title-point2: #f92e62;
+    --color-title-point3: #20b681;
+    --color-background: #fff;
+    --color-background2: #fafbfc;
+    --color-background3: #f0f2f8;
+    --color-body-background: #eff2f8;
+    --color-card-background: #f9f9f9;
+    --color-calendar-background: #82c4fb;
+    --color-search-background: #3b7dec;
+    --color-line: #f4f4f4;
+    --color-line2: #f8f8f8;
+    --color-line3: #f2f2f2;
+    --color-line4: #dfdfdf;
+    --color-box-line: #e9e9e9;
+    --color-card-line: #f4f4f4;
+    --color-separation-line: #f0f2f8;
+    --color-highlight-line1: #2565d0;
+    --color-highlight-line2: #94b1e7;
+    --color-button: #3780ed;
+    --color-button2: #888b91;
+    --color-button3: #3680f7;
+    --color-button4: #2565d0;
+    --color-button5: #478bf8;
+    --color-button6: #fff;
+    --color-button7: #777;
+    --color-button8: #a7a7a7;
+    --color-button9: #525252;
+    --color-button-tab: #1a7deb;
+    --color-button-tab2: #43a0fd;
+    --color-button-tab3: #f0f1f3;
+    --color-button-tab4: #0084ea;
+    --color-button-tab5: #f5f5f4;
+    --color-icon-more: #666;
+    --color-icon-arrow: #777;
+    --color-ranking-sub-background: #f3f5f7;
+    --color-best-player-background: #f1f6f9;
+    --color-best-player-background2: #e5eaee;
+    --color-best-player-background3: #e8f1ff;
+    --color-expected-match-text: #242424;
+    --color-match-end-text: #1e1e23;
+    --color-ranking-text: #898a8c;
+    --color-ranking-text2: #9d9fae;
+    --color-ranking-text3: #8991a9;
+    --color-match-end-sub-text: #767678;
+    --color-kbo-point-text: #3680f7;
+    --color-kbo-point-text2: #005bff;
+    --color-kbo-point-text3: #2869e0;
+    --color-kbo-point-text4: #1b53d8;
+    --color-kbo-point-text5-1: #3e93ff;
+    --color-kbo-point-text5-2: #8846f5;
+    --color-kbo-point-text6-1: #0478b9;
+    --color-kbo-point-text6-2: #4b4de7;
+    --color-kbo-point-text7: #3f6789;
+    --color-kbo-point-text8: #ff5454;
+    --color-kbo-button1: #3b89ff;
+    --color-kbo-button2: #7b75ff;
+    --color-icon-expected-match: #849bb7;
+    --color-expected-match-button: #f3f7ff;
+    --color-icon-vote-card: #3680f7;
+    --color-comment-title: #222;
+    --color-comment-text: #222;
+    --color-comment-info: #666;
+    --color-comment-info-base: #999;
+    --color-comment-info-dot: #d8d8d8;
+    --color-comment-box: #f0f1f4;
+    --color-comment-box-mine: #d8ecff;
+    --color-comment-input-line: #d0d0d0;
+    --color-comment-button: #b0b3be;
+    --color-comment-popup: #fff;
+    --color-comment-popup-report: #fff;
+    --color-comment-popup-line: rgba(220, 220, 220, 0.49);
+    --color-comment-popup-title: #000;
+    --color-comment-popup-sub-text: #666;
+    --color-comment-popup-sub-text2: #000;
+    --color-comment-popup-button: #222;
+    --color-comment-popup-cleanbot-set: #666;
+    --color-comment-popup-cleanbot-set-box: #f6f6f6;
+    --color-comment-line1: #000;
+    --color-comment-line2: #dce0e9;
+    --color-comment-line3: #eaeaea;
+    --color-comment-line4: #f4f4f4;
+    --color-comment-line5: #ededee;
+    --color-comment-line6: #f0f0f0;
+    --color-comment-sub-info1: #222;
+    --color-comment-sub-info2: #555;
+    --color-comment-sub-info3: #69717C;
+    --color-comment-sub-info4: #95a0b1;
+    --color-comment-sub-info5: #94a6b9;
+    --color-comment-sub-info6: #999;
+    --color-comment-point1: #3680f7;
+    --color-comment-point2: #2068e5
+}
+
+@media (prefers-color-scheme:dark) {
+    html.DARK_THEME {
+        --color-title: #f0f0f2;
+        --color-sub-title: #dadde0;
+        --color-feed-title: #f0f0f2;
+        --color-main-text: #f0f0f2;
+        --color-main-text2: #f0f0f2;
+        --color-main-text3: #f0f0f2;
+        --color-sub-text: #919192;
+        --color-sub-text2: #919192;
+        --color-sub-text3: #919192;
+        --color-sub-text4: #919192;
+        --color-sub-text5: #919192;
+        --color-sub-text6: #919192;
+        --color-sub-text7: #919192;
+        --color-sub-text8: #dadde0;
+        --color-sub-text9: #dadde0;
+        --color-sub-text10: #919192;
+        --color-point-text: #6b9cff;
+        --color-point-text2: #6b9cff;
+        --color-point-text3: #6b9cff;
+        --color-point-text4: #6b9cff;
+        --color-point-text5: #6b9cff;
+        --color-point-text6: #e56b81;
+        --color-point-text7: #e56b81;
+        --color-point-text8: #6b9cff;
+        --color-point-text9: #6b9cff;
+        --color-point-text10: #e56b81;
+        --color-button-text: #f0f0f2;
+        --color-gnb-text: #f0f0f2;
+        --color-search-text: #e56b81;
+        --color-calendar-text: #919192;
+        --color-calendar-text2: #6b9cff;
+        --color-calendar-text3: #f0f0f2;
+        --color-calendar-text4: #656565;
+        --color-calendar-text5: #a8c1d7;
+        --color-calendar-text6: #e56b81;
+        --color-sub-info: #919192;
+        --color-sub-info2: #a5a5a7;
+        --color-title-point: #6b9cff;
+        --color-title-point2: #fd96b0;
+        --color-title-point3: #22b681;
+        --color-background: #39393c;
+        --color-background2: #48484b;
+        --color-background3: #303033;
+        --color-body-background: #303033;
+        --color-card-background: #48484b;
+        --color-calendar-background: #6b9cff;
+        --color-search-background: #6b9cff;
+        --color-line: #464649;
+        --color-line2: #464649;
+        --color-line3: #464649;
+        --color-line4: #545457;
+        --color-box-line: #545457;
+        --color-card-line: #545457;
+        --color-separation-line: #303033;
+        --color-highlight-line1: #6b9cff;
+        --color-highlight-line2: #6b9cff;
+        --color-button: #2375ff;
+        --color-button2: #6f7886;
+        --color-button3: #6b9cff;
+        --color-button4: #6b9cff;
+        --color-button5: #6b9cff;
+        --color-button6: #39393c;
+        --color-button7: #dadde0;
+        --color-button8: #919192;
+        --color-button9: #919192;
+        --color-button-tab: #6b9cff;
+        --color-button-tab2: #6b9cff;
+        --color-button-tab3: #48484b;
+        --color-button-tab4: #6b9cff;
+        --color-button-tab5: #545457;
+        --color-icon-more: #939393;
+        --color-icon-arrow: #919192;
+        --color-ranking-sub-background: #48484b;
+        --color-best-player-background: #48484b;
+        --color-best-player-background2: #3e3e41;
+        --color-best-player-background3: #49505c;
+        --color-expected-match-text: #f0f0f2;
+        --color-match-end-text: #f0f0f2;
+        --color-ranking-text: #919192;
+        --color-ranking-text2: #919192;
+        --color-ranking-text3: #919192;
+        --color-match-end-sub-text: #919192;
+        --color-kbo-point-text: #6b9cff;
+        --color-kbo-point-text2: #6b9cff;
+        --color-kbo-point-text3: #6b9cff;
+        --color-kbo-point-text4: #6b9cff;
+        --color-kbo-point-text5-1: #6b9cff;
+        --color-kbo-point-text5-2: #6b9cff;
+        --color-kbo-point-text6-1: #6b9cff;
+        --color-kbo-point-text6-2: #6b9cff;
+        --color-kbo-point-text7: #a8c1d7;
+        --color-kbo-point-text8: #e56b81;
+        --color-kbo-button1: #6b9cff;
+        --color-kbo-button2: #6b9cff;
+        --color-icon-expected-match: #a8c1d7;
+        --color-expected-match-button: #39393c;
+        --color-icon-vote-card: #6b9cff;
+        --color-comment-title: #f0f0f2;
+        --color-comment-text: #dadde0;
+        --color-comment-info: #dadde0;
+        --color-comment-info-base: #a5a5a7;
+        --color-comment-info-dot: #646465;
+        --color-comment-box: #48484b;
+        --color-comment-box-mine: #3c4d60;
+        --color-comment-input-line: #d0d0d0;
+        --color-comment-button: #575b64;
+        --color-comment-popup: #26262a;
+        --color-comment-popup-report: #202023;
+        --color-comment-popup-line: #343438;
+        --color-comment-popup-title: #f0f0f2;
+        --color-comment-popup-sub-text: #919192;
+        --color-comment-popup-sub-text2: #919192;
+        --color-comment-popup-button: #dadde0;
+        --color-comment-popup-cleanbot-set: #919192;
+        --color-comment-popup-cleanbot-set-box: #39393C;
+        --color-comment-line1: #919192;
+        --color-comment-line2: #545457;
+        --color-comment-line3: #545457;
+        --color-comment-line4: #464649;
+        --color-comment-line5: #464649;
+        --color-comment-line6: #464649;
+        --color-comment-sub-info1: #dadde0;
+        --color-comment-sub-info2: #dadde0;
+        --color-comment-sub-info3: #919192;
+        --color-comment-sub-info4: #919192;
+        --color-comment-sub-info5: #919192;
+        --color-comment-sub-info6: #919192;
+        --color-comment-point1: #6b9cff;
+        --color-comment-point2: #6b9cff
+    }
+}
+
+.u_cbox .u_vc {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px
+}
+
+.u_cbox button {
+    overflow: visible;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: 0 0;
+    cursor: pointer;
+    -webkit-user-select: none
+}
+
+.u_cbox .u_cbox_btn_refresh .u_cbox_ico_refresh,
+.u_cbox .u_cbox_cleanbot_content::before,
+.u_cbox .u_cbox_cleanbot_contents::before,
+.u_cbox .u_cbox_comment .u_cbox_ico_exclamation,
+.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_none,
+.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_restrict,
+.u_cbox .u_cbox_con_press .u_cbox_ico_inform,
+.u_cbox .u_cbox_help_info .u_cbox_ico_help,
+.u_cbox .u_cbox_ico_loading_fail,
+.u_cbox .u_cbox_layer_cleanbot2_checkboxdummy,
+.u_cbox .u_cbox_layer_cleanbot2_closeicon,
+.u_cbox .u_cbox_layer_cleanbot_checkbox:checked~.u_cbox_layer_cleanbot_checkboxdummy,
+.u_cbox .u_cbox_layer_cleanbot_checkboxdummy,
+.u_cbox .u_cbox_layer_cleanbot_closeicon,
+.u_cbox .u_cbox_recomm_set .u_cbox_btn_recomm_on .u_cbox_ico_recomm,
+.u_cbox .u_cbox_recomm_set .u_cbox_ico_recomm,
+.u_cbox .u_cbox_refresh_wrap .u_cbox_btn_refresh_auto_on .u_cbox_ico_refresh_auto,
+.u_cbox .u_cbox_refresh_wrap .u_cbox_ico_refresh_auto,
+.u_cbox .u_cbox_sort .u_cbox_sort_option_on:nth-child(2) .u_cbox_ico_select,
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap:nth-child(2) .u_cbox_ico_select,
+.u_cbox a.u_cbox_cleanbot_setbutton.is_highlight::before,
+.u_cbox a.u_cbox_cleanbot_setbutton::before {
+    background-image: url(https://ssl.pstatic.net/static/sports/2020/m/09/24/sp_talk.svg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent)), url(https://ssl.pstatic.net/static/sports/2020/m/09/24/sp_talk.svg);
+    background-image: -webkit-linear-gradient(transparent, transparent), url(https://ssl.pstatic.net/static/sports/2020/m/09/24/sp_talk.svg);
+    background-image: linear-gradient(transparent, transparent), url(https://ssl.pstatic.net/static/sports/2020/m/09/24/sp_talk.svg);
+    -webkit-background-size: 198px 159px;
+    background-size: 198px 159px;
+    background-repeat: no-repeat
+}
+
+.u_cbox {
+    padding: 22px 15px 0
+}
+
+.u_cbox .u_cbox_wrap {
+    position: relative;
+    -webkit-tap-highlight-color: transparent
+}
+
+.u_cbox .u_cbox_head {
+    min-height: 22px
+}
+
+.u_cbox .u_cbox_head::after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+.u_cbox .u_cbox_head .u_cbox_head_tools {
+    display: none
+}
+
+.u_cbox .u_cbox_title {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px
+}
+
+.u_cbox .u_cbox_count {
+    float: left;
+    font-family: HelveticaNeue-Medium, Helvetica-Medium, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    color: #222
+}
+
+.u_cbox .u_cbox_count::after {
+    display: inline;
+    line-height: 1.31;
+    letter-spacing: -.5px;
+    content: '개의 톡'
+}
+
+.u_cbox .u_cbox_btn_refresh {
+    float: left;
+    overflow: hidden;
+    margin-left: 4px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent
+}
+
+.u_cbox .u_cbox_btn_refresh .u_cbox_ico_refresh {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -150px -63px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px
+}
+
+.ui-input-container {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 4px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.ui-input-container h2 {
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.ui-form-input-container {
+    position: relative;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.ui-form-input {
+    padding: 13px 15px;
+    border-radius: 8px;
+    border: 2px solid #1a73e8;
+    outline: 0;
+    width: 100%;
+}
+
+.form-input-label {
+    position: absolute;
+    top: -7px;
+    left: 10px;
+    color: #1a73e8;
+    font-size: 0.85rem;
+    padding-right: 0.33rem;
+    padding-left: 0.33rem;
+    background: white;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.ui-form-btn {
+    padding: 13px 15px;
+    border-radius: 8px;
+    background: #1a73e8;
+    outline: 0;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+textarea {
+    min-height: 6em;
+    max-height: 10vh;
+    width: 100%;
+    resize: none;
+}
+
+.u_cbox .u_cbox_refresh_wrap {
+    position: absolute;
+    top: 0;
+    right: -1px
+}
+
+.u_cbox .u_cbox_refresh_wrap::after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_refresh_area {
+    float: left
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_btn_refresh_auto {
+    float: right;
+    margin-left: 5px
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_bg_wrap {
+    display: none
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_ico_refresh_auto {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -110px -50px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 22px
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_btn_refresh_auto_on .u_cbox_ico_refresh_auto {
+    background-position: -108px -85px;
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 22px
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_txt_refresh {
+    float: right;
+    margin-top: 3px;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: -.5px;
+    color: #666
+}
+
+.u_cbox .u_cbox_refresh_wrap .u_cbox_refresh_box {
+    display: none
+}
+
+.u_cbox .u_cbox_sort {
+    position: relative;
+    padding: 18px 30px 0 0
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option {
+    position: relative;
+    z-index: 1;
+    height: 21px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_list {
+    display: table;
+    white-space: nowrap
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_list::after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap {
+    display: table-cell
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap~.u_cbox_sort_option_wrap {
+    padding-left: 14px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap:nth-child(2) .u_cbox_ico_select {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -108px -115px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 12px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_wrap:nth-child(2) .u_cbox_sort_label {
+    padding-left: 18px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_select {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    padding-right: 2px
+}
+
+.u_cbox .u_cbox_sort+.u_cbox_content_wrap .u_cbox_list {
+    margin-top: 15px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_ico_select {
+    display: none;
+    position: absolute;
+    top: 2px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: -.5px;
+    color: #999;
+    vertical-align: top
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_on .u_cbox_sort_label {
+    font-weight: 700;
+    color: #222
+}
+
+.u_cbox .u_cbox_sort .u_cbox_sort_option_on:nth-child(2) .u_cbox_ico_select {
+    background-position: -150px -117px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 12px
+}
+
+.u_cbox .u_cbox_sort .u_cbox_head_tools {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    z-index: 110
+}
+
+.u_cbox .u_cbox_sort .u_cbox_layer_help {
+    top: 24px;
+    right: 0;
+    margin-top: 0
+}
+
+.u_cbox .u_cbox_sort~.u_cbox_cleanbot {
+    margin: 8px 0 0
+}
+
+.u_cbox .u_cbox_help_info .u_cbox_info_label {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px
+}
+
+.u_cbox .u_cbox_help_info .u_cbox_btn_help {
+    display: inline-block;
+    margin-right: -1px;
+    vertical-align: top
+}
+
+.u_cbox .u_cbox_help_info .u_cbox_ico_help {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -120px -137px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px
+}
+
+.u_cbox .u_cbox_help_info .u_cbox_txt_help {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px
+}
+
+.u_cbox .u_cbox_comment_none {
+    position: relative;
+    padding: 99px 0 119px;
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -.5px;
+    text-align: center;
+    color: #666
+}
+
+.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_none {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -4px -85px;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 7px
+}
+
+.u_cbox .u_cbox_con_inform .u_cbox_ico_comment_restrict {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -56px -85px;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    margin: 3px auto 6px
+}
+
+.u_cbox .u_cbox_con_inform .u_cbox_txt_mark {
+    color: #333
+}
+
+.u_cbox .u_cbox_inform {
+    padding: 73px 0 93px;
+    text-align: center
+}
+
+.u_cbox .u_cbox_con_inform {
+    max-width: 257px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -.5px;
+    color: #666
+}
+
+.u_cbox .u_cbox_item_inform {
+    display: inline-block;
+    padding-top: 11px;
+    font-size: 15px;
+    color: #999;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top
+}
+
+.u_cbox .u_cbox_item_inform::after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+.u_cbox .u_cbox_item_inform .u_cbox_tit_item {
+    display: block;
+    float: left;
+    clear: left
+}
+
+.u_cbox .u_cbox_item_inform .u_cbox_con_item {
+    float: left
+}
+
+.u_cbox .u_cbox_item_inform .u_cbox_ico_bar {
+    overflow: hidden;
+    float: right;
+    position: static;
+    margin: 4px 6px 0 5px;
+    width: 1px;
+    height: 10px;
+    background-color: #ededed;
+    line-height: 99px;
+    vertical-align: top
+}
+
+.u_cbox .u_cbox_inform_maintenance {
+    min-height: 0;
+    padding-top: 57px;
+    line-height: 20px
+}
+
+.u_cbox .u_cbox_txt_mark {
+    color: #666
+}
+
+.u_cbox .u_cbox_con_press .u_cbox_ico_inform {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background-position: -4px -85px;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 9px
+}
+
+.u_cbox .u_cbox_con_press .u_cbox_txt_mark {
+    color: #999
+}
+
+.u_cbox .u_cbox_comment_box {
+    margin: 12px 29px 0 0
+}
+
+.u_cbox .u_cbox_comment_box.u_cbox_type_cleanbot {
+    margin-right: 0
+}
+
+.u_cbox .u_cbox_comment_box .u_cbox_info::after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+.u_cbox .u_cbox_area {
+    display: inline-block;
+    position: relative;
+    min-width: 200px;
+    max-width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #f0f1f4;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #f0f1f4;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+    word-wrap: break-word
+}
+
+.u_cbox .u_cbox_info {
+    position: relative;
+    z-index: 1;
+    margin-right: 168px;
+    font-size: 0;
+    line-height: 0
+}
+
+.u_cbox .u_cbox_name .u_cbox_nick {
+    display: block;
+    overflow: hidden;
+    font-family: HelveticaNeue, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.54;
+    color: #222;
+    letter-spacing: -.5px;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.u_cbox .u_cbox_info_main::after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+/* 여기까지 지움 위쪽에 계속 지워야 함 */
+
+
+.u_cbox .u_cbox_info_base {
+    position: absolute;
+    top: 12px;
+    right: 14px
+}
+
+.u_cbox .u_cbox_pic {
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    width: 25px;
+    height: 25px
+}
+
+.u_cbox .u_cbox_pic img {
+    width: 25px;
+    height: 25px
+}

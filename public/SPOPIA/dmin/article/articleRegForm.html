@@ -83,81 +83,84 @@
     </header>
 
     <main>
-        <div style="height: 80px;"></div>
-        <div class="container" style="max-width: 900px;">
-            <div class="text-center pb-3">
-                <span class="fs-1 fw-bold">게시물 등록</span>
+        <form class="needs-validation" novalidate>
+            <div style="height: 80px;"></div>
+            <div class="container" style="max-width: 900px;">
+                <div class="text-center pb-3">
+                    <span class="fs-1 fw-bold">게시물 등록</span>
+                </div>
+                <div class="card ps-5 pe-5 pt-4 pb-4 shadow">
+                    <div class="row mb-4">
+                        <div class="col-5">
+                            <label for="title" class="form-label fw-bold">제목</label>
+                            <input type="text" class="form-control" id="title" value="" required>
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <label for="content" class="form-label fw-bold">본문</label>
+                            <textarea class="form-control" style="height: 200px;" aria-label="content" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <label for="newspaper" class="form-label fw-bold">신문사</label>
+                            <input type="text" class="form-control" id="newspaper" value="" required>
+                        </div>
+                        <div class="col">
+                            <label for="event" class="form-label fw-bold">종목</label>
+                            <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example" required>
+                                <option value="" selected>선택</option>
+                                <option value="1">축구</option>
+                                <option value="2">해외축구</option>
+                                <option value="3">야구</option>
+                                <option value="4">해외야구</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="event" class="form-label fw-bold">리그</label>
+                            <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example" required>
+                                <option value="" selected>선택</option>
+                                <option value="1">KBO</option>
+                                <option value="2">메이저리그</option>
+                                <option value="3">아메리칸리그</option>
+                                <option value="4">센트럴리그</option>
+                                <option value="5">퍼시픽리그</option>
+                                <option value="6">K리그 1</option>
+                                <option value="7">K리그 2</option>
+                                <option value="8">프리미어리그</option>
+                                <option value="9">라리가</option>
+                                <option value="10">분데스리가</option>
+                                <option value="11">세리에 A</option>
+                                <option value="12">리그 1</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="reporter" class="form-label fw-bold">기자</label>
+                            <input type="text" class="form-control" id="reporter" value="" required>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <input type="file" class="form-control" aria-label="file example" required>
+                            <div class="invalid-feedback">Example invalid form file feedback</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <a class="btn btn-primary btn-sm text-white fw-bold shadow" href="../article/articleList.html"
+                                role="button">취소</a>
+                        </div>
+                        <div class="col-2 offset-8" align="right">
+                            <button class="btn btn-primary btn-sm text-white fw-bold shadow" onclick="location.href='../article/articleList.html'"
+                                type="button">등록</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card ps-5 pe-5 pt-4 pb-4 shadow">
-                <div class="row mb-4">
-                    <div class="col-5">
-                        <label for="title" class="form-label fw-bold">제목</label>
-                        <input type="text" class="form-control" id="title" value="" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mb-4">
-                        <label for="content" class="form-label fw-bold">본문</label>
-                        <textarea class="form-control" style="height: 200px;" aria-label="content"></textarea>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
-                        <label for="newspaper" class="form-label fw-bold">신문사</label>
-                        <input type="text" class="form-control" id="newspaper" value="" required>
-                    </div>
-                    <div class="col">
-                        <label for="event" class="form-label fw-bold">종목</label>
-                        <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example">
-                            <option value="" selected>선택</option>
-                            <option value="1">축구</option>
-                            <option value="2">해외축구</option>
-                            <option value="3">야구</option>
-                            <option value="4">해외야구</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="event" class="form-label fw-bold">리그</label>
-                        <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example">
-                            <option value="" selected>선택</option>
-                            <option value="1">KBO</option>
-                            <option value="2">메이저리그</option>
-                            <option value="3">아메리칸리그</option>
-                            <option value="4">센트럴리그</option>
-                            <option value="5">퍼시픽리그</option>
-                            <option value="6">K리그 1</option>
-                            <option value="7">K리그 2</option>
-                            <option value="8">프리미어리그</option>
-                            <option value="9">라리가</option>
-                            <option value="10">분데스리가</option>
-                            <option value="11">세리에 A</option>
-                            <option value="12">리그 1</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label for="reporter" class="form-label fw-bold">기자</label>
-                        <input type="text" class="form-control" id="reporter" value="" required>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col">
-                        <input type="file" class="form-control" aria-label="file example" required>
-                        <div class="invalid-feedback">Example invalid form file feedback</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-2">
-                        <a class="btn btn-primary btn-sm text-white fw-bold shadow" href="../article/articleList.html"
-                            role="button">취소</a>
-                    </div>
-                    <div class="col-2 offset-8" align="right">
-                        <a class="btn btn-primary btn-sm text-white fw-bold shadow" href="../article/articleList.html"
-                            role="button">등록</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="height: 50px;"></div>
+            <div style="height: 50px;"></div>
+        </form>
     </main>
 
     <footer>
@@ -192,6 +195,26 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+    <script>
+        (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+    </script>
 </body>
 
 </html>
