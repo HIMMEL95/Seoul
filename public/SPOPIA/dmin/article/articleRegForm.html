@@ -83,7 +83,7 @@
     </header>
 
     <main>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate action="./articleList.html" method="get">
             <div style="height: 80px;"></div>
             <div class="container" style="max-width: 900px;">
                 <div class="text-center pb-3">
@@ -101,12 +101,14 @@
                         <div class="col-12 mb-4">
                             <label for="content" class="form-label fw-bold">본문</label>
                             <textarea class="form-control" style="height: 200px;" aria-label="content" required></textarea>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col">
                             <label for="newspaper" class="form-label fw-bold">신문사</label>
                             <input type="text" class="form-control" id="newspaper" value="" required>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                         <div class="col">
                             <label for="event" class="form-label fw-bold">종목</label>
@@ -117,6 +119,7 @@
                                 <option value="3">야구</option>
                                 <option value="4">해외야구</option>
                             </select>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                         <div class="col">
                             <label for="event" class="form-label fw-bold">리그</label>
@@ -135,16 +138,18 @@
                                 <option value="11">세리에 A</option>
                                 <option value="12">리그 1</option>
                             </select>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                         <div class="col">
                             <label for="reporter" class="form-label fw-bold">기자</label>
                             <input type="text" class="form-control" id="reporter" value="" required>
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col">
-                            <input type="file" class="form-control" aria-label="file example" required>
-                            <div class="invalid-feedback">Example invalid form file feedback</div>
+                            <input type="file" class="form-control" aria-label="file example">
+                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div class="row">
@@ -153,8 +158,7 @@
                                 role="button">취소</a>
                         </div>
                         <div class="col-2 offset-8" align="right">
-                            <button class="btn btn-primary btn-sm text-white fw-bold shadow" onclick="location.href='../article/articleList.html'"
-                                type="button">등록</button>
+                            <button class="btn btn-primary btn-sm text-white fw-bold shadow" type="submit">등록</button>
                         </div>
                     </div>
                 </div>
@@ -195,25 +199,26 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
-    <script>
+    <script type="text/javascript">
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
         (() => {
-                'use strict'
+            'use strict'
 
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                const forms = document.querySelectorAll('.needs-validation')
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
 
-                // Loop over them and prevent submission
-                Array.from(forms).forEach(form => {
-                    form.addEventListener('submit', event => {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
 
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-            })()
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
     </script>
 </body>
 

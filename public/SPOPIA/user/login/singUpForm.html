@@ -164,8 +164,7 @@
                         </button>
                     </div>
                     <div class="col-3 offset-4">
-                        <button type="button" class="btn" style="background-color: #03c75a;"
-                            onclick="location.href='../login/loginForm.html'">
+                        <button type="submit" class="btn" style="background-color: #03c75a;">
                             <span class="btn_text text-white fw-bold">회원가입</span>
                         </button>
                     </div>
@@ -202,6 +201,27 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>

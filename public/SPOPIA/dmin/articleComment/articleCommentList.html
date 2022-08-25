@@ -85,258 +85,254 @@
     <main>
         <div style="height: 100px;"></div>
         <div class="container">
-            <div class="row g-4">
-                <!-- 좌측 목록 탭 -->
-                <div class="col-lg-3">
-                    <!-- Advanced filter responsive toggler START -->
-                    <nav class="navbar navbar-expand-lg mx-0">
-                        <div class="d-flex align-items-center d-lg-none">
-                            <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasSideNavbar" aria-controls="offcanvasSideNavbar">
-                                <i class="btn btn-primary fw-bold fa-solid fa-sliders-h"></i>
-                                <span class="h6 mb-0 fw-bold d-lg-none ms-2">항목</span>
-                            </button>
-                        </div>
-
+            <form method="get">
+                <div class="row g-4">
+                    <!-- 좌측 목록 탭 -->
+                    <div class="col-lg-3">
+                        <!-- Advanced filter responsive toggler START -->
                         <nav class="navbar navbar-expand-lg mx-0">
-                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSideNavbar"
-                                style="visibility: visible; width:250px;" aria-modal="true" role="dialog">
-                                <div class="offcanvas-header">
-                                    <button type="button" class="btn-close text-reset ms-auto"
-                                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <div class="d-flex align-items-center d-lg-none">
+                                <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasSideNavbar" aria-controls="offcanvasSideNavbar">
+                                    <i class="btn btn-primary fw-bold fa-solid fa-sliders-h"></i>
+                                    <span class="h6 mb-0 fw-bold d-lg-none ms-2">항목</span>
+                                </button>
+                            </div>
+                
+                            <nav class="navbar navbar-expand-lg mx-0">
+                                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSideNavbar"
+                                    style="visibility: visible; width:250px;" aria-modal="true" role="dialog">
+                                    <div class="offcanvas-header">
+                                        <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                
+                                    <div class="offcanvas-body d-block px-2 px-lg-0">
+                                        <div class="card overflow-hidden">
+                                            <img src="../dmin_image/mountains.png" class="card-img-top" alt="background"
+                                                style="height: 50px; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                                            <div class="card-body pt-0">
+                                                <div class="text-center">
+                                                    <div class="avatar avatar-lg mt-n5 mb-3">
+                                                        <a href="#"><img class="avatar-img rounded border border-white border-3"
+                                                                src="../../image/diano.jpg" style="width: 50px;" alt=""></a>
+                                                    </div>
+                                                    <div class="mt-2 mb-4">
+                                                        <span class="mb-0"><a href="#">이하늘</a></span>
+                                                        <small>Himmel</small><br>
+                                                        <small>himmel@gmail.com</small>
+                                                    </div>
+                                                    <hr>
+                                                    <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../Dashboard/Dashboard.html">
+                                                                <i class="fa-solid fa-chart-line pe-3"></i>
+                                                                <span>Dashboard</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../user/userList.html">
+                                                                <i class="fa-solid fa-users pe-3"></i>
+                                                                <span>회원관리</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../article/articleList.html">
+                                                                <i class="fas fa-light fa-newspaper pe-3"></i>
+                                                                <span>게시물 관리</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../articleComment/articleCommentList.html">
+                                                                <i class="fas fa-light fa-comments pe-3"></i>
+                                                                <span>댓글 리스트</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../game/gameList.html">
+                                                                <i class="fas fa-duotone fa-trophy pe-3"></i>
+                                                                <span>경기 기록 관리</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="nav small mt-4 justify-content-center lh-1">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="my-profile-about.html">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="settings.html">Settings</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" target="_blank" href="https://support.webestica.com/login">Support
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" target="_blank" href="docs/index.html">Docs </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="help.html">Help</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="privacy-and-terms.html">Privacy &amp; terms</a>
+                                            </li>
+                                        </ul>
+                                        <p class="small text-center mt-1">©2022 <a class="text-body" target="_blank" href="#"> SPOPIA
+                                            </a></p>
+                                    </div>
                                 </div>
-
-                                <div class="offcanvas-body d-block px-2 px-lg-0">
-                                    <div class="card overflow-hidden">
-                                        <img src="../dmin_image/mountains.png" class="card-img-top" alt="background"
-                                            style="height: 50px; background-position: center; background-size: cover; background-repeat: no-repeat;">
-                                        <div class="card-body pt-0">
-                                            <div class="text-center">
-                                                <div class="avatar avatar-lg mt-n5 mb-3">
-                                                    <a href="#"><img
-                                                            class="avatar-img rounded border border-white border-3"
-                                                            src="../../image/diano.jpg" style="width: 50px;" alt=""></a>
-                                                </div>
-                                                <div class="mt-2 mb-4">
-                                                    <span class="mb-0"><a href="#">이하늘</a></span>
-                                                    <small>Himmel</small><br>
-                                                    <small>himmel@gmail.com</small>
-                                                </div>
-                                                <hr>
-                                                <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="../Dashboard/Dashboard.html">
-                                                            <i class="fa-solid fa-chart-line pe-3"></i>
-                                                            <span>Dashboard</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="../user/userList.html">
-                                                            <i class="fa-solid fa-users pe-3"></i>
-                                                            <span>회원관리</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="../article/articleList.html">
-                                                            <i class="fas fa-light fa-newspaper pe-3"></i>
-                                                            <span>게시물 관리</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link"
-                                                            href="../articleComment/articleCommentList.html">
-                                                            <i class="fas fa-light fa-comments pe-3"></i>
-                                                            <span>댓글 리스트</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" href="../game/gameList.html">
-                                                            <i class="fas fa-duotone fa-trophy pe-3"></i>
-                                                            <span>경기 기록 관리</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                            </nav>
+                        </nav>
+                    </div>
+                    <!-- 중앙 메인 영역 -->
+                    <div class="col-md-8 col-lg-9 vstack gap-4">
+                        <!-- 게시물 사진 -->
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div class="card text-white position-relative shadow-lg">
+                                    <img src="../dmin_image/road-ahead-vJ3tIj_VRdU-unsplash.jpg" class="card-img" style="height: 200px;"
+                                        alt="...">
+                                    <div class="card-img-overlay text-center p-4 position-absoulte top-50 start-50 translate-middle">
+                                        <span class="card-title align-middle fw-bold fs-3">댓글 관리</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 검색 -->
+                        <div class="card p-3 shadow">
+                            <div class="row align-items-center pb-2">
+                                <div class="col-2">
+                                    <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
+                                        <option value="" selected>선택</option>
+                                        <option value="createdAt">등록일</option>
+                                        <option value="modifiedAt">수정일</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="2022-01-01" required>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="2022-12-31" required>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-2">
+                                    <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
+                                        <option value="" selected>선택</option>
+                                        <option value="name">이름</option>
+                                        <option value="id">아이디</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-primary fw-bold btn-sm shadow" type="submit">검색</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 리스트 -->
+                        <div class="card ps-3 pt-3 pe-3 shadow">
+                            <table class="table text-center align-middle">
+                                <thead>
+                                    <tr>
+                                        <th style="font-size: small;"><input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault"></th>
+                                        <th>번호</th>
+                                        <th>이름</th>
+                                        <th>성별</th>
+                                        <th>아이디</th>
+                                        <th>내용</th>
+                                        <th>등록일</th>
+                                        <th>수정일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </td>
+                                        <td>1</td>
+                                        <td>이하늘</td>
+                                        <td>남자</td>
+                                        <td>himmel</td>
+                                        <td>두산이겨라!</td>
+                                        <td>2022-05-16 12:00:00</td>
+                                        <td>2022-05-16 12:15:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </td>
+                                        <td>2</td>
+                                        <td>박지성</td>
+                                        <td>남자</td>
+                                        <td>Jisung</td>
+                                        <td>LG 이겨라!!</td>
+                                        <td>2022-05-16 12:00:00</td>
+                                        <td>2022-05-16 12:15:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        </td>
+                                        <td>3</td>
+                                        <td>김연경</td>
+                                        <td>여자</td>
+                                        <td>yunkyung</td>
+                                        <td>아무나 이겨라!!!</td>
+                                        <td>2022-05-16 12:00:00</td>
+                                        <td>2022-05-16 12:15:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination pagination-sm col-3 offset-5">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-1">
+                                <button class="border-0 btn btn-sm shadow" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">
+                                    <i class="fa-solid fa-trash fa-lg text-danger"></i>
+                                </button>
+                                <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title fw-bold" id="staticBackdropLabel">게시물 삭제</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body fs-6">
+                                                선택하신 게시물을 정말로 삭제하시겠습니까?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                                <button type="button" class="btn btn-primary">삭제</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="nav small mt-4 justify-content-center lh-1">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="my-profile-about.html">About</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="settings.html">Settings</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" target="_blank"
-                                                href="https://support.webestica.com/login">Support </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" target="_blank" href="docs/index.html">Docs </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="help.html">Help</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="privacy-and-terms.html">Privacy &amp; terms</a>
-                                        </li>
-                                    </ul>
-                                    <p class="small text-center mt-1">©2022 <a class="text-body" target="_blank"
-                                            href="#"> SPOPIA </a></p>
-                                </div>
-                            </div>
-                        </nav>
-                    </nav>
-                </div>
-                <!-- 중앙 메인 영역 -->
-                <div class="col-md-8 col-lg-9 vstack gap-4">
-                    <!-- 게시물 사진 -->
-                    <div class="row">
-                        <div class="col-12 ">
-                            <div class="card text-white position-relative shadow-lg">
-                                <img src="../dmin_image/road-ahead-vJ3tIj_VRdU-unsplash.jpg" class="card-img"
-                                    style="height: 200px;" alt="...">
-                                <div
-                                    class="card-img-overlay text-center p-4 position-absoulte top-50 start-50 translate-middle">
-                                    <span class="card-title align-middle fw-bold fs-3">댓글 관리</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 검색 -->
-                    <div class="card p-3 shadow">
-                        <div class="row align-items-center pb-2">
-                            <div class="col-2">
-                                <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                    <option value="" selected>선택</option>
-                                    <option value="createdAt">등록일</option>
-                                    <option value="modifiedAt">수정일</option>
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="2022-01-01"
-                                    required>
-                            </div>
-                            <div class="col-3">
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="2022-12-31"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-2">
-                                <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                    <option value="" selected>선택</option>
-                                    <option value="name">이름</option>
-                                    <option value="id">아이디</option>
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                            </div>
-                            <div class="col-3">
-                                <button class="btn btn-primary fw-bold btn-sm shadow" type="submit">검색</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 리스트 -->
-                    <div class="card ps-3 pt-3 pe-3 shadow">
-                        <table class="table text-center align-middle">
-                            <thead>
-                                <tr>
-                                    <th style="font-size: small;"><input class="form-check-input" type="checkbox"
-                                            value="" id="flexCheckDefault"></th>
-                                    <th>번호</th>
-                                    <th>이름</th>
-                                    <th>성별</th>
-                                    <th>아이디</th>
-                                    <th>내용</th>
-                                    <th>등록일</th>
-                                    <th>수정일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </td>
-                                    <td>1</td>
-                                    <td>이하늘</td>
-                                    <td>남자</td>
-                                    <td>himmel</td>
-                                    <td>두산이겨라!</td>
-                                    <td>2022-05-16 12:00:00</td>
-                                    <td>2022-05-16 12:15:00</td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </td>
-                                    <td>2</td>
-                                    <td>박지성</td>
-                                    <td>남자</td>
-                                    <td>Jisung</td>
-                                    <td>LG 이겨라!!</td>
-                                    <td>2022-05-16 12:00:00</td>
-                                    <td>2022-05-16 12:15:00</td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </td>
-                                    <td>3</td>
-                                    <td>김연경</td>
-                                    <td>여자</td>
-                                    <td>yunkyung</td>
-                                    <td>아무나 이겨라!!!</td>
-                                    <td>2022-05-16 12:00:00</td>
-                                    <td>2022-05-16 12:15:00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination pagination-sm col-3 offset-5">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-1">
-                            <button class="border-0 btn btn-sm shadow" type="button" data-bs-toggle="modal"
-                                data-bs-target="#deleteModal">
-                                <i class="fa-solid fa-trash fa-lg text-danger"></i>
-                            </button>
-                            <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title fw-bold" id="staticBackdropLabel">게시물 삭제</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body fs-6">
-                                            선택하신 게시물을 정말로 삭제하시겠습니까?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">취소</button>
-                                            <button type="button" class="btn btn-primary">삭제</button>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
         <div style="height: 50px;">
         </div>
