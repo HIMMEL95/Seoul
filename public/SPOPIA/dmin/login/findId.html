@@ -7,7 +7,7 @@
     <title>FindId</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="../user_css/dashboard.css" rel="stylesheet" type="text/css">
+    <link href="../dmin_css/dashboard.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -80,7 +80,7 @@
     </header>
 
     <main>
-        <form method="get">
+        <form class="needs-validation" novalidate method="get">
             <div style="height: 100px;"></div>
             <div class="container container1">
                 <p class="fs-2 fw-bold">계정 정보 찾기</p>
@@ -218,6 +218,26 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>

@@ -121,13 +121,19 @@
                             <input type="text" class="form-control" id="newspaper" value="문화일보" required>
                         </div>
                         <div class="col">
+                            <label for="abroadNY" class="form-label fw-bold">해외여부</label>
+                            <select id="abroadNY" class="form-select form-select fw-bold" aria-label=".form-select example">
+                                <option value="">선택</option>
+                                <option value="1">국내</option>
+                                <option value="2" selected>해외</option>
+                            </select>
+                        </div>
+                        <div class="col">
                             <label for="event" class="form-label fw-bold">종목</label>
                             <select id="event" class="form-select form-select fw-bold" aria-label=".form-select example">
                                 <option value="">선택</option>
-                                <option value="1">축구</option>
-                                <option value="2">해외축구</option>
-                                <option value="3" selected>야구</option>
-                                <option value="4">해외야구</option>
+                                <option value="1" selected>야구</option>
+                                <option value="2">축구</option>
                             </select>
                         </div>
                         <div class="col">

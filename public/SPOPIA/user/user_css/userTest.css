@@ -18,7 +18,7 @@
   text-transform: uppercase;
   color: #004d40;
   text-align: center;
-
+  min-height: 100%;
 }
 
 /* header */
@@ -357,33 +357,37 @@ main {
   display: flex;
 }
 
-.live_tag, .live_viewer {
+.live_info {
   position: absolute;
-  top: 5px;
-  left: 10px;
+  margin: 5px 15px;
+  align-items: center;
+  display: flex;
 }
 
 .live_tag {
-  width: 36px;
-  height: 16px;
-  padding: 2px 2px;
+  padding: 1px 8px;
   overflow: hidden;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   border-radius: 2px;
   background: red;
   left: 10px;
+  font-size: 10px;
+  font-weight: 800;
 }
 
 .live_viewer {
   display: inline-block;
-  padding: 0 5px 0 8px;
+  padding: 0 5px;
   height: 16px;
   border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.4);
   text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+  vertical-align: middle;
   color: #fff;
   font-size: 10px;
+  left: 50px;
+  letter-spacing: -0.5px;
 }
 
 .number {
@@ -399,8 +403,10 @@ main {
   display: flex;
   margin: 0 5px;
   bottom: 10px;
-  left: 5px;
+  left: 10px;
   color: white;
+  font-size: 15px;
+  font-weight: 800;
 }
 
 #article {
@@ -652,11 +658,11 @@ main {
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 15%);
-  background: white;
+  background: #FCF7F6;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: -0.5px;
-  color: #909aaa;
+  color: black;
   cursor: pointer;
   z-index: 10;
   padding: 0 10px;
