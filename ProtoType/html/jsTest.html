@@ -1,232 +1,96 @@
 <!doctype html>
-<html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>SPOPIA : 회원가입</title>
-    <link href="../user_css/signUp.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../javascript/test.js"></script>
-    <link href="../css/validation.css" rel="stylesheet" type="text/css">
-</head>
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <title>Validation Test</title>
+        <!-- <link rel="stylesheet" href="../css/validationTest.css"> -->
+        <link rel="stylesheet" href="../css/validation.css">
+        <script defer type="text/javascript" src="../javascript/test.js"></script>
+    </head>
 <body>
-    <form name="inputForm" onsubmit="return validateForm()" class="needs-validation p-3" novalidate>
+
+    <header></header>
+
+    <main>
         <div class="container">
-            <div style="height: 100px;"></div>
-            <div class="card shadow mb-5 pb-5 border border-primary border-2">
+            <form id="form" action="/">
+                <img src="../../public/SPOPIA/image/SPOPIA1.png">
                 <div class="row">
-                    <div class="col-12 mt-5 text-center mb-5 pb-4">
-                        <a href="../../user/member/main_page.html" class="logo">
-                            <img src="../../image/SPOPIA1.png" style="width: 150px;">
-                        </a>
-                    </div>
-                    <div class="col-5 offset-2 mb-3">
-                        <span class="fs-2 fw-bold">필수 사항</span>
-                    </div>
-                    <div class="col-4 offset-2 mb-3">
-                        <label for="id" class="form-label fw-bold">아이디</label>
-                        <input type="text" class="form-control" id="id" value="" required>
-                        <span id="id_span" class="validation"></span>
-                    </div>
-                    <div class="col-2 mb-3">
-                        <div class="row">
-                            <div class="col">
-                                <label for="id" class="form-label fw-bold invisible">중복확인</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn fw-bold text-white"
-                                    style="background-color: #03c75a;">중복확인</button>
-                            </div>
+                    <div class="col-6">
+                        <div class="input-control">
+                            <label for="id">Id</label>
+                            <input id="id" name="id" type="text"> 
+                            <div class="error"></div>
                         </div>
                     </div>
-                    <div class="col-4 offset-2 mb-3">
-                        <label for="name" class="form-label fw-bold">이름</label>
-                        <input type="text" class="form-control" id="name" value="" required>
-                        <span id="name_span" class="validation"></span>
-                    </div>
-                    <div class="col-4  mb-3">
-                        <label for="email" class="form-label fw-bold">이메일</label>
-                        <input type="email" class="form-control" id="email" value="" placeholder="email@naver.com"
-                            required>
-                        <span id="email_span" class="validation"></span>
-                    </div>
-                    <div class="col-4 offset-2 mb-3">
-                        <label for="password" class="form-label fw-bold">비밀번호</label>
-                        <input type="password" class="form-control" id="password" value="" required>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <label for="confirm_password" class="form-label fw-bold">비밀번호 확인</label>
-                        <input type="password" class="form-control" id="confirm_password" value="" required>
-                    </div>
-                    <div class="col-4 offset-2 mb-3">
-                        <label for="dob" class="form-label fw-bold">생년월일</label>
-                        <input type="text" class="form-control" id="dob" value="" placeholder="1900-01-01" required>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <label for="gender" class="form-label fw-bold">성별</label>
-                        <select class="form-select form-select-lg fs-6" id="gender" aria-label=".form-select-lg example"
-                            required>
-                            <option value="">선택</option>
-                            <option value="남성">남성</option>
-                            <option value="여성">여성</option>
-                        </select>
-                    </div>
-                    <div class="col-2 offset-2 mb-3">
-                        <label for="gender" class="form-label fw-bold">통신사</label>
-                        <select class="form-select form-select-md fs-6 fw-bold" id="gender"
-                            aria-label=".form-select-lg example" required>
-                            <option value="">선택</option>
-                            <option value="1">SKT</option>
-                            <option value="2">KT</option>
-                            <option value="3">LGT</option>
-                        </select>
-                    </div>
-                    <div class="col-4 mb-3">
-                        <label for="tel" class="form-label fw-bold">전화번호</label>
-                        <input type="tel" class="form-control" id="tel" value="" required>
-                    </div>
-                    <div class="col-2 mb-3">
-                        <div class="row">
-                            <div class="col">
-                                <label for="id" class="form-label fw-bold invisible">인증번호</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn fw-bold text-white"
-                                    style="background-color: #03c75a;">인증번호</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 offset-2 mb-3" hidden>
-                        <label for="tel" class="form-label fw-bold">인증번호</label>
-                        <input type="tel" class="form-control" id="tel" value="" required>
-                    </div>
-                    <div class="col-2 mb-3" hidden>
-                        <div class="row">
-                            <div class="col">
-                                <label for="id" class="form-label fw-bold invisible">확인</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn fw-bold text-white"
-                                    style="background-color: #03c75a;">확인</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 offset-2 mb-3">
-                        <label for="zip" class="form-label fw-bold">우편번호</label>
-                        <input type="text" class="form-control" id="zip" value="" required>
-                    </div>
-                    <div class="col-2 mb-3 col-lg-3 align-items-center">
-                        <div class="row">
-                            <div class="col">
-                                <label for="id" class="form-label fw-bold invisible">주소검색</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn fw-bold text-white"
-                                    style="background-color: #03c75a;">주소검색</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 offset-2 mb-3">
-                        <label for="address" class="form-label fw-bold">주소</label>
-                        <input type="text" class="form-control" id="address" value="" required>
-                    </div>
-                    <div class="col-8 offset-2 mb-3">
-                        <label for="detailAddress" class="form-label fw-bold">상세주소</label>
-                        <input type="text" class="form-control" id="detailAddress" value="" required>
+                    <div class="col-2">
+                        <label for="id" class="form-label fw-bold invisible">중복확인</label>
+                        <button type="button" class="btn fw-bold text-white"
+                            style="background-color: #03c75a;">중복확인</button>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 offset-2">
-                        <hr>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="username">Username</label>
+                            <input id="username" name="username" type="text"> 
+                            <div class="error"></div>
+                        </div>
                     </div>
-                    <div class="col-5 offset-2 mb-3">
-                        <span class="fs-2 fw-bold">선택 사항</span>
-                    </div>
-                    <div class="col-4 offset-2 mb-3">
-                        <label for="job" class="form-label fw-bold">직업</label>
-                        <input type="text" class="form-control" id="job">
-                    </div>
-                    <div class="col-4  mb-5">
-                        <label for="team" class="form-label fw-bold">좋아하는 팀</label>
-                        <input type="text" class="form-control" id="team">
-                    </div>
-                    <div class="col-2 offset-2">
-                        <button type="button" class="btn" style="background-color: #03c75a;"
-                            onclick="location.href='../login/loginForm.html'">
-                            <span class="btn_text text-white fw-bold">취소</span>
-                        </button>
-                    </div>
-                    <div class="col-3 offset-4">
-                        <button type="submit" class="btn" style="background-color: #03c75a;">
-                            <span class="btn_text text-white fw-bold">회원가입</span>
-                        </button>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="text">
+                            <div class="error"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- footer -->
-            <div class="footer">
-                <div class="footer_inner">
-                    <!--[주]고객센터,제휴문의,서비스안내-->
-                    <ul class="footer_link" id="footer_link">
-                        <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html"
-                                id="fot.agreement"><span class="text">이용약관</span></a></li>
-                        <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html"
-                                id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
-                        <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html"
-                                id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
-                        <li><a target="_blank" class="footer_item"
-                                href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span
-                                    class="text">회원정보 고객센터</span></a></li>
-                    </ul>
-                    <div class="footer_copy">
-                        <a id="fot.naver" target="_blank" href="https://www.navercorp.com">
-                            <img src="../../image/SPOPIA1.png" alt="logo" style="width: 45px;">
-                        </a>
-                        <span class="text">Copyright</span>
-                        <span class="corp">© SPOPIA Corp.</span>
-                        <span class="text">All Rights Reserved.</span>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="password2">Password again</label>
+                            <input id="password2" name="password2" type="password">
+                            <div class="error"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </form>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="dob">생년월일</label>
+                            <input id="dob" name="dob" type="text" placeholder="1900-01-01">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="gender">성별</label>
+                            <select id="gender" aria-label=".form-select-lg example">
+                                <option value="">선택</option>
+                                <option value="남성">남성</option>
+                                <option value="여성">여성</option>
+                            </select>
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Sing Up</button>
+            </form>
+        </div>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a33686bef4.js" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript">
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script> -->
+    <footer></footer>
 </body>
-
-</html>
+</html> 
