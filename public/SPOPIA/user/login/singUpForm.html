@@ -17,14 +17,14 @@
 
     <main>
         <div class="container">
-            <form id="form" action="../login/loginForm.html" method="get">
+            <form id="form" onkeyup="" action="../login/loginForm.html" method="get">
                 <img src="../../image/SPOPIA1.png">
                 <h1>필수 사항</h1>
                 <div class="row">
                     <div class="col-6">
                         <div class="input-control">
                             <label for="id">Id</label>
-                            <input id="id" name="id" type="text"> 
+                            <input id="id" name="id" type="text" required> 
                             <div class="error"></div>
                         </div>
                     </div>
@@ -41,14 +41,14 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="username">Username</label>
-                            <input id="username" name="username" type="text"> 
+                            <input id="username" name="username" type="text" required> 
                             <div class="error"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="email">Email</label>
-                            <input id="email" name="email" type="text">
+                            <input id="email" name="email" type="text" required>
                             <div class="error"></div>
                         </div>
                     </div>
@@ -57,14 +57,14 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="password">Password</label>
-                            <input id="password" name="password" type="password">
+                            <input id="password" name="password" type="password" required>
                             <div class="error"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="password2">Password again</label>
-                            <input id="password2" name="password2" type="password">
+                            <input id="password2" name="password2" type="password" required>
                             <div class="error"></div>
                         </div>
                     </div>
@@ -73,17 +73,17 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="dob">생년월일</label>
-                            <input id="dob" name="dob" type="text" placeholder="1900-01-01">
+                            <input id="dob" name="dob" type="text" placeholder="1900-01-01" required>
                             <div class="error"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="gender">성별</label>
-                            <select id="gender" aria-label=".form-select-lg example">
-                                <option value="">선택</option>
-                                <option value="남성">남성</option>
-                                <option value="여성">여성</option>
+                            <select id="gender" aria-label=".form-select-lg example" required>
+                                <option value="0">선택</option>
+                                <option value="1">남성</option>
+                                <option value="2">여성</option>
                             </select>
                             <div class="error"></div>
                         </div>
@@ -93,8 +93,8 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="radio_operator">통신사</label>
-                            <select id="radio_operator" aria-label=".form-select-lg example">
-                                <option value="">선택</option>
+                            <select id="radio_operator" aria-label=".form-select-lg example" required>
+                                <option value="0">선택</option>
                                 <option value="1">SKT</option>
                                 <option value="2">KT</option>
                                 <option value="3">LGT</option>
@@ -106,7 +106,7 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="tel">전화번호</label>
-                            <input id="tel" name="tel" type="tel" placeholder="010-0000-0000">
+                            <input id="tel" name="tel" type="tel" placeholder="010-0000-0000" required>
                             <div class="error"></div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                     <div class="col-6">
                         <div class="input-control">
                             <label for="zip">우편번호</label>
-                            <input id="zip" name="zip" type="text"> 
+                            <input id="zip" name="zip" type="text" required> 
                             <div class="error"></div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="address">주소</label>
-                            <input id="address" name="address" type="text"> 
+                            <input id="address" name="address" type="text" required> 
                             <div class="error"></div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="detailAddress">상세주소</label>
-                            <input id="detailAddress" name="detailAddress" type="text"> 
+                            <input id="detailAddress" name="detailAddress" type="text" required> 
                             <div class="error"></div>
                         </div>
                     </div>
