@@ -20,6 +20,7 @@
         <div class="container">
             <form id="form" action="/">
                 <img src="../../public/SPOPIA/image/SPOPIA1.png">
+                <h1>필수 사항</h1>
                 <div class="row">
                     <div class="col-6">
                         <div class="input-control">
@@ -29,9 +30,12 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <label for="id" class="form-label fw-bold invisible">중복확인</label>
-                        <button type="button" class="btn fw-bold text-white"
-                            style="background-color: #03c75a;">중복확인</button>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn fw-bold text-white certification"
+                                    style="background-color: #03c75a;">중복확인</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -86,11 +90,136 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit">Sing Up</button>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="radio_operator">통신사</label>
+                            <select id="radio_operator" aria-label=".form-select-lg example">
+                                <option value="">선택</option>
+                                <option value="1">SKT</option>
+                                <option value="2">KT</option>
+                                <option value="3">LGT</option>
+                                <option value="4">알뜰폰</option>
+                            </select>
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="tel">전화번호</label>
+                            <input id="tel" name="tel" type="tel" placeholder="010-0000-0000">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn fw-bold text-white certification"
+                                    style="background-color: #03c75a;">인증번호</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" hidden>
+                    <div class="col-6">
+                        <div class="input-control">
+                            <label for="tel_certification">인증번호</label>
+                            <input id="tel_certification" name="tel_certification" type="text"> 
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn fw-bold text-white certification"
+                                    style="background-color: #03c75a;">중복확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-control">
+                            <label for="zip">우편번호</label>
+                            <input id="zip" name="zip" type="text"> 
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn fw-bold text-white certification"
+                                    style="background-color: #03c75a;">주소검색</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="address">주소</label>
+                            <input id="address" name="address" type="text"> 
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="detailAddress">상세주소</label>
+                            <input id="detailAddress" name="detailAddress" type="text"> 
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h1>선택 사항</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="job">직업</label>
+                            <input id="job" name="job" type="password">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="team">좋아하는 팀</label>
+                            <input id="team" name="team" type="password">
+                            <div class="error"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="submit" type="submit">Sign Up</button>
             </form>
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer">
+                <div class="footer_inner">
+                    <!--[주]고객센터,제휴문의,서비스안내-->
+                    <ul class="footer_link" id="footer_link">
+                        <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html"
+                                id="fot.agreement"><span class="text">이용약관</span></a></li>
+                        <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html"
+                                id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                        <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html"
+                                id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
+                        <li><a target="_blank" class="footer_item"
+                                href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span
+                                    class="text">회원정보 고객센터</span></a></li>
+                    </ul>
+                    <div class="footer_copy">
+                        <a id="fot.naver" target="_blank" href="https://www.navercorp.com">
+                            <img src="../../image/SPOPIA1.png" alt="logo" style="width: 45px;">
+                        </a>
+                        <span class="text">Copyright</span>
+                        <span class="corp">© SPOPIA Corp.</span>
+                        <span class="text">All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+    </footer>
 </body>
 </html> 

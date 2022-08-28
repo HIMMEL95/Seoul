@@ -126,6 +126,14 @@ main {
     margin: 0 5px;
 }
 
+.input-control.success select {
+    border-color: #09c372;
+}
+
+.input-control.error select {
+    border-color: #ff3860;
+}
+
 /* footer 영역 */
 
 footer {
