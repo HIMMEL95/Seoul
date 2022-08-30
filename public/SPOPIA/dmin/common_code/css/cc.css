@@ -87,11 +87,7 @@ header {
 nav a {
     text-decoration: none;
     cursor: pointer;
-}
-
-nav a:-webkit-any-link {
     color: #132144;
-    cursor: pointer;
 }
 
 /* main */

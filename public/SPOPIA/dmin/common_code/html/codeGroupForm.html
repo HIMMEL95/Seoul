@@ -194,213 +194,98 @@
                     </div>
                     <!-- 중앙 메인 영역 -->
                     <div class="col-md-8 col-lg-9 vstack gap-4">
-                        <!-- 검색 -->
-                        <div class="card p-3 shadow">
-                            <div class="row align-items-center pb-2">
-                                <div class="col-2">
-                                    <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                        <option value="" selected>선택</option>
-                                        <option value="createdAt">등록일</option>
-                                        <option value="modifiedAt">수정일</option>
-                                    </select>
-                                </div>
-                                <div class="col-2">
-                                    <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                        <option value="" selected>선택</option>
-                                        <option value="createdAt">등록일</option>
-                                        <option value="modifiedAt">수정일</option>
-                                    </select>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="2022-01-01" required>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="2022-12-31" required>
-                                </div>
+                        <h1 style="font-weight: 800;">코드그룹 관리</h1>
+                        <div class="row">
+                            <div class="col">
+                                <label for="group_code" class="form-label">코드그룹 코드</label>
+                                <input type="text" class="form-control" id="group_code" value="" placeholder="영문(대문자),숫자" required>
                             </div>
-                            <div class="row align-items-center">
-                                <div class="col-2">
-                                    <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                        <option value="" selected>선택</option>
-                                        <option value="name">이름</option>
-                                        <option value="id">아이디</option>
-                                    </select>
-                                </div>
-                                <div class="col-2">
-                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
-                                </div>
-                                <div class="col-2">
-                                    <button class="btn btn-warning fw-bold btn-sm shadow" type="submit">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                    <button class="btn btn-danger fw-bold btn-sm shadow" type="submit">
-                                        <i class="fa-solid fa-arrow-rotate-right"></i>
-                                    </button>
-                                </div>
+                            <div class="col">
+                                <label for="group_code_another" class="form-label">코드그룹 코드 (Another)</label>
+                                <input type="text" class="form-control" id="group_code_another" value="" placeholder="영문(대문자),숫자" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="group_code_ko" class="form-label">코드그룹 이름 (한글)</label>
+                                <input type="text" class="form-control" id="group_code_ko" value="" placeholder="한글,숫자" required>
+                            </div>
+                            <div class="col">
+                                <label for="group_code_eng" class="form-label">코드그룹 이름 (영문)</label>
+                                <input type="text" class="form-control" id="group_code_eng" value="" placeholder="영문(대소문자),숫자" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="useNY" class="form-label">사용여부</label>
+                                <select class="form-select" id="useNY" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>N</option>
+                                    <option>Y</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="orderBY" class="form-label">순서</label>
+                                <input type="text" class="form-control" id="orderBY" value="" placeholder="숫자" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="useNY" class="form-label">설명</label>
+                                <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+                            </div>
+                            <div class="col">
+                                <label for="deleteNY" class="form-label">삭제여부</label>
+                                <select class="form-select" id="usdeleteNYeNY" required>
+                                    <option selected disabled value="">Choose...</option>
+                                    <option>N</option>
+                                    <option>Y</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="varchar_sub1" class="form-label">예비1 (varchar type)</label>
+                                <input type="text" class="form-control" id="varchar_sub1" value="" placeholder="영문(대소문자), 숫자" required>
+                            </div>
+                            <div class="col">
+                                <label for="varchar_sub2" class="form-label">예비2 (varchar type)</label>
+                                <input type="text" class="form-control" id="varchar_sub2" value="" placeholder="영문(대소문자), 숫자" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="varchar_sub3" class="form-label">예비3 (varchar type)</label>
+                                <input type="text" class="form-control" id="varchar_sub3" value="" placeholder="영문(대소문자), 숫자" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="int_sub1" class="form-label">예비1 (int type)</label>
+                                <input type="text" class="form-control" id="int_sub1" value="" placeholder="숫자" required>
+                            </div>
+                            <div class="col">
+                                <label for="int_sub2" class="form-label">예비2 (int type)</label>
+                                <input type="text" class="form-control" id="int_sub2" value="" placeholder="숫자" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="int_sub3" class="form-label">예비3 (int type)</label>
+                                <input type="text" class="form-control" id="int_sub3" value="" placeholder="숫자" required>
                             </div>
                         </div>
                         <!-- 리스트 -->
-                        <div class="card ps-3 pt-3 pe-3 shadow">
-                            <table class="table text-center align-middle">
-                                <thead>
-                                    <tr>
-                                        <th style="font-size: small;"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault"></th>
-                                        <th>#</th>
-                                        <th>코드그룹 코드</th>
-                                        <th>코드그룹 이름(한글)</th>
-                                        <th>코드그룹 이름(영문)</th>
-                                        <th>코드갯수</th>
-                                        <th>등록일</th>
-                                        <th>수정일</th>
-                                    </tr>
-                                </thead>
-                                <tbody onclick="newPage()">
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td onclick="event.cancelBubble=true"><input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                        </td>
-                                        <td>42</td>
-                                        <td>49</td>
-                                        <td>asdasd</td>
-                                        <td></td>
-                                        <td>0</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <nav aria-label="Page navigation">
-                                <ul class=" pagination pagination-sm col-3 offset-5">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
                         <div class="row align-items-center">
-                            <div class="col-2">
-                                <button class="border-0 btn btn-sm shadow" type="button" data-bs-toggle="modal"
+                            <div class="col-1">
+                                <a class="border-0 btn btn-sm bg-secondary shadow" type="button" href="./codeGroupList.html">
+                                    <i class="fa-solid fa-bars" style="color: white;"></i>
+                                </a>
+                            </div>
+                            <div class="col-3 offset-8" align="right">
+                                <button class="border-0 btn btn-sm bg-danger shadow" type="button" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal">
-                                    <i class="fa-solid fa-trash fa-lg text-danger"></i>
+                                    <i class="fa-solid fa-xmark" style="color: white;"></i>
                                 </button>
                                 <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
                                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -421,19 +306,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="border-0 btn btn-sm shadow" type="button" data-bs-toggle="modal"
+                                <button class="border-0 btn btn-sm bg-danger shadow" type="button" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal">
-                                    <i class="fa-solid fa-xmark"></i>
+                                    <i class="fa-solid fa-trash-can" style="color: white;"></i>
                                 </button>
-                            </div>
-                            <div class="col-2 offset-8" align="right">
                                 <button class="border-0 btn btn-sm bg-success shadow" type="button" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal">
-                                    <i class="fa-regular fa-file-excel" style="color: white;"></i>
+                                    <i class="fa-regular fa-bookmark" style="color: white;"></i>
                                 </button>
-                                <a class="border-0 btn btn-sm shadow bg-primary" role="button" href="../article/articleRegForm.html">
-                                    <i class="fa-regular fa-plus fa-1x" style="color: white;"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -475,12 +355,6 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        // row 클릭시 페이지 이동
-        function newPage() {
-            window.location.href = './articleView.html'
-        }
-    </script>
     
 </body>
 

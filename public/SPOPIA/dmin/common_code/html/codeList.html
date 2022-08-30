@@ -18,7 +18,7 @@
             <div class="container px-3 px-xl-5 pt-1">
                 <!-- Logo START -->
                 <a class="navbar-brand" href="../../user/member/main_page.html">
-                    <img class="light-mode-item navbar-brand-item" src="../../image/SPOPIA_white.png" alt="logo"
+                    <img class="light-mode-item navbar-brand-item" src="../../../image/SPOPIA_white.png" alt="logo"
                         style="width: 90px;">
                 </a>
                 <!-- Profile START -->
@@ -27,7 +27,7 @@
                         <li class="me-2">
                             <a class="p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside"
                                 data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar"
+                                <img class="avatar-img rounded-circle" src="../../../image/diano.jpg" alt="avatar"
                                     style="width: 30px;">
                             </a>
                             <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
@@ -37,7 +37,7 @@
                                     <div class="d-flex align-items-center">
                                         <!-- Avatar -->
                                         <div class="avatar1 me-3">
-                                            <img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg"
+                                            <img class="avatar-img rounded-circle shadow" src="../../../image/diano.jpg"
                                                 alt="avatar" style="width: 30px;">
                                         </div>
                                         <div>
@@ -80,14 +80,15 @@
                 <!-- Profile START -->
             </div>
         </nav>
-        <div class="nav-scroller py-1 mb-2" style="width: 1200px; margin: auto;">
-            <nav class="nav d-flex justify-content-around">
-              <a class="p-2 link-secondary" href="#">회원관리</a>
-              <a class="p-2 link-secondary" href="#">서비스관리</a>
-              <a class="p-2 link-secondary" href="#">사이트관리</a>
-              <a class="p-2 link-secondary" href="#">로그관리</a>
-              <a class="p-2 link-secondary" href="#">시스템관리</a>
-              <a class="p-2 link-secondary" href="#">시스템관리</a>
+        <div class="nav-scroller py-1 mb-2 bg-info">
+            <nav class="nav d-flex justify-content-around" style="width: 1200px; margin: auto;">
+                <a class="p-2" href="#">Navbar</a>
+                <a class="p-2" href="#">회원관리</a>
+                <a class="p-2 link-secondary" href="#">서비스관리</a>
+                <a class="p-2 link-secondary" href="#">사이트관리</a>
+                <a class="p-2 link-secondary" href="#">로그관리</a>
+                <a class="p-2 link-secondary" href="#">시스템관리</a>
+                <a class="p-2 link-secondary" href="#">시스템관리</a>
             </nav>
           </div>
     </header>
@@ -119,13 +120,13 @@
                 
                                     <div class="offcanvas-body d-block px-2 px-lg-0">
                                         <div class="card overflow-hidden">
-                                            <img src="../dmin_image/mountains.png" class="card-img-top" alt="background"
+                                            <img src="../../dmin_image/mountains.png" class="card-img-top" alt="background"
                                                 style="height: 50px; background-position: center; background-size: cover; background-repeat: no-repeat;">
                                             <div class="card-body pt-0">
                                                 <div class="text-center">
                                                     <div class="avatar avatar-lg mt-n5 mb-3">
                                                         <a href="#"><img class="avatar-img rounded border border-white border-3"
-                                                                src="../../image/diano.jpg" style="width: 50px;" alt=""></a>
+                                                                src="../../../image/diano.jpg" style="width: 50px;" alt=""></a>
                                                     </div>
                                                     <div class="mt-2 mb-4">
                                                         <span class="mb-0"><a href="#">이하늘</a></span>
@@ -137,31 +138,26 @@
                                                         <li class="nav-item">
                                                             <a class="nav-link" href="../Dashboard/Dashboard.html">
                                                                 <i class="fa-solid fa-chart-line pe-3"></i>
-                                                                <span>Dashboard</span>
+                                                                <span>Home</span>
                                                             </a>
                                                         </li>
                                                         <li class="nav-item">
                                                             <a class="nav-link" href="../user/userList.html">
                                                                 <i class="fa-solid fa-users pe-3"></i>
-                                                                <span>회원관리</span>
+                                                                <span>Dashboard</span>
                                                             </a>
                                                         </li>
                                                         <li class="nav-item">
                                                             <a class="nav-link" href="../article/articleList.html">
                                                                 <i class="fas fa-light fa-newspaper pe-3"></i>
-                                                                <span>게시물 관리</span>
+                                                                <span>Orders</span>
                                                             </a>
                                                         </li>
+                                                        <hr>
                                                         <li class="nav-item">
                                                             <a class="nav-link" href="../articleComment/articleCommentList.html">
                                                                 <i class="fas fa-light fa-comments pe-3"></i>
-                                                                <span>댓글 리스트</span>
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="../game/gameList.html">
-                                                                <i class="fas fa-duotone fa-trophy pe-3"></i>
-                                                                <span>경기 기록 관리</span>
+                                                                <span>Account</span>
                                                             </a>
                                                         </li>
                                                     </ul>
@@ -468,7 +464,7 @@
                             </nav>
                         </div>
                         <div class="row align-items-center">
-                            <div class="col-1">
+                            <div class="col-2">
                                 <button class="border-0 btn btn-sm shadow" type="button" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal">
                                     <i class="fa-solid fa-trash fa-lg text-danger"></i>
@@ -492,10 +488,18 @@
                                         </div>
                                     </div>
                                 </div>
+                                <button class="border-0 btn btn-sm shadow" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
                             </div>
-                            <div class="col-1 offset-10 pe-3">
-                                <a class="border-0 btn btn-sm shadow role=" button" href="../article/articleRegForm.html">
-                                    <i class="fa-solid fa-id-card fa-lg"></i>
+                            <div class="col-2 offset-8" align="right">
+                                <button class="border-0 btn btn-sm bg-success shadow" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">
+                                    <i class="fa-regular fa-file-excel" style="color: white;"></i>
+                                </button>
+                                <a class="border-0 btn btn-sm shadow bg-primary" role="button" href="../article/articleRegForm.html">
+                                    <i class="fa-regular fa-plus fa-1x" style="color: white;"></i>
                                 </a>
                             </div>
                         </div>

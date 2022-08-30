@@ -59,171 +59,115 @@ const isValidNickname = id => {
     return re.test(id);
 }
 
-let isValidId = false
 id.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '4~20자리 아이디를 입력하시오')
-        isValidId = false
     } else if (!isValidNickname) {
         setError(e.target, '숫자로 시작하는 아이디를 입력하지 마시오')
     } else if (e.target.value.length < 4 || e.target.value.length > 20) {
         setError(e.target, '4~20자리 아이디를 입력하시오')
     } else {
         setSuccess(e.target)
-        isValidId = true
     }
 })
 
-let isValidName = false
 username.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '이름을 입력하시오')
-        isValidName = false
     } else if (!isValidUserName(e.target.value)) {
         setError(e.target, '정확한 이름을 입력하시오')
     } else {
         setSuccess(e.target)
-        isValidName = true
     }
 })
 
-let isValidedEmail = false
 email.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '이메일을 입력하시오')
-        isValidedEmail = false
     } else if (!isValidEmail(e.target.value)) {
         setError(e.target, "이메일 양식에 맞게 입력하시오")
-        isValidedEmail = false
     } else {
         setSuccess(e.target)
-        isValidedEmail = true
     }
 })
 
-let isValiedPassword = false
 password.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '비밀번호를 입력하시오')
-        isValiedPassword = false
     } else if (e.target.value.length < 8 ) {
         setError(e.target, 'Password must be at least 8 character.')
-        isValiedPassword = false
     } else {
         setSuccess(e.target)
-        isValiedPassword = true
     }
 })
 
-let isValiedPassword2 = false
 password2.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '비밀번호를 입력하시오')
-        isValiedPassword2 = false
     } else if (e.target.value !== password.value.trim()) {
         setError(e.target, "Passwords doesn't match")
-        isValiedPassword2 = false
     } else {
         setSuccess(e.target)
-        isValiedPassword2 = true
     }
 })
 
-let isValidedDob = false
 dob.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '생년월일을 입력하시오')
-        isValidedDob = false
     } else if (!isValidDob(e.target.value)) {
         setError(e.target, '양식에 맞게 입력하시오')
-        isValidedDob = false
     } else {
         setSuccess(e.target)
-        isValidedDob = true
     }
 })
 
-let isValidPhone = false
 tel.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '전화번호를 입력하시오')
-        isValidPhone = false
     } else if (!isValidTel(e.target.value)) {
         setError(e.target, '양식에 맞게 입력하시오')
-        isValidPhone = false
     } else {
         setSuccess(e.target)
-        isValidPhone = true
     }
 })
 
-let isValidZip = false
 zip.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '우편번호를 입력하시오')
-        isValidZip = false
     } else {
         setSuccess(e.target)
-        isValidZip = true
     }
 })
 
-let isValidAddress = false
 address.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '주소를 입력하시오')
-        isValidAddress = false
     } else {
         setSuccess(e.target)
-        isValidAddress = true
     }
 })
 
-let isValidDetailAdd = false
 detail_add.addEventListener('input', e => {
     if (e.target.value === '') {
         setError(e.target, '상세주소를 입력하시오')
-        isValidDetailAdd = false
     } else {
         setSuccess(e.target)
-        isValidDetailAdd = true
     }
 })
 
-let isValidRadio = false
 radio.addEventListener('input', e => {
     if (e.target.value === '0') {
         setError(e.target, '통신사를 선택하세요')
-        isValidRadio = false
     } else {
         setSuccess(e.target)
-        isValidRadio = true
     }
 })
 
-let isValidGender = false
 gender.addEventListener('input', e => {
     if (e.target.value === '0') {
         setError(e.target, '성별을 선택하세요')
-        isValidGender = false
     } else {
         setSuccess(e.target)
-        isValidGender = true
-    }
-})
-
-// && isValidName  == false && isValidedEmail === false && isValiedPassword === false && isValiedPassword2 === false
-//         && isValidedDob === false && isValidGender === false && isValidRadio === false && isValidPhone === false && isValidZip === false
-//         && isValidAddress === false && isValidDetailAdd === false
-
-signBtn.addEventListener('change', e => {
-    if (isValidId === false && isValidName  == false && isValidedEmail === false && isValiedPassword === false && isValiedPassword2 === false
-        && isValidedDob === false && isValidGender === false && isValidRadio === false && isValidPhone === false && isValidZip === false
-        && isValidAddress === false && isValidDetailAdd === false) {
-        e.target.disabled = true
-        console.log(e.target)
-    } else {
-        e.target.disabled = false
     }
 })
 
