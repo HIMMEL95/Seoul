@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Article List</title>
+    <title>codeMod</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="../css/cc.css" rel="stylesheet" type="text/css">
@@ -213,7 +213,7 @@
                         <h1 style="font-weight: 800;">코드 관리</h1>
                         <div class="row">
                             <div class="col-6">
-                                <label for="code_useNY" class="form-label">선택하세요</label>
+                                <label for="code_useNY" class="form-label">사용여부</label>
                                 <select class="form-select" id="code_useNY" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option>N</option>
@@ -228,77 +228,77 @@
                             </div>
                             <div class="col">
                                 <label for="code_another" class="form-label">코드 (Another)</label>
-                                <input type="text" class="form-control" id="code_another" value="" placeholder="" required>
+                                <input type="text" class="form-control" id="code_another" value="" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="code_ko" class="form-label">코드 이름 (한글)</label>
-                                <input type="text" class="form-control" id="code_ko" value="" placeholder="" required>
+                                <input type="text" class="form-control" id="code_ko" value="SK 텔레콤" required>
                             </div>
                             <div class="col">
                                 <label for="code_eng" class="form-label">코드 이름 (영문)</label>
-                                <input type="text" class="form-control" id="code_eng" value="" placeholder="" required>
+                                <input type="text" class="form-control" id="code_eng" value="SKT" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="useNY" class="form-label">사용여부</label>
                                 <select class="form-select" id="useNY" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option>N</option>
-                                    <option>Y</option>
+                                    <option value="">Choose...</option>
+                                    <option value="0" >N</option>
+                                    <option value="1" selected>Y</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <label for="orderBY" class="form-label">순서</label>
-                                <input type="text" class="form-control" id="orderBY" value="" placeholder="숫자" required>
+                                <input type="text" class="form-control" id="orderBY" value="1" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="useNY" class="form-label">설명</label>
-                                <textarea class="form-control" id="validationTextarea" placeholder="" required></textarea>
+                                <textarea class="form-control" id="validationTextarea" required>SK 텔레콤 통신사</textarea>
                             </div>
                             <div class="col">
                                 <label for="deleteNY" class="form-label">삭제여부</label>
                                 <select class="form-select" id="usdeleteNYeNY" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option>N</option>
-                                    <option>Y</option>
+                                    <option value="">Choose...</option>
+                                    <option value="0" selected>N</option>
+                                    <option value="1">Y</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="varchar_sub1" class="form-label">예비1 (varchar type)</label>
-                                <input type="text" class="form-control" id="varchar_sub1" value="" placeholder="영문(대소문자), 숫자" required>
+                                <input type="text" class="form-control" id="varchar_sub1" value="" required>
                             </div>
                             <div class="col">
                                 <label for="varchar_sub2" class="form-label">예비2 (varchar type)</label>
-                                <input type="text" class="form-control" id="varchar_sub2" value="" placeholder="영문(대소문자), 숫자" required>
+                                <input type="text" class="form-control" id="varchar_sub2" value="" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
                                 <label for="varchar_sub3" class="form-label">예비3 (varchar type)</label>
-                                <input type="text" class="form-control" id="varchar_sub3" value="" placeholder="영문(대소문자), 숫자" required>
+                                <input type="text" class="form-control" id="varchar_sub3" value="" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="int_sub1" class="form-label">예비1 (int type)</label>
-                                <input type="text" class="form-control" id="int_sub1" value="" placeholder="숫자" required>
+                                <input type="text" class="form-control" id="int_sub1" value="" required>
                             </div>
                             <div class="col">
                                 <label for="int_sub2" class="form-label">예비2 (int type)</label>
-                                <input type="text" class="form-control" id="int_sub2" value="" placeholder="숫자" required>
+                                <input type="text" class="form-control" id="int_sub2" value="" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
                                 <label for="int_sub3" class="form-label">예비3 (int type)</label>
-                                <input type="text" class="form-control" id="int_sub3" value="" placeholder="숫자" required>
+                                <input type="text" class="form-control" id="int_sub3" value="" required>
                             </div>
                         </div>
                         <!-- 리스트 -->

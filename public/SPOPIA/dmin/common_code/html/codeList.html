@@ -81,20 +81,36 @@
             </div>
         </nav>
         <div class="nav-scroller py-1 mb-2 bg-info">
-            <nav class="nav d-flex justify-content-around" style="width: 1200px; margin: auto;">
-                <a class="p-2" href="#">Navbar</a>
-                <a class="p-2" href="#">회원관리</a>
-                <a class="p-2 link-secondary" href="#">서비스관리</a>
-                <a class="p-2 link-secondary" href="#">사이트관리</a>
-                <a class="p-2 link-secondary" href="#">로그관리</a>
-                <a class="p-2 link-secondary" href="#">시스템관리</a>
-                <a class="p-2 link-secondary" href="#">시스템관리</a>
-            </nav>
-          </div>
+            <div class="container bg-info">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Navbar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">회원관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">서비스관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">사이트관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">로그관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">시스템관리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">시스템관리</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div style="height: 100px;"></div>
+        <div style="height: 140px;"></div>
         <div class="container">
             <form method="get">
                 <div class="row g-4">
@@ -201,35 +217,35 @@
                             <div class="row align-items-center pb-2">
                                 <div class="col-2">
                                     <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                        <option value="" selected>선택</option>
-                                        <option value="createdAt">등록일</option>
-                                        <option value="modifiedAt">수정일</option>
+                                        <option value="">선택</option>
+                                        <option value="1" selected>N</option>
+                                        <option value="2">Y</option>
                                     </select>
                                 </div>
                                 <div class="col-2">
                                     <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                        <option value="" selected>선택</option>
+                                        <option value="">선택</option>
                                         <option value="createdAt">등록일</option>
-                                        <option value="modifiedAt">수정일</option>
+                                        <option value="modifiedAt" selected>수정일</option>
                                     </select>
                                 </div>
                                 <div class="col-2">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="2022-01-01" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="시작일" required>
                                 </div>
                                 <div class="col-2">
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="2022-12-31" required>
+                                    <input type="text" class="form-control" id="validationCustom01" placeholder="종료일" required>
                                 </div>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-2">
                                     <select class="form-select form-select-sm fw-bold" aria-label=".form-select-sm example">
-                                        <option value="" selected>선택</option>
+                                        <option value="" selected>검색구분</option>
                                         <option value="name">이름</option>
                                         <option value="id">아이디</option>
                                     </select>
                                 </div>
                                 <div class="col-2">
-                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" placeholder="검색어" required>
                                 </div>
                                 <div class="col-2">
                                     <button class="btn btn-warning fw-bold btn-sm shadow" type="submit">
@@ -273,7 +289,7 @@
                                         <td>1</td>
                                         <td></td>
                                         <td>
-                                            <a href="#">웹-MS edge</a>
+                                            <a href="./codeModForm.html">웹-MS edge</a>
                                         </td>
                                         <td></td>
                                         <td>Y</td>
