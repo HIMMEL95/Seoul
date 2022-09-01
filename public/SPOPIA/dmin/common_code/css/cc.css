@@ -40,6 +40,22 @@
     }
 } 
 
+@media (max-width: 350px) {
+    .nav-scroller {
+        font-size: 10px;
+    }
+
+    .top_space {
+        height: 150px;
+    }
+}
+
+@media (max-width: 350px) {
+    .top_space {
+        height: 180px;
+    }
+} 
+
 /* header */
 .fixed-top {
     position: fixed;
