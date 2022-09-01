@@ -401,6 +401,10 @@ strong {
     color: #000;
 }
 
+.modal-body {
+    text-align: start;
+}
+
 option {
     font-weight: bold;
 }
