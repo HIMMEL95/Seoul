@@ -429,6 +429,10 @@ option {
     text-decoration: none;
 }
 
+.footer_copy a {
+    text-decoration: none;
+}
+
 /* 경기 정보 영역 */
 .MatchBox_comp_match_box__1oRmr.MatchBox_type_ready__2Q2dm {
     background-color: #274281;
