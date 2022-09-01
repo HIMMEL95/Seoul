@@ -20,6 +20,26 @@
     padding: auto;
 }
 
+.top_space {
+    height: 120px;
+}
+
+@media (max-width: 990px) {
+    .nav-scroller {
+        font-size: 12px;
+    }
+} 
+
+@media (max-width: 768px) {
+    .nav-scroller {
+        font-size: 12px;
+    }
+
+    .top_space {
+        height: 150px;
+    }
+} 
+
 /* header */
 .fixed-top {
     position: fixed;
@@ -383,6 +403,10 @@ strong {
 
 option {
     font-weight: bold;
+}
+
+.footer_inner ul li a {
+    text-decoration: none;
 }
 
 /* 경기 정보 영역 */
