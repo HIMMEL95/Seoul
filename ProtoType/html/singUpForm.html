@@ -24,8 +24,8 @@
                     <div class="col-6">
                         <div class="input-control">
                             <label for="id">Id</label>
-                            <input id="id" name="id" value="" type="text" required> 
-                            <div class="error" name="id_error"></div>
+                            <input id="id" name="id" value="" type="text" required onkeypress="validationUpdt()"> 
+                            <div class="error" name="id_error">4~20자리 아이디를 입력하시오</div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -227,8 +227,10 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script type="text/javascript">
+        $('.error').hide();
         validationUpdt = function() {
             if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!")) {
+                $('.error').show();
                 return false;
             } else if(!checkNull($('input[name=username]'), $('input[name=username]').val(), "이름을 입력하세요!")) {
                 return false;
@@ -253,6 +255,7 @@
             } else if(!checkNull($('input[name=detailAddress]'), $('input[name=detailAddress]').val(), "상세주소를 입력하세요!")) {
                 return false;
             } else {
+                $('.error').hide();
                 return true;
             }
         };

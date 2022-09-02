@@ -1,6 +1,6 @@
 checkNull = function(obj, value, message) {
     if (value == "" || value == null || value == '0') {
-        alert(message);
+        // alert(message);
         obj.focus();
         return false;
     } else {
