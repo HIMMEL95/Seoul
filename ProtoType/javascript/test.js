@@ -4,11 +4,13 @@ checkNull = function(obj, value, message, hide) {
         obj.focus();
         $(hide).text(message);
         $(hide).show();
+        setError(obj, message);
         // $(".error").css('display', none);
         return false;
     } else {
         $(hide).text();
         $(hide).hide();
+        setSuccess(obj);
         return true;
     }
 }

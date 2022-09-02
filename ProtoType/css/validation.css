@@ -109,14 +109,13 @@ main {
 
 .input-control input:focus {
     outline: 0;
-    border-color: #ff3860
 }
 
 .input-control.success input {
     border-color: #09c372;
 }
 
-.input-control.error iput {
+.input-control.error input:focus {
     border-color: #ff3860;
 }
 
