@@ -2,6 +2,9 @@ checkNull = function(obj, value, message) {
     if (value == "" || value == null || value == '0') {
         // alert(message);
         obj.focus();
+        $(".error").text(message);
+        $(".error").show();
+        // $(".error").css('display', none);
         return false;
     } else {
         return true;

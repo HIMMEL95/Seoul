@@ -25,7 +25,7 @@
                         <div class="input-control">
                             <label for="id">Id</label>
                             <input id="id" name="id" value="" type="text" required onkeypress="validationUpdt()"> 
-                            <div class="error" name="id_error">4~20자리 아이디를 입력하시오</div>
+                            <span class="error" name="id_error" style="display: none;">아이디를 입력하시오</span>
                         </div>
                     </div>
                     <div class="col-2">
@@ -42,14 +42,14 @@
                         <div class="input-control">
                             <label for="username">Username</label>
                             <input id="username" name="username" type="text" required> 
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">이름을 입력하시오</div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="email">Email</label>
                             <input id="email" name="email" type="text" required>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">이메일을 입력하시오</div>
                         </div>
                     </div>
                 </div>
@@ -58,14 +58,14 @@
                         <div class="input-control">
                             <label for="password">Password</label>
                             <input id="password" name="password" type="password" required>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">패스워드를 입력하시오</div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="password2">Password again</label>
                             <input id="password2" name="password2" type="password" required>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">패스워드를 입력하시오</div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <div class="input-control">
                             <label for="dob">생년월일</label>
                             <input id="dob" name="dob" type="text" placeholder="1900-01-01" required>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">패스워드를 입력하시오</div>
                         </div>
                     </div>
                     <div class="col">
@@ -85,7 +85,7 @@
                                 <option value="1">남성</option>
                                 <option value="2">여성</option>
                             </select>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">성별을 선택하시오</div>
                         </div>
                     </div>
                 </div>
@@ -100,14 +100,14 @@
                                 <option value="3">LGT</option>
                                 <option value="4">알뜰폰</option>
                             </select>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">통신사를 선택하시오</div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="tel">전화번호</label>
                             <input id="tel" name="tel" type="tel" placeholder="010-0000-0000" required>
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">전화번호를 입력하시오</div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -124,7 +124,7 @@
                         <div class="input-control">
                             <label for="tel_certification">인증번호</label>
                             <input id="tel_certification" name="tel_certification" type="text"> 
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">올바른 인증번호를 입력하시오</div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -141,7 +141,7 @@
                         <div class="input-control">
                             <label for="zip">우편번호</label>
                             <input id="zip" name="zip" type="text" required> 
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">우편번호를 입력하시오</div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -158,7 +158,7 @@
                         <div class="input-control">
                             <label for="address">주소</label>
                             <input id="address" name="address" type="text" required> 
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">주소를 입력하시오</div>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                         <div class="input-control">
                             <label for="detailAddress">상세주소</label>
                             <input id="detailAddress" name="detailAddress" type="text" required> 
-                            <div class="error"></div>
+                            <div class="error" name="id_error" style="display: none;">상세주소를 입력하시오</div>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,6 @@
         $('.error').hide();
         validationUpdt = function() {
             if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!")) {
-                $('.error').show();
                 return false;
             } else if(!checkNull($('input[name=username]'), $('input[name=username]').val(), "이름을 입력하세요!")) {
                 return false;
@@ -255,7 +254,7 @@
             } else if(!checkNull($('input[name=detailAddress]'), $('input[name=detailAddress]').val(), "상세주소를 입력하세요!")) {
                 return false;
             } else {
-                $('.error').hide();
+                $(".error").hide();
                 return true;
             }
         };

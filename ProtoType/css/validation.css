@@ -109,9 +109,7 @@ main {
 
 .input-control input:focus {
     outline: 0;
-    border-color: #ff3860;
-    font-size: 15px;
-    margin: 0 5px;
+    border-color: #ff3860
 }
 
 .input-control.success input {
@@ -225,3 +223,7 @@ a:-webkit-any-link {
     min-width: 400px;
 }
 
+/* validation 용 */
+.error {
+    display: none;
+}
