@@ -25,7 +25,7 @@
                         <div class="input-control">
                             <label for="id">Id</label>
                             <input id="id" name="id" value="" type="text" required onkeypress="validationUpdt()"> 
-                            <span class="error" name="id_error" style="display: none;">아이디를 입력하시오</span>
+                            <div class="error" id="id_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -41,15 +41,15 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="username">Username</label>
-                            <input id="username" name="username" type="text" required> 
-                            <div class="error" name="id_error" style="display: none;">이름을 입력하시오</div>
+                            <input id="username" name="username" type="text" required onkeypress="validationUpdt()"> 
+                            <div class="error" id="username_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="email">Email</label>
-                            <input id="email" name="email" type="text" required>
-                            <div class="error" name="id_error" style="display: none;">이메일을 입력하시오</div>
+                            <input id="email" name="email" type="text" required onkeypress="validationUpdt()">
+                            <div class="error" id="email_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -57,15 +57,15 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="password">Password</label>
-                            <input id="password" name="password" type="password" required>
-                            <div class="error" name="id_error" style="display: none;">패스워드를 입력하시오</div>
+                            <input id="password" name="password" type="password" required onkeypress="validationUpdt()">
+                            <div class="error" id="password_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="password2">Password again</label>
-                            <input id="password2" name="password2" type="password" required>
-                            <div class="error" name="id_error" style="display: none;">패스워드를 입력하시오</div>
+                            <input id="password2" name="password2" type="password" required onkeypress="validationUpdt()">
+                            <div class="error" id="password2_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -73,19 +73,19 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="dob">생년월일</label>
-                            <input id="dob" name="dob" type="text" placeholder="1900-01-01" required>
-                            <div class="error" name="id_error" style="display: none;">패스워드를 입력하시오</div>
+                            <input id="dob" name="dob" type="text" placeholder="1900-01-01" required onkeypress="validationUpdt()">
+                            <div class="error" id="dob_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="gender">성별</label>
-                            <select id="gender" aria-label=".form-select-lg example" required>
-                                <option value="0">선택</option>
+                            <select id="gender" aria-label=".form-select-lg example" required onclick="validationUpdt()">
+                                <option value="">선택</option>
                                 <option value="1">남성</option>
                                 <option value="2">여성</option>
                             </select>
-                            <div class="error" name="id_error" style="display: none;">성별을 선택하시오</div>
+                            <div class="error" id="gender_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -93,21 +93,21 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="radio_operator">통신사</label>
-                            <select id="radio_operator" aria-label=".form-select-lg example" required>
-                                <option value="0">선택</option>
+                            <select id="radio_operator" aria-label=".form-select-lg example" required onclick="validationUpdt()">
+                                <option value="">선택</option>
                                 <option value="1">SKT</option>
                                 <option value="2">KT</option>
                                 <option value="3">LGT</option>
                                 <option value="4">알뜰폰</option>
                             </select>
-                            <div class="error" name="id_error" style="display: none;">통신사를 선택하시오</div>
+                            <div class="error" id="radio_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
                             <label for="tel">전화번호</label>
-                            <input id="tel" name="tel" type="tel" placeholder="010-0000-0000" required>
-                            <div class="error" name="id_error" style="display: none;">전화번호를 입력하시오</div>
+                            <input id="tel" name="tel" type="tel" placeholder="010-0000-0000" required onkeypress="validationUpdt()">
+                            <div class="error" id="tel_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -123,8 +123,8 @@
                     <div class="col-6">
                         <div class="input-control">
                             <label for="tel_certification">인증번호</label>
-                            <input id="tel_certification" name="tel_certification" type="text"> 
-                            <div class="error" name="id_error" style="display: none;">올바른 인증번호를 입력하시오</div>
+                            <input id="tel_certification" name="tel_certification" type="text" onkeypress="validationUpdt()"> 
+                            <div class="error" id="tel_certi_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -140,8 +140,8 @@
                     <div class="col-6">
                         <div class="input-control">
                             <label for="zip">우편번호</label>
-                            <input id="zip" name="zip" type="text" required> 
-                            <div class="error" name="id_error" style="display: none;">우편번호를 입력하시오</div>
+                            <input id="zip" name="zip" type="text" required onkeypress="validationUpdt()"> 
+                            <div class="error" id="zip_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col-2">
@@ -157,8 +157,8 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="address">주소</label>
-                            <input id="address" name="address" type="text" required> 
-                            <div class="error" name="id_error" style="display: none;">주소를 입력하시오</div>
+                            <input id="address" name="address" type="text" required onkeypress="validationUpdt()"> 
+                            <div class="error" id="add_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -166,8 +166,8 @@
                     <div class="col">
                         <div class="input-control">
                             <label for="detailAddress">상세주소</label>
-                            <input id="detailAddress" name="detailAddress" type="text" required> 
-                            <div class="error" name="id_error" style="display: none;">상세주소를 입력하시오</div>
+                            <input id="detailAddress" name="detailAddress" type="text" required onkeypress="validationUpdt()"> 
+                            <div class="error" id="add_detail_msg" name="id_error" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -229,29 +229,29 @@
     <script type="text/javascript">
         $('.error').hide();
         validationUpdt = function() {
-            if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!")) {
+            if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", "#id_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=username]'), $('input[name=username]').val(), "이름을 입력하세요!")) {
+            } else if(!checkNull($('input[name=username]'), $('input[name=username]').val(), "이름을 입력하세요!", "#username_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=email]'), $('input[name=email]').val(), "이메일을 입력하세요!")) {
+            } else if(!checkNull($('input[name=email]'), $('input[name=email]').val(), "이메일을 입력하세요!", "#email_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=password]'), $('input[name=password]').val(), "비밀번호를 입력하세요!")) {
+            } else if(!checkNull($('input[name=password]'), $('input[name=password]').val(), "비밀번호를 입력하세요!", "#password_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=password2]'), $('input[name=password2]').val(), "비밀번호 확인을 입력하세요!")) {
+            } else if(!checkNull($('input[name=password2]'), $('input[name=password2]').val(), "비밀번호 확인을 입력하세요!", "#password2_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=dob]'), $('input[name=dob]').val(), "생년월일을 입력하세요!")) {
+            } else if(!checkNull($('input[name=dob]'), $('input[name=dob]').val(), "생년월일을 입력하세요!", "#dob_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('select[name=gender]'), $('select[name=gender]').val(), "성별을 입력하세요!")) {
+            } else if(!checkNull($('#gender'), $('#gender').val(), "성별을 선택하세요!", "#gender_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('select[name=radio_operator]'), $('select[name=radio_operator]').val(), "통신사를 입력하세요!")) {
+            } else if(!checkNull($('#radio_operator'), $('#radio_operator').val(), "통신사를 선택하세요!", "#radio_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=tel]'), $('input[name=tel]').val(), "전화번호를 입력하세요!")) {
+            } else if(!checkNull($('input[name=tel]'), $('input[name=tel]').val(), "전화번호를 입력하세요!", "#tel_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=zip]'), $('input[name=zip]').val(), "우편번호를 입력하세요!")) {
+            } else if(!checkNull($('input[name=zip]'), $('input[name=zip]').val(), "우편번호를 입력하세요!", "#zip_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=address]'), $('input[name=address]').val(), "주소를 입력하세요!")) {
+            } else if(!checkNull($('input[name=address]'), $('input[name=address]').val(), "주소를 입력하세요!", "#add_msg") || (event.onKeyPress == 13)) {
                 return false;
-            } else if(!checkNull($('input[name=detailAddress]'), $('input[name=detailAddress]').val(), "상세주소를 입력하세요!")) {
+            } else if(!checkNull($('input[name=detailAddress]'), $('input[name=detailAddress]').val(), "상세주소를 입력하세요!", "#add_detail_msg") || (event.onKeyPress == 13)) {
                 return false;
             } else {
                 $(".error").hide();

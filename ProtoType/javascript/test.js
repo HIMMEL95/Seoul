@@ -1,12 +1,14 @@
-checkNull = function(obj, value, message) {
-    if (value == "" || value == null || value == '0') {
+checkNull = function(obj, value, message, hide) {
+    if (value == "" || value == null) {
         // alert(message);
         obj.focus();
-        $(".error").text(message);
-        $(".error").show();
+        $(hide).text(message);
+        $(hide).show();
         // $(".error").css('display', none);
         return false;
     } else {
+        $(hide).text();
+        $(hide).hide();
         return true;
     }
 }
