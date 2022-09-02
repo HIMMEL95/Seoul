@@ -191,9 +191,10 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col">
-                            <input type="file" class="form-control" aria-label="file example" required>
-                            <div class="invalid-feedback">Example invalid form file feedback</div>
+                        <div class="col align-items-center">
+                            <img src="" id="preview" width="500px;" class="mb-2">
+                            <label for="ex_file"></label>
+                            <input type="file" id="ex_file" class="form-control" aria-label="file example">
                         </div>
                     </div>
                     <div class="row">
@@ -262,6 +263,20 @@
                 }, false)
             })
         })()
+
+        // 이미지 미리보기
+		const reader = new FileReader();
+
+        reader.onload = (readerEvent) => {
+            document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+        };
+
+        document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+
+            const imgFile = changeEvent.target.files[0];
+            reader.readAsDataURL(imgFile);
+            document.getElementById("text").innerHTML = " ";
+        })
     </script>
 </body>
 

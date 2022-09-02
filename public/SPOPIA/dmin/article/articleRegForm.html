@@ -94,21 +94,18 @@
                         <div class="col-5">
                             <label for="title" class="form-label fw-bold">제목</label>
                             <input type="text" class="form-control" id="title" value="" required>
-                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 mb-4">
                             <label for="content" class="form-label fw-bold">본문</label>
                             <textarea class="form-control" style="height: 200px;" aria-label="content" required></textarea>
-                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col">
                             <label for="newspaper" class="form-label fw-bold">신문사</label>
                             <input type="text" class="form-control" id="newspaper" value="" required>
-                            <div class="valid-feedback">Looks good!</div>
                         </div>
                         <div class="col">
                             <label for="abroadNY" class="form-label fw-bold">해외여부</label>
@@ -125,7 +122,6 @@
                                 <option value="1">야구</option>
                                 <option value="2">축구</option>
                             </select>
-                            <div class="valid-feedback">Looks good!</div>
                         </div>
                         <div class="col">
                             <label for="event" class="form-label fw-bold">리그</label>
@@ -144,18 +140,17 @@
                                 <option value="11">세리에 A</option>
                                 <option value="12">리그 1</option>
                             </select>
-                            <div class="valid-feedback">Looks good!</div>
                         </div>
                         <div class="col">
                             <label for="reporter" class="form-label fw-bold">기자</label>
                             <input type="text" class="form-control" id="reporter" value="" required>
-                            <div class="valid-feedback">Looks good!</div>
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col">
-                            <input type="file" class="form-control" aria-label="file example">
-                            <div class="valid-feedback">Looks good!</div>
+                        <div class="col align-items-center">
+                            <img src="" id="preview" width="500px;" class="mb-2">
+                            <label for="ex_file"></label>
+                            <input type="file" id="ex_file" class="form-control" aria-label="file example">
                         </div>
                     </div>
                     <div class="row">
@@ -225,6 +220,20 @@
                 }, false)
             })
         })()
+
+        // 이미지 미리보기
+		const reader = new FileReader();
+
+        reader.onload = (readerEvent) => {
+            document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+        };
+
+        document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+
+            const imgFile = changeEvent.target.files[0];
+            reader.readAsDataURL(imgFile);
+            document.getElementById("text").innerHTML = " ";
+        })
     </script>
 </body>
 

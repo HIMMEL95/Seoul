@@ -177,10 +177,11 @@
                         <span class="fs-1 fw-bold text-center">회원 정보</span>
                         <div class="row mb-4">
                             <div class="col-12 shadow rounded pt-3 ps-4" style="height: 100px; background-color: #f7f7fc;">
-                                <img src="../user_image/diano.jpg" class="rounded-circle avatar-img shadow" style="width: 60px;">
+                                <label for="ex_file" hidden>업로드</label>
+                                <img src="../user_image/diano.jpg" id="preview" class="rounded-circle avatar-img shadow" style="width: 60px; height: 60px;">
                                 <div class="form-attachment-btn btn btn-primary btn-sm ms-3">
                                     <i class="fa-solid fa-arrows-rotate me-2"></i>Upload photo
-                                    <input type="file" class="js-file-attach form-attachment-btn-label" id="avatarUploader">
+                                    <input type="file" class="js-file-attach form-attachment-btn-label" id="ex_file">
                                 </div>
                             </div>
                         </div>
@@ -308,6 +309,18 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+    <script>
+        // 이미지 미리보기
+		const reader = new FileReader();
+        reader.onload = (readerEvent) => {
+            document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+        };
+        document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+            const imgFile = changeEvent.target.files[0];
+            reader.readAsDataURL(imgFile);
+			document.getElementById("text").innerHTML = " ";
+        })
+    </script>
 </body>
 
 </html>
