@@ -49,7 +49,7 @@ body {
     border-color: #09c372;
 }
 
-.input-control.error iput {
+.input-control.error input {
     border-color: #ff3860;
 }
 

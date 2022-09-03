@@ -2,15 +2,14 @@ checkNull = function(obj, value, message, hide) {
     if (value == "" || value == null) {
         // alert(message);
         obj.focus();
-        $(hide).text(message);
-        $(hide).show();
-        setError(obj, message);
-        // $(".error").css('display', none);
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
         return false;
     } else {
-        $(hide).text();
-        $(hide).hide();
-        setSuccess(obj);
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
         return true;
     }
 }
