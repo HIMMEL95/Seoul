@@ -229,7 +229,7 @@
     <script type="text/javascript">
         $('.error').hide();
         validationUpdt = function() {
-            if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", $('#id_msg')) && (!id_regex($('input[name=id]'))) || (event.onKeyPress == 13)) {
+            if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", $('#id_msg')) || (!id_regex($('input[name=id]'))) || (event.onKeyPress == 13)) {
                 return false;
             } else if(!checkNull($('input[name=username]'), $('input[name=username]').val(), "이름을 입력하세요!", $('#username_msg')) && (!name_regex($('input[name=id]').val())) || (event.onKeyPress == 13)) {
                 return false;

@@ -47,10 +47,26 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 };
 
-id_regex = function(obj) {
-    const re = /^[A-Za-z가-힣]{1}[A-Za-z가-힣]{3,19}$/g;
-    console.log(re.test(obj))
-    return re.test(obj);
+id_regex = function(obj, hide) {
+    const re = /^[A-Za-z가-힣]{1}[A-Za-z가-힣]{2,19}$/g;
+    console.log($.trim($(obj).val()))
+    if ($.trim($(obj).val()) == null || $.trim($(obj).val()) == '') {
+        hide.parent().addClass('error')
+        $(hide).text("아이디를 작성하시오")
+        $(hide).show()
+        return false;
+    } else if(!(($.trim($(obj).val()).length > 2) && ($.trim($(obj).val()).length < 21))) {
+        $(hide).text('4~20자 사이의 아이디를 작성하시오')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).text("멋진 아이디 입니다.")
+        $(hide).show()
+        return true;
+    }
 }
 
 name_regex = function(obj) {
