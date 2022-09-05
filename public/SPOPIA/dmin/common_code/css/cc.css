@@ -716,3 +716,11 @@ img {
     font-size: 9px;
     height: 13px;
 }
+
+.input-control.success select {
+    border-color: #09c372;
+}
+
+.input-control.success textarea {
+    border-color: #09c372;
+}

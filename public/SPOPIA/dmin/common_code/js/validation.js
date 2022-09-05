@@ -137,7 +137,7 @@ order_regex = function(obj, value, message, hide) {
 }
 
 ex_regex = function(obj, value, message, hide) {
-    const re = /^[a-zA-Z0-9ㄱ-ㅎ가-힣\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]*$/g;
+    const re = /^[a-zA-Z0-9ㄱ-ㅎ가-힣\s\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]*$/g;
     if (!checkNull(obj, value)) {
         hide.parent().addClass('error')
         $(hide).text(message)
