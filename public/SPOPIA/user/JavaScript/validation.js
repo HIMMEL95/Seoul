@@ -1,20 +1,104 @@
-const form = document.getElementById('form');
-const id = document.getElementById('id');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
-const dob = document.getElementById('dob');
-const gender = document.getElementById('gender');
-const radio = document.getElementById('radio_operator');
-const tel = document.getElementById('tel');
-const certi = document.getElementById('tel_certification');
-const zip = document.getElementById('zip');
-const address = document.getElementById('address');
-const detail_add = document.getElementById('detailAddress');
-const job = document.getElementById('job');
-const team = document.getElementById('team');
-const signBtn = document.querySelector('.submit');
+// checkNull = function(obj, value, message, hide) {
+//     if (value == "" || value == null) {
+//         // alert(message);
+//         obj.focus();
+//         hide.parent().addClass('error')
+//         $(hide).text(message)
+//         $(hide).show()
+//         return false;
+//     } else {
+//         hide.parent().removeClass('error')
+//         hide.parent().addClass('success')
+//         $(hide).hide()
+//         return true;
+//     }
+// }
+
+// checkNullWithoutFocus = function(value, message, hide) {
+//     if (value == "" || value == null) {
+//         alert(message);
+//         hide.parent().addClass('error')
+//         $(hide).text(message)
+//         $(hide).show()
+//         return false;
+//     } else {
+//         hide.parent().removeClass('error')
+//         hide.parent().addClass('success')
+//         $(hide).hide()
+//         return true;
+//     }
+// }
+
+// const setError = (element, message) => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
+
+//     errorDisplay.innerText = message;
+//     inputControl.classList.add('error');
+//     inputControl.classList.remove('success');
+// };
+
+// const setSuccess = element => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
+
+//     errorDisplay.innerText = '';
+//     inputControl.classList.add('success');
+//     inputControl.classList.remove('error');
+// };
+
+// id_regex = function(obj, hide) {
+//     const re = /^[A-Za-z가-힣]{1}[A-Za-z가-힣]{2,19}$/g;
+//     console.log($.trim($(obj).val()))
+//     if ($.trim($(obj).val()) == null || $.trim($(obj).val()) == '') {
+//         hide.parent().addClass('error')
+//         $(hide).text("아이디를 작성하시오")
+//         $(hide).show()
+//         return false;
+//     } else if(!(($.trim($(obj).val()).length > 2) && ($.trim($(obj).val()).length < 21))) {
+//         $(hide).text('4~20자 사이의 아이디를 작성하시오')
+//         hide.parent().addClass('error')
+//         $(hide).show()
+//         return false;
+//     } else {
+//         hide.parent().removeClass('error')
+//         hide.parent().addClass('success')
+//         $(hide).text("멋진 아이디 입니다.")
+//         $(hide).show()
+//         return true;
+//     }
+// }
+
+// name_regex = function(obj) {
+//     const re = /^[^0-9]+[가-힣]{1,4}$/g;
+//     console.log(re.test(obj))
+//     return re.test(obj);
+// }
+
+
+checkNull = function(obj, value) {
+    if (value == "" || value == null) {
+        obj.focus();
+        return false;
+    } else {
+        return true;
+    }
+}
+
+checkNullWithoutFocus = function(value) {
+    if (value == "" || value == null) {
+        alert(message);
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
+}
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -34,246 +118,228 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 };
 
-const isValidEmail = email => {
+id_regex = function(obj, value, message, hide) {
+    const re = /^[A-Za-z가-힣]{1}[A-Za-z가-힣]{2,19}$/g;
+    if (!checkNull(obj, value) && !(re.test($.trim($(obj).val())))) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if(!(($.trim($(obj).val()).length > 2) && ($.trim($(obj).val()).length < 21))) {
+        $(hide).text('4~20자 사이의 아이디를 작성하시오')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).text("멋진 아이디 입니다.")
+        $(hide).show()
+        return true;
+    }
+}
+
+name_regex = function(obj, value, message, hide) {
+    const re = /^[ㄱ-ㅎ가-힣a-zA-z]{1,10}$/g;
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if (!(re.test($.trim($(obj).val())))) {
+        $(hide).text('양식에 맞게 작성하시오')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else if(!(($.trim($(obj).val()).length > 1) && ($.trim($(obj).val()).length < 10))) {
+        $(hide).text('2~10자 사이의 이름을 작성하시오')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
+}
+
+email_regex = function(obj, value, message, hide) {
     const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-    return re.test(String(email).toLowerCase());
+    // const re = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if (!(re.test($.trim($(obj).val())))) {
+        $(hide).text('양식에 맞게 작성하시오')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
 }
 
-const isValidDob = dob => {
+pwd_regex = function(obj, value, message, hide) {
+    if (!checkNull(obj, value) && (re.test($.trim($(obj).val())))) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if(!(($.trim($(obj).val()).length > 7))) {
+        $(hide).text('8자 이상의 비밀번호를 작성하시오')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
+}
+
+pwd2_regex = function(obj, value, message, hide) {
+    if (!checkNull(obj, value) && (re.test($.trim($(obj).val())))) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if(!(($.trim($(obj).val()) === $.trim($('#password').val())))) {
+        $(hide).text('비밀번호가 일치하지 않습니다.')
+        hide.parent().addClass('error')
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
+}
+
+dob_regex = function(obj, value, message, hide) {
     const re = /^[1-2]{1}[0-9]{3}-[0-1]{1}[0-9]{1}-[0-3]{1}[0-9]{1}$/g;
-    return re.test(dob);
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if (!(re.test($.trim($(obj).val())))) {
+        hide.parent().addClass('error')
+        $(hide).text("양식에 맞게 작성하세요")
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
 }
 
-const isValidTel = tel => {
+gender_regex = function(obj, value, message, hide) {
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
+}
+
+radio_regex = function(obj, value, message, hide) {
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
+}
+
+tel_regex = function(obj, value, message, hide) {
     const re = /^[\d]{3}-[\d]{4}-[\d]{4}$/g;
-    return re.test(tel);
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if (!(re.test($.trim($(obj).val())))) {
+        hide.parent().addClass('error')
+        $(hide).text("양식에 맞게 작성하세요")
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
 }
 
-const isValidUserName = username => {
-    const re = /^[^0-9]+[가-힣]{1,4}$/g;
-    return re.test(username);
+zip_regex = function(obj, value, message, hide) {
+    const re = /^[\d]{5}$/g;
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if (!(re.test($.trim($(obj).val())))) {
+        hide.parent().addClass('error')
+        $(hide).text("양식에 맞게 작성하세요")
+        $(hide).show()
+        return false;
+    } else if(!(($.trim($(obj).val()).length === 5))) {
+        hide.parent().addClass('error')
+        $(hide).text("5자리 우편번호를 입력하세요")
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
 }
 
-const isValidNickname = id => {
-    const re = /^[A-Za-z가-힣]{1}[A-Za-z가-힣]{3,19}$/g;
-    return re.test(id);
+add_regex = function(obj, value, message, hide) {
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else {
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
+    }
 }
 
-id.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '4~20자리 아이디를 입력하시오')
-    } else if (!isValidNickname) {
-        setError(e.target, '숫자로 시작하는 아이디를 입력하지 마시오')
-    } else if (e.target.value.length < 4 || e.target.value.length > 20) {
-        setError(e.target, '4~20자리 아이디를 입력하시오')
+detail_regex = function(obj, value, message, hide) {
+    if (!checkNull(obj, value)) {
+        hide.parent().addClass('error')
+        $(hide).text(message)
+        $(hide).show()
+        return false;
     } else {
-        setSuccess(e.target)
+        hide.parent().removeClass('error')
+        hide.parent().addClass('success')
+        $(hide).hide()
+        return true;
     }
-})
-
-username.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '이름을 입력하시오')
-    } else if (!isValidUserName(e.target.value)) {
-        setError(e.target, '정확한 이름을 입력하시오')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-email.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '이메일을 입력하시오')
-    } else if (!isValidEmail(e.target.value)) {
-        setError(e.target, "이메일 양식에 맞게 입력하시오")
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-password.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '비밀번호를 입력하시오')
-    } else if (e.target.value.length < 8 ) {
-        setError(e.target, 'Password must be at least 8 character.')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-password2.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '비밀번호를 입력하시오')
-    } else if (e.target.value !== password.value.trim()) {
-        setError(e.target, "Passwords doesn't match")
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-dob.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '생년월일을 입력하시오')
-    } else if (!isValidDob(e.target.value)) {
-        setError(e.target, '양식에 맞게 입력하시오')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-tel.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '전화번호를 입력하시오')
-    } else if (!isValidTel(e.target.value)) {
-        setError(e.target, '양식에 맞게 입력하시오')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-zip.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '우편번호를 입력하시오')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-address.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '주소를 입력하시오')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-detail_add.addEventListener('input', e => {
-    if (e.target.value === '') {
-        setError(e.target, '상세주소를 입력하시오')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-radio.addEventListener('input', e => {
-    if (e.target.value === '0') {
-        setError(e.target, '통신사를 선택하세요')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-gender.addEventListener('input', e => {
-    if (e.target.value === '0') {
-        setError(e.target, '성별을 선택하세요')
-    } else {
-        setSuccess(e.target)
-    }
-})
-
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-
-//     validateInputs();
-    
-// });
-
-// const validateInputs = () => {
-//     const idValue = id.value.trim();
-//     const usernameValue = username.value.trim();
-//     const emailValue = email.value.trim();
-//     const passwordValue = password.value.trim();
-//     const password2Value = password2.value.trim();
-//     const dobValue = dob.value.trim();
-//     const genderValue = gender.value.trim();
-//     const radioValue = radio.value.trim();
-//     const telValue = tel.value.trim();
-//     const certiValue = certi.value.trim();
-//     const zipValue = zip.value.trim();
-//     const addressValue = address.value.trim();
-//     const detailValue = detail_add.value.trim();
-
-//     if (idValue === '') {
-//         setError(id, 'ID를 입력하시오');
-//     } else {
-//         setSuccess(id);
-//     }
-
-//     if (usernameValue === '') {
-//         setError(username, '이름을 입력하시오');
-//     } else {
-//         setSuccess(username);
-//     }
-
-//     if (emailValue === '') {
-//         setError(email, 'Email을 입력하시오');
-//     } else if (!isValidEmail(emailValue)) {
-//         setError(email, '올바른 방식의 이메일을 입력하시오');
-//     } else {
-//         setSuccess(email);
-//     }
-
-//     if (passwordValue === '') {
-//         setError(password, 'Password is required');
-//     } else if (passwordValue.length < 8) {
-//         setError(password, 'Password must be at least 8 character.');
-//     } else {
-//         setSuccess(password);
-//     }
-
-//     if (password2Value === '') {
-//         setError(password2, 'Please confirm your password');
-//     } else if (password2Value !== passwordValue) {
-//         setError(password2, "Passwords doesn't match");
-//     } else {
-//         setSuccess(password2);
-//     }
-
-//     if (dobValue === '') {
-//         setError(dob, '올바른 형식의 생일을 입력하시오');
-//     } else {
-//         setSuccess(dob);
-//     }
-
-//     if (genderValue === '') {
-//         setError(gender, '본인의 성별을 입력하시오');
-//     } else {
-//         setSuccess(gender);
-//     }
-
-//     if (telValue === '') {
-//         setError(tel, '전화번호 입력하시오');
-//     } else {
-//         setSuccess(tel);
-//     }
-
-//     if (radioValue === '') {
-//         setError(radio, '통신사 입력하시오');
-//     } else {
-//         setSuccess(radio);
-//     }
-
-//     if (certiValue === '') {
-//         setError(certi, '인증번호를 입력하시오');
-//     } else {
-//         setSuccess(certi);
-//     }
-
-//     if (zipValue === '') {
-//         setError(zip, '우편번호를 입력하시오');
-//     } else {
-//         setSuccess(zip);
-//     }
-
-//     if (addressValue === '') {
-//         setError(address, '주소를 입력하시오');
-//     } else {
-//         setSuccess(address);
-//     }
-
-//     if (detailValue === '') {
-//         setError(detail_add, '상세주소를 입력하시오');
-//     } else {
-//         setSuccess(detail_add);
-//     }
-// }
+}

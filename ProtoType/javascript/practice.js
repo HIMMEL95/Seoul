@@ -78,16 +78,9 @@
 
 checkNull = function(obj, value) {
     if (value == "" || value == null) {
-        // alert(message);
         obj.focus();
-        // hide.parent().addClass('error')
-        // $(hide).text(message)
-        // $(hide).show()
         return false;
     } else {
-        // hide.parent().removeClass('error')
-        // hide.parent().addClass('success')
-        // $(hide).hide()
         return true;
     }
 }
@@ -107,23 +100,23 @@ checkNullWithoutFocus = function(value) {
     }
 }
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+// const setError = (element, message) => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
-};
+//     errorDisplay.innerText = message;
+//     inputControl.classList.add('error');
+//     inputControl.classList.remove('success');
+// };
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+// const setSuccess = element => {
+//     const inputControl = element.parentElement;
+//     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-};
+//     errorDisplay.innerText = '';
+//     inputControl.classList.add('success');
+//     inputControl.classList.remove('error');
+// };
 
 id_regex = function(obj, value, message, hide) {
     const re = /^[A-Za-z가-힣]{1}[A-Za-z가-힣]{2,19}$/g;
@@ -147,11 +140,15 @@ id_regex = function(obj, value, message, hide) {
 }
 
 name_regex = function(obj, value, message, hide) {
-    const re = /^[ㄱ-ㅎ|가-힣]{1,4}$/g;
-    // const re = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
-    if (!checkNull(obj, value) && !(re.test($.trim($(obj).val())))) {
+    const re = /^[ㄱ-ㅎ가-힣a-zA-z]{1,10}$/g;
+    if (!checkNull(obj, value)) {
         hide.parent().addClass('error')
         $(hide).text(message)
+        $(hide).show()
+        return false;
+    } else if (!(re.test($.trim($(obj).val())))) {
+        $(hide).text('양식에 맞게 작성하시오')
+        hide.parent().addClass('error')
         $(hide).show()
         return false;
     } else if(!(($.trim($(obj).val()).length > 1) && ($.trim($(obj).val()).length < 10))) {

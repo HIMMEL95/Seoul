@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="input-control">
-                            <label for="id">Id</label>
+                            <label for="id">Id<span style="color: red;">*</span></label>
                             <input id="id" name="id" value="" type="text" required onkeypress="validationUpdt()"> 
                             <div class="msg" id="id_msg" name="id_msg" style="display: none;"></div>
                         </div>
@@ -40,14 +40,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-control">
-                            <label for="name">Username</label>
+                            <label for="name">Username<span style="color: red;">*</span></label>
                             <input id="name" name="name" value="" type="text" required onkeypress="validationUpdt()"> 
                             <div class="msg" id="name_msg" name="name_msg" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
-                            <label for="email">Email</label>
+                            <label for="email">Email<span style="color: red;">*</span></label>
                             <input id="email" name="email" value="" type="text" required onkeypress="validationUpdt()">
                             <div class="msg" id="email_msg" name="email_msg" style="display: none;"></div>
                         </div>
@@ -56,14 +56,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-control">
-                            <label for="password">Password</label>
+                            <label for="password">Password<span style="color: red;">*</span></label>
                             <input id="password" name="password" value="" type="password" required onkeypress="validationUpdt()">
                             <div class="msg" id="password_msg" name="password_msg" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
-                            <label for="password2">Password again</label>
+                            <label for="password2">Password again<span style="color: red;">*</span></label>
                             <input id="password2" name="password2" value="" type="password" required onkeypress="validationUpdt()">
                             <div class="msg" id="password2_msg" name="password2_msg" style="display: none;"></div>
                         </div>
@@ -72,14 +72,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-control">
-                            <label for="dob">생년월일</label>
+                            <label for="dob">생년월일<span style="color: red;">*</span></label>
                             <input id="dob" name="dob" type="text" value="" placeholder="1900-01-01" required onkeypress="validationUpdt()">
                             <div class="msg" id="dob_msg" name="dob_msg" style="display: none;"></div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="input-control">
-                            <label for="gender">성별</label>
+                            <label for="gender">성별<span style="color: red;">*</span></label>
                             <select id="gender" aria-label=".form-select-lg example" required onclick="validationUpdt()">
                                 <option value="">선택</option>
                                 <option value="1">남성</option>
@@ -92,7 +92,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-control">
-                            <label for="radio_operator">통신사</label>
+                            <label for="radio_operator">통신사<span style="color: red;">*</span></label>
                             <select id="radio_operator" aria-label=".form-select-lg example" required onclick="validationUpdt()">
                                 <option value="">선택</option>
                                 <option value="1">SKT</option>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col">
                         <div class="input-control">
-                            <label for="tel">전화번호</label>
+                            <label for="tel">전화번호<span style="color: red;">*</span></label>
                             <input id="tel" name="tel" type="tel" value="" placeholder="010-0000-0000" required onkeypress="validationUpdt()">
                             <div class="msg" id="tel_msg" name="tel_msg" style="display: none;"></div>
                         </div>
@@ -139,7 +139,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="input-control">
-                            <label for="zip">우편번호</label>
+                            <label for="zip">우편번호<span style="color: red;">*</span></label>
                             <input id="zip" name="zip" type="text" value="" required onkeypress="validationUpdt()"> 
                             <div class="msg" id="zip_msg" name="zip_msg" style="display: none;"></div>
                         </div>
@@ -156,7 +156,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-control">
-                            <label for="address">주소</label>
+                            <label for="address">주소<span style="color: red;">*</span></label>
                             <input id="address" name="address" type="text" value="" required onkeypress="validationUpdt()"> 
                             <div class="msg" id="add_msg" name="add_msg" style="display: none;"></div>
                         </div>
@@ -165,7 +165,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="input-control">
-                            <label for="detailAddress">상세주소</label>
+                            <label for="detailAddress">상세주소<span style="color: red;">*</span></label>
                             <input id="detailAddress" name="detailAddress" value="" type="text" required onkeypress="validationUpdt()"> 
                             <div class="msg" id="detail_msg" name="detail_msg" style="display: none;"></div>
                         </div>
@@ -229,34 +229,34 @@
     <script type="text/javascript">
         $('.error').hide();
         validationUpdt = function() {
-            // if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", $('#id_msg')) || (!id_regex($('input[name=id]'), $('#id_msg'))) || (event.onKeyPress == 13)) {
+            // if(!checkNull($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", $('#id_msg')) || (!id_regex($('input[name=id]'), $('#id_msg')))) {
             //     return false;
             // } else {
             //     return true;
             // }
-            if(!id_regex($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", $('#id_msg')) || (event.onKeyPress == 13)) {
+            if(!id_regex($('input[name=id]'), $('input[name=id]').val(), "아이디를 입력하세요!", $('#id_msg'))) {
                 return false;
-            } else if(!name_regex($('input[name=name]'), $('input[name=name]').val(), "이름을 입력하세요!", $('#name_msg')) || (event.onKeyPress == 13)) {
+            } else if(!name_regex($('input[name=name]'), $('input[name=name]').val(), "이름을 입력하세요!", $('#name_msg'))) {
                 return false;
-            } else if(!email_regex($('input[name=email]'), $('input[name=email]').val(), "이메일을 입력하세요!", $('#email_msg')) || (event.onKeyPress == 13)) {
+            } else if(!email_regex($('input[name=email]'), $('input[name=email]').val(), "이메일을 입력하세요!", $('#email_msg'))) {
                 return false;
-            } else if(!pwd_regex($('input[name=password]'), $('input[name=password]').val(), "비밀번호를 입력하세요!", $('#password_msg')) || (event.onKeyPress == 13)) {
+            } else if(!pwd_regex($('input[name=password]'), $('input[name=password]').val(), "비밀번호를 입력하세요!", $('#password_msg'))) {
                 return false;
-            } else if(!pwd2_regex($('input[name=password2]'), $('input[name=password2]').val(), "비밀번호를 입력하세요!", $('#password2_msg')) || (event.onKeyPress == 13)) {
+            } else if(!pwd2_regex($('input[name=password2]'), $('input[name=password2]').val(), "비밀번호를 입력하세요!", $('#password2_msg'))) {
                 return false;
-            } else if(!dob_regex($('input[name=dob]'), $('input[name=dob]').val(), "생년월일을 입력하세요!", $('#dob_msg')) || (event.onKeyPress == 13)) {
+            } else if(!dob_regex($('input[name=dob]'), $('input[name=dob]').val(), "생년월일을 입력하세요!", $('#dob_msg'))) {
                 return false;
-            } else if(!gender_regex($('#gender'), $('#gender').val(), "성별을 선택하세요!", $('#gender_msg')) || (event.onKeyPress == 13)) {
+            } else if(!gender_regex($('#gender'), $('#gender').val(), "성별을 선택하세요!", $('#gender_msg'))) {
                 return false;
-            } else if(!radio_regex($('#radio_operator'), $('#radio_operator').val(), "통신사를 선택하세요!", $('#radio_msg')) || (event.onKeyPress == 13)) {
+            } else if(!radio_regex($('#radio_operator'), $('#radio_operator').val(), "통신사를 선택하세요!", $('#radio_msg'))) {
                 return false;
-            } else if(!tel_regex($('input[name=tel]'), $('input[name=tel]').val(), "전화번호를 입력하세요!", $('#tel_msg')) || (event.onKeyPress == 13)) {
+            } else if(!tel_regex($('input[name=tel]'), $('input[name=tel]').val(), "전화번호를 입력하세요!", $('#tel_msg'))) {
                 return false;
-            } else if(!zip_regex($('input[name=zip]'), $('input[name=zip]').val(), "우편번호를 입력하세요!", $('#zip_msg')) || (event.onKeyPress == 13)) {
+            } else if(!zip_regex($('input[name=zip]'), $('input[name=zip]').val(), "우편번호를 입력하세요!", $('#zip_msg'))) {
                 return false;
-            } else if(!add_regex($('input[name=address]'), $('input[name=address]').val(), "주소를 입력하세요!", $('#add_msg')) || (event.onKeyPress == 13)) {
+            } else if(!add_regex($('input[name=address]'), $('input[name=address]').val(), "주소를 입력하세요!", $('#add_msg'))) {
                 return false;
-            } else if(!detail_regex($('input[name=detailAddress]'), $('input[name=detailAddress]').val(), "상세주소를 입력하세요!", $('#detail_msg')) || (event.onKeyPress == 13)) {
+            } else if(!detail_regex($('input[name=detailAddress]'), $('input[name=detailAddress]').val(), "상세주소를 입력하세요!", $('#detail_msg'))) {
                 return false;
             } else {
                 return true;
