@@ -116,262 +116,260 @@
             <form method="get" action="../html/codeGroupList.html">
                 <div class="row g-4">
                     <!-- 좌측 목록 탭 -->
-                    <form>
-                        <div class="col-lg-3">
-                            <!-- Advanced filter responsive toggler START -->
+                    <div class="col-lg-3">
+                        <!-- Advanced filter responsive toggler START -->
+                        <nav class="navbar navbar-expand-lg mx-0">
+                            <div class="d-flex align-items-center d-lg-none">
+                                <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasSideNavbar" aria-controls="offcanvasSideNavbar">
+                                    <i class="btn btn-primary fw-bold fa-solid fa-sliders-h"></i>
+                                    <span class="h6 mb-0 fw-bold d-lg-none ms-2">항목</span>
+                                </button>
+                            </div>
+                
                             <nav class="navbar navbar-expand-lg mx-0">
-                                <div class="d-flex align-items-center d-lg-none">
-                                    <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasSideNavbar" aria-controls="offcanvasSideNavbar">
-                                        <i class="btn btn-primary fw-bold fa-solid fa-sliders-h"></i>
-                                        <span class="h6 mb-0 fw-bold d-lg-none ms-2">항목</span>
-                                    </button>
-                                </div>
-                    
-                                <nav class="navbar navbar-expand-lg mx-0">
-                                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSideNavbar"
-                                        style="visibility: visible; width:250px;" aria-modal="true" role="dialog">
-                                        <div class="offcanvas-header">
-                                            <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas"
-                                                aria-label="Close"></button>
-                                        </div>
-                    
-                                        <div class="offcanvas-body d-block px-2 px-lg-0">
-                                            <div class="card overflow-hidden">
-                                                <img src="../../dmin_image/mountains.png" class="card-img-top" alt="background"
-                                                    style="height: 50px; background-position: center; background-size: cover; background-repeat: no-repeat;">
-                                                <div class="card-body pt-0">
-                                                    <div class="text-center">
-                                                        <div class="avatar avatar-lg mt-n5 mb-3">
-                                                            <a href="#"><img class="avatar-img rounded border border-white border-3"
-                                                                    src="../../../image/diano.jpg" style="width: 50px;" alt=""></a>
-                                                        </div>
-                                                        <div class="mt-2 mb-4">
-                                                            <span class="mb-0"><a href="#">이하늘</a></span>
-                                                            <small>Himmel</small><br>
-                                                            <small>himmel@gmail.com</small>
-                                                        </div>
-                                                        <hr>
-                                                        <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="../Dashboard/Dashboard.html">
-                                                                    <i class="fa-solid fa-chart-line pe-3"></i>
-                                                                    <span>Home</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="../user/userList.html">
-                                                                    <i class="fa-solid fa-users pe-3"></i>
-                                                                    <span>Dashboard</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="../article/articleList.html">
-                                                                    <i class="fas fa-light fa-newspaper pe-3"></i>
-                                                                    <span>Orders</span>
-                                                                </a>
-                                                            </li>
-                                                            <hr>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" href="../articleComment/articleCommentList.html">
-                                                                    <i class="fas fa-light fa-comments pe-3"></i>
-                                                                    <span>Account</span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSideNavbar"
+                                    style="visibility: visible; width:250px;" aria-modal="true" role="dialog">
+                                    <div class="offcanvas-header">
+                                        <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                
+                                    <div class="offcanvas-body d-block px-2 px-lg-0">
+                                        <div class="card overflow-hidden">
+                                            <img src="../../dmin_image/mountains.png" class="card-img-top" alt="background"
+                                                style="height: 50px; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                                            <div class="card-body pt-0">
+                                                <div class="text-center">
+                                                    <div class="avatar avatar-lg mt-n5 mb-3">
+                                                        <a href="#"><img class="avatar-img rounded border border-white border-3"
+                                                                src="../../../image/diano.jpg" style="width: 50px;" alt=""></a>
                                                     </div>
+                                                    <div class="mt-2 mb-4">
+                                                        <span class="mb-0"><a href="#">이하늘</a></span>
+                                                        <small>Himmel</small><br>
+                                                        <small>himmel@gmail.com</small>
+                                                    </div>
+                                                    <hr>
+                                                    <ul class="nav nav-link-secondary flex-column fw-bold gap-2">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../Dashboard/Dashboard.html">
+                                                                <i class="fa-solid fa-chart-line pe-3"></i>
+                                                                <span>Home</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../user/userList.html">
+                                                                <i class="fa-solid fa-users pe-3"></i>
+                                                                <span>Dashboard</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../article/articleList.html">
+                                                                <i class="fas fa-light fa-newspaper pe-3"></i>
+                                                                <span>Orders</span>
+                                                            </a>
+                                                        </li>
+                                                        <hr>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="../articleComment/articleCommentList.html">
+                                                                <i class="fas fa-light fa-comments pe-3"></i>
+                                                                <span>Account</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <ul class="nav small mt-4 justify-content-center lh-1">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="my-profile-about.html">About</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="settings.html">Settings</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" target="_blank" href="https://support.webestica.com/login">Support
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" target="_blank" href="docs/index.html">Docs </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="help.html">Help</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="privacy-and-terms.html">Privacy &amp; terms</a>
-                                                </li>
-                                            </ul>
-                                            <p class="small text-center mt-1">©2022 <a class="text-body" target="_blank" href="#"> SPOPIA
+                                        </div>
+                                        <ul class="nav small mt-4 justify-content-center lh-1">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="my-profile-about.html">About</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="settings.html">Settings</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" target="_blank" href="https://support.webestica.com/login">Support
                                                 </a>
-                                            </p>
-                                        </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" target="_blank" href="docs/index.html">Docs </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="help.html">Help</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="privacy-and-terms.html">Privacy &amp; terms</a>
+                                            </li>
+                                        </ul>
+                                        <p class="small text-center mt-1">©2022 <a class="text-body" target="_blank" href="#"> SPOPIA
+                                            </a>
+                                        </p>
                                     </div>
-                                </nav>
+                                </div>
                             </nav>
+                        </nav>
+                    </div>
+                    <!-- 중앙 메인 영역 -->
+                    <div class="col-md-8 col-lg-9 vstack gap-4">
+                        <h1 style="font-weight: 800;">코드그룹 관리</h1>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="cg_code">코드그룹 코드<span style="color: red;">*</span></label>
+                                    <input type="text" id="cg_code" name="cg_code" value="" placeholder="영문(대문자),숫자">
+                                    <div class="msg" id="cg_code_msg" name="cg_code_msg" style="display: none;"></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="cg_another">코드그룹 코드 (Another)<span style="color: red;">*</span></label>
+                                    <input type="text" id="cg_another" name="cg_another" value="" placeholder="영문(대문자),숫자">
+                                    <div class="msg" id="another_msg" name="another_msg" style="display: none;"></div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- 중앙 메인 영역 -->
-                        <div class="col-md-8 col-lg-9 vstack gap-4">
-                            <h1 style="font-weight: 800;">코드그룹 관리</h1>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="cg_code">코드그룹 코드<span style="color: red;">*</span></label>
-                                        <input type="text" id="cg_code" name="cg_code" value="" placeholder="영문(대문자),숫자" required onkeydown="validationUpdt()">
-                                        <div class="msg" id="cg_code_msg" name="cg_code_msg" style="display: none;"></div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="cg_another">코드그룹 코드 (Another)<span style="color: red;">*</span></label>
-                                        <input type="text" id="cg_another" name="cg_another" value="" placeholder="영문(대문자),숫자" required onkeypress="validationUpdt()">
-                                        <div class="msg" id="another_msg" name="another_msg" style="display: none;"></div>
-                                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="cg_name_ko">코드그룹 이름 (한글)<span style="color: red;">*</span></label>
+                                    <input type="text" id="cg_name_ko" name="cg_name_ko" value="" placeholder="한글,숫자">
+                                    <div class="msg" id="ko_msg" name="ko_msg" style="display: none;"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="cg_name_ko">코드그룹 이름 (한글)<span style="color: red;">*</span></label>
-                                        <input type="text" id="cg_name_ko" name="cg_name_ko" value="" placeholder="한글,숫자" required>
-                                        <div class="msg" id="ko_msg" name="ko_msg" style="display: none;"></div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="cg_name_eng">코드그룹 이름 (영문)<span style="color: red;">*</span></label>
-                                        <input type="text" id="cg_name_eng" name="cg_name_eng" value="" placeholder="영문(대소문자),숫자" required>
-                                        <div class="msg" id="eng_msg" name="eng_msg" style="display: none;"></div>
-                                    </div>
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="cg_name_eng">코드그룹 이름 (영문)<span style="color: red;">*</span></label>
+                                    <input type="text" id="cg_name_eng" name="cg_name_eng" value="" placeholder="영문(대소문자),숫자">
+                                    <div class="msg" id="eng_msg" name="eng_msg" style="display: none;"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="useNY">사용여부<span style="color: red;">*</span></label>
-                                        <select class="form-select" id="useNY" required>
-                                            <option selected value="">Choose...</option>
-                                            <option>N</option>
-                                            <option>Y</option>
-                                        </select>
-                                        <div class="msg" id="use_msg" name="use_msg" style="display: none;"></div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="orderBY">순서<span style="color: red;">*</span></label>
-                                        <input type="text" id="orderBY" name="orderBY" value="" placeholder="숫자" required>
-                                        <div class="msg" id="order_msg" name="order_msg" style="display: none;"></div>
-                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="useNY">사용여부<span style="color: red;">*</span></label>
+                                    <select class="form-select" id="useNY">
+                                        <option selected value="">Choose...</option>
+                                        <option>N</option>
+                                        <option>Y</option>
+                                    </select>
+                                    <div class="msg" id="use_msg" name="use_msg" style="display: none;"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="explanation">설명<span style="color: red;">*</span></label>
-                                        <textarea id="explanation" name="explanation" placeholder="" required></textarea>
-                                        <div class="msg" id="ex_msg" name="ex_msg" style="display: none;"></div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="deleteNY">삭제여부<span style="color: red;">*</span></label>
-                                        <select class="form-select" id="deleteNY" required>
-                                            <option selected value="">Choose...</option>
-                                            <option>N</option>
-                                            <option>Y</option>
-                                        </select>
-                                        <div class="msg" id="del_msg" name="del_msg" style="display: none;"></div>
-                                    </div>
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="orderBY">순서<span style="color: red;">*</span></label>
+                                    <input type="text" id="orderBY" name="orderBY" value="" placeholder="숫자">
+                                    <div class="msg" id="order_msg" name="order_msg" style="display: none;"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="varchar_sub1">예비1 (varchar type)</label>
-                                        <input type="text" id="varchar_sub1" value="" placeholder="영문(대소문자), 숫자" required>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="varchar_sub2">예비2 (varchar type)</label>
-                                        <input type="text" id="varchar_sub2" value="" placeholder="영문(대소문자), 숫자">
-                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="explanation">설명<span style="color: red;">*</span></label>
+                                    <textarea id="explanation" name="explanation" placeholder=""></textarea>
+                                    <div class="msg" id="ex_msg" name="ex_msg" style="display: none;"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="input-control">
-                                        <label for="varchar_sub3">예비3 (varchar type)</label>
-                                        <input type="text" id="varchar_sub3" value="" placeholder="영문(대소문자), 숫자">
-                                    </div>
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="deleteNY">삭제여부<span style="color: red;">*</span></label>
+                                    <select class="form-select" id="deleteNY">
+                                        <option selected value="">Choose...</option>
+                                        <option>N</option>
+                                        <option>Y</option>
+                                    </select>
+                                    <div class="msg" id="del_msg" name="del_msg" style="display: none;"></div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="int_sub1">예비1 (int type)</label>
-                                        <input type="text" id="int_sub1" value="" placeholder="숫자">
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-control">
-                                        <label for="int_sub2">예비2 (int type)</label>
-                                        <input type="text" id="int_sub2" value="" placeholder="숫자">
-                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="varchar_sub1">예비1 (varchar type)</label>
+                                    <input type="text" id="varchar_sub1" value="" placeholder="영문(대소문자), 숫자">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="input-control">
-                                        <label for="int_sub3">예비3 (int type)</label>
-                                        <input type="text" id="int_sub3" value="" placeholder="숫자">
-                                    </div>
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="varchar_sub2">예비2 (varchar type)</label>
+                                    <input type="text" id="varchar_sub2" value="" placeholder="영문(대소문자), 숫자">
                                 </div>
                             </div>
-                            <!-- 리스트 -->
-                            <div class="row align-items-center">
-                                <div class="col-1">
-                                    <a class="border-0 btn btn-sm bg-secondary shadow" type="button" href="./codeGroupList.html">
-                                        <i class="fa-solid fa-bars" style="color: white;"></i>
-                                    </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-control">
+                                    <label for="varchar_sub3">예비3 (varchar type)</label>
+                                    <input type="text" id="varchar_sub3" value="" placeholder="영문(대소문자), 숫자">
                                 </div>
-                                <div class="col-3 offset-8" align="right">
-                                    <button class="border-0 btn btn-sm bg-danger shadow" type="button" data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal">
-                                        <i class="fa-solid fa-xmark" style="color: white;"></i>
-                                    </button>
-                                    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
-                                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title fw-bold" id="staticBackdropLabel">게시물 삭제</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body fs-6">
-                                                    선택하신 게시물을 정말로 삭제하시겠습니까?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-                                                    <button type="button" class="btn btn-primary">삭제</button>
-                                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="int_sub1">예비1 (int type)</label>
+                                    <input type="text" id="int_sub1" value="" placeholder="숫자">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-control">
+                                    <label for="int_sub2">예비2 (int type)</label>
+                                    <input type="text" id="int_sub2" value="" placeholder="숫자">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-control">
+                                    <label for="int_sub3">예비3 (int type)</label>
+                                    <input type="text" id="int_sub3" value="" placeholder="숫자">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 리스트 -->
+                        <div class="row align-items-center">
+                            <div class="col-1">
+                                <a class="border-0 btn btn-sm bg-secondary shadow" type="button" href="./codeGroupList.html">
+                                    <i class="fa-solid fa-bars" style="color: white;"></i>
+                                </a>
+                            </div>
+                            <div class="col-3 offset-8" align="right">
+                                <button class="border-0 btn btn-sm bg-danger shadow" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">
+                                    <i class="fa-solid fa-xmark" style="color: white;"></i>
+                                </button>
+                                <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title fw-bold" id="staticBackdropLabel">게시물 삭제</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body fs-6">
+                                                선택하신 게시물을 정말로 삭제하시겠습니까?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                                <button type="button" class="btn btn-primary">삭제</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="border-0 btn btn-sm bg-danger shadow" type="button" data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal">
-                                        <i class="fa-solid fa-trash-can" style="color: white;"></i>
-                                    </button>
-                                    <button class="border-0 btn btn-sm bg-success shadow" type="submit" onclick="validation()">
-                                        <i class="fa-regular fa-bookmark" style="color: white;"></i>
-                                    </button>
                                 </div>
+                                <button class="border-0 btn btn-sm bg-danger shadow" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal">
+                                    <i class="fa-solid fa-trash-can" style="color: white;"></i>
+                                </button>
+                                <button class="border-0 btn btn-sm bg-success shadow" type="button" onclick="validation()">
+                                    <i class="fa-regular fa-bookmark" style="color: white;"></i>
+                                </button>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </form>
         </div>
@@ -431,7 +429,7 @@
             } else if (!del_regex($('#deleteNY'), $('#deleteNY').val(), "삭제여부를 선택하세요!", $('#del_msg'))) {
                 return false;
             } else {
-                return true;
+                return false;
             }
         };
 

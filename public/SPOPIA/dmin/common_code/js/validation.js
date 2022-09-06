@@ -171,3 +171,5 @@ del_regex = function(obj, value, message, hide) {
         return true;
     }
 }
+
+checkLogic = function(obj, pattern)
