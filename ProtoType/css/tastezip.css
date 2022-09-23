@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'LeferiPoint-SpecialItalicA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.75em;
+    background: #000;
+    overflow: hidden;
+    min-width: 360px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 845px) {
+    #header {
+        padding: 20px;
+    }
+    
+    .ham_menu {
+        display: block;
+    }
+
+    #header .hd nav {
+        display: none;
+        width: 100%;
+        position: inherit;
+    }
+}
+
+#header {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    background: #000;
+    padding: 50px 60px;
+}
+
+#header .hd {
+    border-top: 1px solid #ffff;
+    padding-top: 20px;
+}
+
+#header .hd h1 {
+    float: left;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+}
+
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.ham_menu {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ham_open {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    background-image: url(../html/menu.png);
+    background-color: white;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#header .hd nav {
+    right: 60px;
+    top: 70px;
+}
+
+#header .hd nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#header .hd nav ul li {
+    position: relative;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#header .hd nav ul li a.cate {
+    font-family: "LeferiPoint-SpecialItalicA";
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #cccccc;
+    display: block;
+    text-decoration: none;
+}
+
