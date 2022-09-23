@@ -874,8 +874,6 @@ video::-webkit-media-controls-volume-slider {display: none !important;}
 	top: 30px;
 }
 
-.family_site_list > li{}
-
 #footer nav ul li:hover a{
 	color: rgba(255, 255, 255, 0.6);
 }
@@ -901,4 +899,98 @@ video::-webkit-media-controls-volume-slider {display: none !important;}
 	#ft_company .ft_info > div{float:inherit; margin-bottom:10px;}
 	#ft_company .ft_info > div p{font-size:12px;}
 	#ft_company .ft_info > div a{font-size:10px;}
+}
+
+/* custom */
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.content {
+	padding: 20px 60px;
+	height: 1000px;
+}
+
+.col {
+	width: 20%;
+	margin: 50px 20px;
+}
+
+.card {
+	height: 250px;
+	border-radius: 20px;
+}
+
+.card-img-top {
+	border-radius: 20px;
+	height: 250px;
+}
+
+.card-body {
+	background: #000000;
+	margin-top: 20px;
+}
+
+.card-title {
+	margin-top: 0;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	font-family: "Ghanachocolate";
+}
+
+.card-text {
+	margin-top: 10px;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	font-family: "ChosunilboNM";
+}
+
+.sub_title {
+	padding: 20px 60px;
+}
+
+.sub_title h2 {
+	font-family: "LeferiPoint-SpecialItalicA";
+	font-size: 50px;
+	color: white;
+	font-weight: 800;
+}
+
+.sub_title .card {
+	height: 400px;
+}
+
+.sub_title .card .card-img-top {
+	height: 397px;
+}
+
+/* offcanvas */
+.offcanvas-body {
+	color: white;
+}
+
+.nav-item {
+	font-family: "LeferiPoint-SpecialItalicA";
+	font-size: 30px;
+	text-align: center;
+}
+
+.sub {
+	font-family: "LeferiPoint-SpecialItalicA";
+	text-align: left;
+	font-size: 25px;
+}
+
+.search {
+	display: flex;
+	position: relative;
+}
+
+.searchBtn {
+	position: absolute;
+	right: 16px;
+	border: 0;
 }
