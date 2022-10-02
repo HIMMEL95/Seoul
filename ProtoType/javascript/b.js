@@ -142,9 +142,9 @@ $(document).ready(function(){
 		var recordingTop = $("#recording").offset().top-40;
 		var detailTop = $("#family_wrap").offset().top-40;
 
-		var specTop = $("#spec_txt").offset().top-40;
-		var characterTop = $("#character").offset().top-40;
-		var featureTop = $("#feature").offset().top-40;
+		// var specTop = $("#spec_txt").offset().top-40;
+		// var characterTop = $("#character").offset().top-40;
+		// var featureTop = $("#feature").offset().top-40;
 		
 		if(scrolltop >= introTop && overviewTop > scrolltop){
 			$(".hd nav > ul > li > a").removeClass("active");
