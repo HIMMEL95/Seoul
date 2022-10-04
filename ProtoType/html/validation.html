@@ -38,8 +38,39 @@
                 <input id="password2" name="password2" type="password">
                 <div class="error"></div>
             </div>
-            <button type="submit">Sing Up</button>
+            <div class="input-control">
+                <label class="form-label">성별<span style="color: red;">*</span></label>
+                <div class="row" style="margin-left: 10px;">
+                    <div class="col-3 form-check form-check-inline" name="gender">
+                      <input class="form-check-input" type="radio" value="4" name="gender" id="gender1">
+                      <label class="form-check-label" for="gender1">
+                        남성
+                      </label>
+                    </div>
+                    <div class="col-3 form-check form-check-inline" name="gender">
+                      <input class="form-check-input" type="radio" value="5" name="gender" id="gender2">
+                      <label class="form-check-label" for="gender2">
+                        여성
+                      </label>
+                    </div>
+                    <div class="msg" id="gender_msg" name="gender_msg" style="display: none;"></div>
+                </div>
+            </div>
+            <div style="height: 100px;"></div>
+            <button type="button" id="btnSave" onclick="validationUpdt()">Sing Up</button>
         </form>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $('.error').hide();
+            validationUpdt = function() {
+                if (!gender_regex($('input[name=gender]'), $('input[name=gender]').val(), "성별을 선택하세요!", $('#gender_msg'))) {
+                    return false;
+                } 
+                return false;
+                alert("회원가입이 완료 되었습니다.");
+            };
+        </script>
     </div>
 </body>
 </html> 
