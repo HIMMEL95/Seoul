@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Article Mod Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="../css/dashboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- start -->
+    <header class="navbar-light fixed-top header-static bg-mode align-items-center">
+        <!-- 상단 -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container px-3 px-xl-5 pt-1">
+                <!-- Logo START -->
+                <a class="navbar-brand" href="../../user/member/main_page.html">
+                    <img class="light-mode-item navbar-brand-item" src="../../image/SPOPIA_white.png" alt="logo"
+                        style="width: 90px;">
+                </a>
+                <!-- Profile START -->
+                <div class="dropdown">
+                    <ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
+                        <li class="me-2">
+                            <a class="p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside"
+                                data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar"
+                                    style="width: 30px;">
+                            </a>
+                            <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
+                                aria-labelledby="profileDropdown">
+                                <!-- Profile info -->
+                                <li class="px-3">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Avatar -->
+                                        <div class="avatar me-3">
+                                            <img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg"
+                                                alt="avatar" style="width: 30px;">
+                                        </div>
+                                        <div>
+                                            <a class="fs-6 fw-bold" href="#">이하늘</a>
+                                            <p class="small m-0">himmel@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </li>
+                                <!-- Links -->
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-user me-2"></i>
+                                        Edit Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-gear me-2"></i>
+                                        Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa-solid fa-circle-info me-2"></i>
+                                        Help
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item bg-danger-soft-hover" href="../../seperate/html/seperatePage.html">
+                                        <i class="fa-solid fa-power-off me-2"></i>
+                                        Sign Out
+                                    </a>
+                                </li>
+                                <!-- Dark mode switch START -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Profile START -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div style="margin-top: 55px;"></div>
+        <div class="container">
+            <div style="height: 50px;"></div>
+            <div style="text-align: center;" class="mb-5">
+                <h3 style="font-weight: 800; font-size: 30px;">마이 가게</h3>
+            </div>
+            <div class="card">
+                <div class="row ms-4 mt-4 me-4 mb-2" >
+                    <label class="form-label bb">오픈 시간</label>
+                    <div class="col">
+                        <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                    </div>
+                    ~
+                    <div class="col">
+                        <input type="text" class="form-control" id="seq" placeholder="Close Time">
+                    </div>
+                </div>
+                <div class="row ms-4 mt-4 me-4 mb-2" >
+                    <label class="form-label bb">전화 번호</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                    </div>
+                </div>
+                <div class="row ms-4 mt-4 me-4 mb-2">
+                    <div class="col-6">
+                        <div class="input-control">
+                            <label for="zip">우편번호<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                            <div class="msg" id="zip_msg" name="zip_msg" style="display: none;"></div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row mt-4">
+                            <div class="col-5">
+                                <button type="button" id="searchBtn" class="btn fw-bold text-white certification"
+                                    style="background-color: #03c75a;">주소검색</button>
+                            </div>
+                            <div class="col-3">
+                                <button id="refresh" class="btn btn-danger fw-bold btn-sm shadow" type="button">
+                                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-4 mt-4 me-4 mb-2">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="address">주소<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                            <div class="msg" id="address_msg" name="address_msg" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-4 mt-4 me-4 mb-2">
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="address_detail">상세주소<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                            <div class="msg" id="address_detail_msg" name="address_detail_msg" style="display: none;"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-control">
+                            <label for="extraAddress">참고항목</label>
+                            <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                            <div class="msg" id="extraAddress_msg" name="extraAddress_msg" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-4 mt-4 me-4 mb-2" >
+                    <label class="form-label bb">간편 길안내</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                    </div>
+                </div>
+                <div class="row ms-4 mt-4 me-4 mb-2" >
+                    <label class="form-label bb">가게 소개</label>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 text-center">
+                <h3>메뉴</h3>
+            </div>
+            <div class="card" style="height: 250px;">
+                <button id="refresh" class="btn btn-danger fw-bold btn-sm shadow" type="button" style="width: 30px; float: right;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="row">
+                    <div class="col">
+                        <em>
+                            <font size="3" color="red" id="text">
+                                수정하고 싶은
+                                <br>사진을 넣으시면 
+                                <br>됩니다.
+                            </font>
+                        </em>
+                        <div class="filebox">
+                            <img src="" id="preview" width="150px;">
+                            <label for="ex_file">업로드</label>
+                            <input type="file" id="ex_file">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row ms-4 mt-4 me-4 mb-2" >
+                            <label class="form-label bb">제품 명</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                            </div>
+                        </div>
+                        <div class="row ms-4 mt-4 me-4 mb-2" >
+                            <label class="form-label bb">가격</label>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="seq" placeholder="Open Time.">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="refresh" class="btn btn-danger fw-bold btn-sm shadow" type="button" style="float: right; margin-top: 10px;">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+        <div style="height: 80px;"></div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer_inner">
+                <!--[주]고객센터,제휴문의,서비스안내-->
+                <ul class="footer_link" id="footer_link">
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html"
+                            id="fot.agreement"><span class="text">이용약관</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html"
+                            id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html"
+                            id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
+                    <li><a target="_blank" class="footer_item"
+                            href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span
+                                class="text">회원정보 고객센터</span></a></li>
+                </ul>
+                <div class="footer_copy">
+                    <a id="fot.naver" target="_blank" href="https://www.navercorp.com">
+                        <img src="../../image/SPOPIA1.png" alt="logo" style="width: 45px;">
+                    </a>
+                    <span class="text">Copyright</span>
+                    <span class="corp">© SPOPIA Corp.</span>
+                    <span class="text">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
+    <script>
+        // 이미지 미리보기
+		const reader = new FileReader();
+
+        reader.onload = (readerEvent) => {
+            document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+        };
+
+        document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+
+            const imgFile = changeEvent.target.files[0];
+            reader.readAsDataURL(imgFile);
+            document.getElementById("text").innerHTML = " ";
+        })
+    </script>
+</body>
+
+</html>
