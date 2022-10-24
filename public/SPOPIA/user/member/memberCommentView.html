@@ -28,8 +28,14 @@
                             <a class="p-0" href="../member/memberView.html" id="profileDropdown" role="button"
                                 data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img class="avatar-img rounded-circle" src="../../image/diano.jpg" alt="avatar"
-                                    style="width: 30px;">
+                                <c:choose>
+                               		<c:when test="${empty sessImg }">
+	                                	<img class="avatar-img rounded-circle" src="/resources/images/diano.jpg" alt="avatar" style="width: 35px;">
+                               		</c:when>
+                               		<c:otherwise>
+	                                    <img class="avatar-img rounded-circle" src="${sessImg }" alt="avatar" style="width: 35px;">		                                		
+                               		</c:otherwise>
+                               	</c:choose>
                             </a>
                             <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
                                 aria-labelledby="profileDropdown">
@@ -38,8 +44,14 @@
                                     <div class="d-flex align-items-center">
                                         <!-- Avatar -->
                                         <div class="avatar mt-2">
-                                            <img class="avatar-img rounded-circle shadow" src="../../image/diano.jpg"
-                                                alt="avatar" style="width: 30px;">
+                                            <c:choose>
+                                        		<c:when test="${empty sessImg }">
+                                        			<img class="avatar-img rounded-circle" src="/resources/images/diano.jpg" alt="avatar" style="width: 35px;">
+                                        		</c:when>
+                                        		<c:otherwise>
+		                                            <img class="avatar-img rounded-circle shadow" src="${sessImg }" alt="avatar" style="width: 35px;">
+                                        		</c:otherwise>
+                                        	</c:choose>
                                         </div>
                                         <div>
                                             <a class="fs-6 fw-bold" href="../member/memberView.html">이하늘</a>
@@ -56,7 +68,7 @@
                                         Settings</a></li>
                                 <li><a class="dropdown-item" href="#"><i
                                             class="fa-solid fa-circle-info me-2"></i>Help</a></li>
-                                <li><a class="dropdown-item bg-danger-soft-hover" href="../../seperate/html/seperatePage.html"><i
+                                <li><a class="dropdown-item bg-danger-soft-hover" href="/"><i
                                             class="fa-solid fa-power-off me-2"></i>Sign Out</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
